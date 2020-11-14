@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbcffe667fcb44499c8f47005858bd9, type: 3}
+  m_Name: TestEnnemieAnimation
+  m_EditorClassIdentifier: 
+  FrontIdelAnimations:
+  - {fileID: 2100000, guid: 36df212bbe92fe74ea4c6a23cb6ba855, type: 2}
+  - {fileID: 2100000, guid: 0809c9cfc96e51a47a5d554c3ac758d9, type: 2}
+  - {fileID: 2100000, guid: 21926e7886b8eec47beffb719b20a8c5, type: 2}
+  - {fileID: 2100000, guid: acf2a1e2a945a244da095193af739359, type: 2}
+  - {fileID: 2100000, guid: af971580dcee99b43b0d1f329b1ec243, type: 2}
+  - {fileID: 2100000, guid: e57af940411a2874bba4bd60b27aae39, type: 2}
+  - {fileID: 2100000, guid: c60d82b6cb70dae439e649069b894977, type: 2}
+  - {fileID: 2100000, guid: 0029a4dfb79f68d429879b9af375675d, type: 2}
+  - {fileID: 2100000, guid: 0e563823a0e5f614da3f5a2de1bbb06a, type: 2}
+  - {fileID: 2100000, guid: 1119d340fb4b1f34faee588778110fd9, type: 2}
+  - {fileID: 2100000, guid: e2588a7996551284fa6b4e7e26a73cbe, type: 2}
+  - {fileID: 2100000, guid: e1842dfacd8b9c74699943d7b60ecf2f, type: 2}
+  - {fileID: 2100000, guid: 618f57f738b2976439abd40e54912122, type: 2}
+  FrontIdelFrameRate: 0.1
+  LeftIdelAnimations: []
+  LeftIdelFrameRate: 0
+  RightIdelAnimations: []
+  RightIdelFrameRate: 0
+  BackIdelAnimations: []
+  BackIdelFrameRate: 0
+  FrontWalkAnimations:
+  - {fileID: 2100000, guid: 36df212bbe92fe74ea4c6a23cb6ba855, type: 2}
+  - {fileID: 2100000, guid: 0809c9cfc96e51a47a5d554c3ac758d9, type: 2}
+  - {fileID: 2100000, guid: 21926e7886b8eec47beffb719b20a8c5, type: 2}
+  - {fileID: 2100000, guid: acf2a1e2a945a244da095193af739359, type: 2}
+  - {fileID: 2100000, guid: af971580dcee99b43b0d1f329b1ec243, type: 2}
+  - {fileID: 2100000, guid: e57af940411a2874bba4bd60b27aae39, type: 2}
+  - {fileID: 2100000, guid: c60d82b6cb70dae439e649069b894977, type: 2}
+  - {fileID: 2100000, guid: 0029a4dfb79f68d429879b9af375675d, type: 2}
+  - {fileID: 2100000, guid: 0e563823a0e5f614da3f5a2de1bbb06a, type: 2}
+  - {fileID: 2100000, guid: 1119d340fb4b1f34faee588778110fd9, type: 2}
+  - {fileID: 2100000, guid: e2588a7996551284fa6b4e7e26a73cbe, type: 2}
+  - {fileID: 2100000, guid: e1842dfacd8b9c74699943d7b60ecf2f, type: 2}
+  - {fileID: 2100000, guid: 618f57f738b2976439abd40e54912122, type: 2}
+  FrontWalkFrameRate: 0.5
+  LeftWalkAnimations: []
+  LeftWalkFrameRate: 0
+  RightWalkAnimations: []
+  RightWalkFrameRate: 0
+  BackWalkAnimations: []
+  BackWalkFrameRate: 0
+  AttackAnimations: []
+  AttackFrameFate: 0
+  DieAnimation: []
+  DieFrameRate: 0
