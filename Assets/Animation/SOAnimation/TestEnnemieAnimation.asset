@@ -26,12 +26,20 @@ MonoBehaviour:
   - {fileID: 2100000, guid: e2588a7996551284fa6b4e7e26a73cbe, type: 2}
   - {fileID: 2100000, guid: e1842dfacd8b9c74699943d7b60ecf2f, type: 2}
   - {fileID: 2100000, guid: 618f57f738b2976439abd40e54912122, type: 2}
-  FrontIdelFrameRate: 0.1
-  LeftIdelAnimations: []
-  LeftIdelFrameRate: 0
+  FrontIdelFrameRate: 0.05
+  LeftIdelAnimations:
+  - {fileID: 2100000, guid: 36df212bbe92fe74ea4c6a23cb6ba855, type: 2}
+  - {fileID: 2100000, guid: acf2a1e2a945a244da095193af739359, type: 2}
+  - {fileID: 2100000, guid: 0029a4dfb79f68d429879b9af375675d, type: 2}
+  - {fileID: 2100000, guid: e1842dfacd8b9c74699943d7b60ecf2f, type: 2}
+  LeftIdelFrameRate: 0.5
   RightIdelAnimations: []
   RightIdelFrameRate: 0
-  BackIdelAnimations: []
+  BackIdelAnimations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   BackIdelFrameRate: 0
   FrontWalkAnimations:
   - {fileID: 2100000, guid: 36df212bbe92fe74ea4c6a23cb6ba855, type: 2}

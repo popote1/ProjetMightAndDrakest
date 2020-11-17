@@ -58,9 +58,16 @@
           <e p="Component" t="Include">
             <e p="BillboardComponent.cs" t="Include" />
             <e p="EnnemiMaterialAnimationComponent.cs" t="Include" />
+            <e p="FightComonent.cs" t="Include" />
+            <e p="PlayerInfoComponent.cs" t="Include" />
+          </e>
+          <e p="PlaneC#" t="Include">
+            <e p="ItemData.cs" t="Include" />
           </e>
           <e p="ScriptableObject" t="Include">
             <e p="SOEnnemiAnimation.cs" t="Include" />
+            <e p="SOObject.cs" t="Include" />
+            <e p="SOWeapon.cs" t="Include" />
           </e>
           <e p="UtilityScripte" t="Include">
             <e p="AnimationTester.cs" t="Include" />

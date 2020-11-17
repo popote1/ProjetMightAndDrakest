@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="" />
+    <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +35,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -37,6 +46,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemiAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/UtilityScripte/AnimationTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +101,9 @@
       <option name="presentableId" value="Default" />
       <updated>1605372362165</updated>
       <workItem from="1605372397641" duration="6067000" />
-      <workItem from="1605388626420" duration="4758000" />
+      <workItem from="1605388626420" duration="5357000" />
+      <workItem from="1605608223223" duration="6171000" />
+      <workItem from="1605650954914" duration="1903000" />
     </task>
     <servers />
   </component>
