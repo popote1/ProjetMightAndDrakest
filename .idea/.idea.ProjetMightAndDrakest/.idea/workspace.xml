@@ -22,9 +22,12 @@
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3D.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FightScène.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FightScène.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -47,10 +55,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/UtilityScripte/AnimationTester.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ExplmentInputSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EditPanelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/CombatPanelAnimationComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
       </list>
     </option>
   </component>
@@ -103,7 +121,10 @@
       <workItem from="1605372397641" duration="6067000" />
       <workItem from="1605388626420" duration="5357000" />
       <workItem from="1605608223223" duration="6171000" />
-      <workItem from="1605650954914" duration="1903000" />
+      <workItem from="1605650954914" duration="2298000" />
+      <workItem from="1605689870245" duration="12348000" />
+      <workItem from="1605774166095" duration="20403000" />
+      <workItem from="1605858375071" duration="1251000" />
     </task>
     <servers />
   </component>
@@ -132,9 +153,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1605372461339" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605374285492">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1605806379505">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="498" height="446" key="SwitcherDM/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1605806379505" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605740857059">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1605740857059" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1605374285492" />
   </component>
 </project>

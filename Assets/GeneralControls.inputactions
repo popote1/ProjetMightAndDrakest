@@ -1,0 +1,52 @@
+{
+    "name": "GeneralControls",
+    "maps": [
+        {
+            "name": "CombatsControls",
+            "id": "7a57ce1f-6977-41e2-8e66-378271914e88",
+            "actions": [
+                {
+                    "name": "MouseAxis",
+                    "type": "Value",
+                    "id": "4bfbb179-2017-4c90-bc45-5a5435b44f73",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MouseClick",
+                    "type": "Button",
+                    "id": "7831291c-ec49-4c7f-af1a-0c1fb05471b8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c88d4fa5-8a2b-4196-a9fc-82c5faf73bcf",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseAxis",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b7da5f3-ac48-4d5a-a769-015c4865ee95",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

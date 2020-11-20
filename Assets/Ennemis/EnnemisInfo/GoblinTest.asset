@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7924b1658257541aba36e799e63f33, type: 3}
+  m_Name: GoblinTest
+  m_EditorClassIdentifier: 
+  Name: Goblin de Test
+  MaxHP: 10
+  Strenght: 2
+  Dexterity: 30
+  Attacks:
+  - SoAttack: {fileID: 11400000, guid: 4513fb5eeb885aa4899bb2815e91c173, type: 2}
+    Probability: 50
+  - SoAttack: {fileID: 11400000, guid: 853558f0dc40b7c428b0671455c354a1, type: 2}
+    Probability: 50
+  SoEnnemiAnimation: {fileID: 0}

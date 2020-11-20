@@ -12,11 +12,11 @@ public class PlayerInfoComponent : MonoBehaviour
     public List<SOObject> SOInventory;
     public List<ItemData> Inventory=new List<ItemData>();
     
-    void Start()
+    void Awake()
     {
-        foreach (var item in SOInventory)
-        { Inventory.Add(new ItemData(item));
-        Debug.Log("ajout "+item.Name+" à l'aventaire");
+        foreach (SOObject item in SOInventory) {
+            Inventory.Add(new ItemData(item));
+            Debug.Log("ajout "+item.Name+" à l'aventaire");
         }
         
     }
