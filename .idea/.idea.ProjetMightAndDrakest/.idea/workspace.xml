@@ -38,15 +38,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -69,6 +69,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/PlayerControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" />
       </list>
     </option>
   </component>
@@ -125,6 +127,9 @@
       <workItem from="1605689870245" duration="12348000" />
       <workItem from="1605774166095" duration="20403000" />
       <workItem from="1605858375071" duration="1251000" />
+      <workItem from="1605951577054" duration="106000" />
+      <workItem from="1605951692414" duration="27000" />
+      <workItem from="1605958196610" duration="6899000" />
     </task>
     <servers />
   </component>

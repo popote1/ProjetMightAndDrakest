@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Git\ProjetMightAndDrakest" t="IncludeRecursive">
+    <e p="C:\PROJETS\ProjetMightAndDrakest" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FirstCaracterControler" t="Include">
+          <e p="Controls.cs" t="Include" />
+          <e p="Deplacement.cs" t="Include" />
+          <e p="FirstControler.cs" t="Include" />
+          <e p="PlayerFPS.cs" t="Include" />
+        </e>
         <e p="LeanTween" t="Include">
           <e p="Editor" t="Include">
             <e p="LeanTweenDocumentationEditor.cs" t="Include" />
@@ -121,7 +127,7 @@
       <e p="ProjetMightAndDrakest.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\popote\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\popote\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_ProjetMightAndDrakest.1412838611.00" t="ExcludeRecursive" />
+    <e p="C:\Users\PC GameDesign\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\PC GameDesign\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_ProjetMightAndDrakest.710741288.00" t="ExcludeRecursive" />
   </component>
 </project>
