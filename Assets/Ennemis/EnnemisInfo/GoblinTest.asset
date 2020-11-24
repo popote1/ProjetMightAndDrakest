@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoblinTest
   m_EditorClassIdentifier: 
   Name: Goblin de Test
-  MaxHP: 10
+  MaxHP: 60
   Strenght: 2
   Dexterity: 30
   Attacks:

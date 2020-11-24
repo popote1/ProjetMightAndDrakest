@@ -21,3 +21,4 @@ MonoBehaviour:
   Target: 0
   Durability: 4
   isTwoHand: 0
+  SpecialEffect: {fileID: 11400000, guid: f3de0f9b8d894fe4bbc8a01b91b1c5e0, type: 2}

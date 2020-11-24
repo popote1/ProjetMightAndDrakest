@@ -5,6 +5,9 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FichierTest" t="Include">
+          <e p="testFPSControler.cs" t="Include" />
+        </e>
         <e p="LeanTween" t="Include">
           <e p="Editor" t="Include">
             <e p="LeanTweenDocumentationEditor.cs" t="Include" />
@@ -60,11 +63,14 @@
             <e p="EnnemiGroupComponent.cs" t="Include" />
             <e p="EnnemiMaterialAnimationComponent.cs" t="Include" />
             <e p="FightComonent.cs" t="Include" />
+            <e p="FightSelectorComponent.cs" t="Include" />
             <e p="PlayerInfoComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
               <e p="CombatPanelAnimationComponent.cs" t="Include" />
+              <e p="CombatSliderAnimationComponant.cs" t="Include" />
               <e p="EditPanelComponent.cs" t="Include" />
               <e p="EnnemiCombatUIComponent.cs" t="Include" />
+              <e p="ShakeComponent.cs" t="Include" />
               <e p="SliderAutiSizerComponent.cs" t="Include" />
             </e>
           </e>
@@ -72,13 +78,25 @@
             <e p="EnnemiAttack.cs" t="Include" />
             <e p="EnnemiInfo.cs" t="Include" />
             <e p="ItemData.cs" t="Include" />
+            <e p="StanceInfo.cs" t="Include" />
           </e>
           <e p="ScriptableObject" t="Include">
             <e p="SOAttack.cs" t="Include" />
             <e p="SOEnnemi.cs" t="Include" />
             <e p="SOEnnemiAnimation.cs" t="Include" />
             <e p="SOObject.cs" t="Include" />
+            <e p="SOSpecialEffectBurn.cs" t="Include" />
+            <e p="SOSpecialEffectGeneral.cs" t="Include" />
+            <e p="SOSpecialEffetStun.cs" t="Include" />
+            <e p="SOSpecialStatBurn.cs" t="Include" />
+            <e p="SOSpecialStatGeneral.cs" t="Include" />
+            <e p="SOSpecialStatStun.cs" t="Include" />
+            <e p="SOStanceGeneral.cs" t="Include" />
             <e p="SOWeapon.cs" t="Include" />
+            <e p="Stances" t="Include">
+              <e p="SOStanceChaceDuDroite.cs" t="Include" />
+              <e p="SOStanceRevertDuGauche.cs" t="Include" />
+            </e>
           </e>
           <e p="UtilityScripte" t="Include">
             <e p="AnimationTester.cs" t="Include" />

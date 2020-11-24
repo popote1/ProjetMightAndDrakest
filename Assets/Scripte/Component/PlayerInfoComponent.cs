@@ -11,6 +11,23 @@ public class PlayerInfoComponent : MonoBehaviour
     public int CurrentHP;
     public List<SOObject> SOInventory;
     public List<ItemData> Inventory=new List<ItemData>();
+    public List<SOStanceGeneral> SOStance;
+    private int tempsSpecialEffect;
+
+    public int TempsSpecialEffect
+    {
+        get => tempsSpecialEffect;
+        set
+        {
+            tempsSpecialEffect = value;
+            if (tempsSpecialEffect <= 0)
+            {
+                tempsSpecialEffect = 0;
+                SpecialStat = null;
+            }
+        }
+    }
+    public SOSpecialStatGeneral SpecialStat;
     
     void Awake()
     {
@@ -26,4 +43,6 @@ public class PlayerInfoComponent : MonoBehaviour
     {
         
     }
+
+  
 }

@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 584ceaaea3754db4187e304adf36b393, type: 3}
-  m_Name: CoupDEpee
+  m_Script: {fileID: 11500000, guid: 42419b83b4c9ab34e842da689850eeb3, type: 3}
+  m_Name: SOStanceReverDuGauche
   m_EditorClassIdentifier: 
-  name: Coup
-  Damage: 3
-  ChanceToHit: 50
+  Name: Rever du Gauche
+  CoolDown: 2
+  CoolDescription: 
+  PracticalDescription: "Plus 50% de d\xE9gas avec l'arme de Gauche"
+  CoolImage: {fileID: 0}

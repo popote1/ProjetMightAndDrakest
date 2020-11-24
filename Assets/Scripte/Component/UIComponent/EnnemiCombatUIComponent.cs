@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using Slider = UnityEngine.UIElements.Slider;
+using Random = UnityEngine.Random;
 
 public class EnnemiCombatUIComponent : MonoBehaviour
 {
@@ -13,13 +14,43 @@ public class EnnemiCombatUIComponent : MonoBehaviour
     public Slider SilderHP;
     public Image ImgSpecialStat;
     public EnnemiInfo EnnemiInfo;
+    public ShakeComponent shakeComponent;
     [HideInInspector]public bool IsAlive;
+    private int tempsSpecialEffet;
+
+    public int TempsSpecialEffet
+    {
+        get => tempsSpecialEffet;
+        set
+        {
+            if (value <= 0)
+            {
+                value = 0;
+                HideSpecialStat();
+            }
+
+            if (value > 0)
+            {
+                ShowSpecialStat();
+            }
+            tempsSpecialEffet = value;
+            
+        }
+    }
+
+    public SOSpecialStatGeneral SpecialStat;
 
     public void Awake()
     {
         PanelEnnemi.SetActive(false);
+        HideSpecialStat();
     }
-    
+
+    public void Update()
+    {
+        SilderHP.value = Mathf.Lerp(SilderHP.value, (float) EnnemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP, 0.5f);
+    }
+
 
     public void SetPanel(EnnemiInfo ennemiInfo)
     {
@@ -29,5 +60,83 @@ public class EnnemiCombatUIComponent : MonoBehaviour
         EnnemiHP.text = ennemiInfo.CurrentHP + "/" + EnnemiInfo.SoEnnemi.MaxHP;
         SilderHP.value = (float)ennemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP;
         IsAlive = true;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        EnnemiInfo.CurrentHP -= damage;
+        if (EnnemiInfo.CurrentHP <= 0)
+        {
+            EnnemiInfo.CurrentHP = 0;
+            
+            IsAlive = false;
+            Invoke("ClosePanel", 1.5f);
+        }
+        EnnemiHP.text = EnnemiInfo.CurrentHP + "/" + EnnemiInfo.SoEnnemi.MaxHP;
+        shakeComponent.StartShake();
+    }
+    private void ClosePanel()
+    {
+     PanelEnnemi.SetActive(false);   
+    }
+
+    public int MakeAttack()
+    {
+        return MakeAttack(ChoseAttack());
+    }
+
+    private EnnemiAttack ChoseAttack()
+    {
+        float attackIndex = Random.Range(0, 100);
+        float inerAttackIndex = 0;
+        foreach (EnnemiAttack choseAttack in EnnemiInfo.SoEnnemi.Attacks)
+        {
+            inerAttackIndex += choseAttack.Probability;
+            if ( attackIndex<=inerAttackIndex )
+            {
+                return choseAttack;
+                
+            }
+        }
+        Debug.Log("indexd'attaque est de " + attackIndex + " et le inerAttack est de " + inerAttackIndex);
+        return null;
+    }
+
+    private int MakeAttack(EnnemiAttack attack)
+    {
+        float generalChanceToHit = attack.SoAttack.ChanceToHit + EnnemiInfo.SoEnnemi.Dexterity;
+        float hitRollDice = Random.Range(0, 100);
+        if (generalChanceToHit >= hitRollDice)
+        {
+            if (hitRollDice <= 10)
+            {
+                Debug.Log(attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit+" en critique");
+                return MakeDamage(true, attack);
+            }
+            Debug.Log(attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit);
+            return MakeDamage(false, attack);
+        }
+        Debug.Log(attack.SoAttack.Name+" rate avec un "+hitRollDice+" sur "+generalChanceToHit);
+        return 0;
+    }
+
+    private int MakeDamage(bool isCritique, EnnemiAttack attack)
+    {
+        int damage = attack.SoAttack.Damage + EnnemiInfo.SoEnnemi.Strenght;
+        if (isCritique) return damage * 2;
+        return damage;
+    }
+
+    private void ShowSpecialStat()
+    {
+        ImgSpecialStat.enabled = true;
+        ImgSpecialStat.sprite = SpecialStat.Sprite;
+        Debug.Log("Affiche les statut");
+    }
+
+    private void HideSpecialStat()
+    {
+        ImgSpecialStat.enabled = false;
+        SpecialStat = null;
     }
 }

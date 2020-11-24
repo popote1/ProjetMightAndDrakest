@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Blocking3DTest.unity
+    guid: 50bbbf7d2dee8e54698ec2b91bfa6f74
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 64298842c7043c4458eb10da53ceefe7,
       type: 2}

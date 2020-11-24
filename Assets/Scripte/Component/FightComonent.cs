@@ -4,6 +4,7 @@ using System.Diagnostics;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
@@ -11,23 +12,13 @@ using Debug = UnityEngine.Debug;
 
 public class FightComonent : MonoBehaviour
 {
-    [Header("Custom Parameters")] 
-    public float PanelScrollSpeed;
-    public float SelectorMoveSpeed = 0.5f;
-    [SerializeField]public EnnemiGroupComponent ennemiGroupComponent;
-    [Header("Prefabs")]
-    public GameObject NewPrefabPanel;
-    [Header("UI Selection")] 
-    public GameObject Selector;
-    public GameObject PanelObject;
-    public GameObject PanelSlideObject;
-    public GameObject PanelStance;
-    public GameObject PanelSliderStance;
-    public GameObject PanelSelectedObject1;
-    public GameObject PanelSelectedObject2;
-    public GameObject PanelSelectedStance;
-    [Header(("UI Perso Info"))]
-    public Slider SliderHP;
+    [Header("Custom Parameters")] [SerializeField]
+    public EnnemiGroupComponent ennemiGroupComponent;
+
+    public FightSelectorComponent FightSelectorComponent;
+
+
+    [Header(("UI Perso Info"))] public Slider SliderHP;
     public TMP_Text TxtHP;
     public Image ImgSpecialStat;
     public GameObject PanelInfoSpecialStat;
@@ -35,207 +26,149 @@ public class FightComonent : MonoBehaviour
     public TMP_Text TxtSpecialStatCharge;
     public TMP_Text TxtSpecialStatDescription;
     public Image ImgSelector;
-    [Header("UI Ennemi1")]
-    public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
-    [Header("UI Ennemi2")]
+    [Header("UI Ennemi")] public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi2CombatUIComponent;
-    [Header("UI Ennemi3")] public EnnemiCombatUIComponent Ennemi3CombatUIComponent;
+    public EnnemiCombatUIComponent Ennemi3CombatUIComponent;
+    [Header("Temporal Elements")] public GameObject VictoryPanel;
+    public GameObject DefeatPanel;
 
-    public enum AttackTarget { Front,Invest,Back,Splash }
+    public enum AttackTarget
+    {
+        Front,
+        Invest,
+        Back,
+        Splash
+    }
 
-    private ScrollRect _iteamScrollReck;
-    private PlayerInfoComponent _playerInfoComponent;
-    private int _selectorStat = 1;
-    private GameObject _preSelectedPanel;
-    private GameObject _temporalHolder;
-    private int _combatStat = 1;
-    
+    [HideInInspector] public PlayerInfoComponent PlayerInfoComponent;
+    [HideInInspector] public int CombatStat = 1;
+
     //object séléctioner
-    private GameObject _object1;
-    private GameObject _object2;
     private GameObject _Stance;
-    private ItemData _itemData1;
-    private ItemData _itemData2;
-    
+    [HideInInspector] public ItemData ItemData1;
+    [HideInInspector] public ItemData ItemData2;
+    [HideInInspector] public List<StanceInfo> Stances = new List<StanceInfo>();
+    [HideInInspector] public StanceInfo SelectedStance;
+    [HideInInspector] public bool IsStaneOnObject1;
+    [HideInInspector] public bool IsStaneOnObject2;
+
     void Start()
     {
-        _iteamScrollReck = PanelObject.GetComponent<ScrollRect>();
-        _playerInfoComponent = GetComponent<PlayerInfoComponent>();
+        PlayerInfoComponent = GetComponent<PlayerInfoComponent>();
         Cursor.lockState = CursorLockMode.Locked;
-        LoadIteamBar();
         LoadPlayerStats();
         SetEnnemis();
+        FightSelectorComponent.LoadIteamBar();
+        FightSelectorComponent.LoadStancePanel();
+        CheckSpecialStat();
     }
 
     // Update is called once per frame
     void Update()
     {
+        CheckSpecialStat();
 
-        UpDateSelectorPos();
-        PreSelectPanel();
-
-        if (_object1 != null)
+        SliderHP.value = Mathf.Lerp(SliderHP.value, PlayerInfoComponent.CurrentHP / (float) PlayerInfoComponent.MaxHP,
+            0.5f);
+        // effectue les effets Speciaux
+        if (CombatStat == 1)
         {
-            Debug.Log(" SaBoge le pannel");
-            PanelToposition(_object1, PanelSelectedObject1.transform);
-        }
-        if (_object2 != null)
-        {
-            PanelToposition(_object2, PanelSelectedObject2.transform);
-        }
-    }
-    
-    
-    
-    
-    
-    //Methode qui permet de faire bouge le panel object
-    public void ScrollPanel(InputAction.CallbackContext callbackContext)
-    {
-        Vector2 RawValue = new Vector2(callbackContext.ReadValue<float>(),0);
-        _iteamScrollReck.velocity = RawValue * PanelScrollSpeed;
-    }
-
-    //click pour séléctionner les object et stance
-    public void OnClick(InputAction.CallbackContext callbackContext)
-    {
-        if (callbackContext.started)
-        {
-            switch (_selectorStat)
+            if (PlayerInfoComponent.SpecialStat != null)
             {
-                case 1:
-                    _preSelectedPanel.transform.SetParent( PanelSelectedObject1.transform);
-                    _preSelectedPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
-                    if (_object1 != null)
-                    {
-                        _object1.transform.SetParent(PanelSlideObject.transform);
-                    }
-                    
-
-                    _object1 = _preSelectedPanel;
-                    _preSelectedPanel = null;
-                    PassToNextSelectorStat();
-                    PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
-                    _itemData1 = _preSelectedPanel.GetComponent<ItemData>();
-                    break;
-                case 2:
-                    _preSelectedPanel.transform.SetParent( PanelSelectedObject2.transform);
-                    _preSelectedPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
-                    if (_object2 != null)
-                    {
-                        _object2.transform.SetParent(PanelSlideObject.transform);
-                    }
-
-                    _object2 = _preSelectedPanel;
-                    _preSelectedPanel = null;
-                    PassToNextSelectorStat();
-                    PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
-                    _itemData2 = _preSelectedPanel.GetComponent<ItemData>();
-                    break;
+                PlayerInfoComponent.SpecialStat.MakeEffect(PlayerInfoComponent);
             }
+            CheckSpecialStat();
+            CombatStat = 2;
+        }
+
+        //Choix des armes
+        if (CombatStat == 2)
+        {
+            FightSelectorComponent.SelectTime = true;
+        }
+
+        //Analise de la stance
+        if (CombatStat == 3)
+        {
+            CheckOfUse();
+        }
+
+        //Execution de l'object1
+        if (CombatStat == 5)
+        {
+            PlayerAttack1();
+        }
+
+        //Execution de l'object2
+        if (CombatStat == 7)
+        {
+            PlayerAttack2();
+        }
+
+        //Résolution des effets sur Ennemi1
+        if (CombatStat == 10)
+        {
+            EnnemiSpecialStat(1);
+        }
+
+        //Attaque de l'ennemi 1
+        if (CombatStat == 12)
+        {
+            EnnemiAttaque(1);
+        }
+
+        //Résolution des effets sur Ennemi2
+        if (CombatStat == 20)
+        {
+            EnnemiSpecialStat(2);
+        }
+
+        //Attaque de l'ennemi 2
+        if (CombatStat == 22)
+        {
+            EnnemiAttaque(2);
+        }
+
+        //Résolution des effets sur Ennemi3
+        if (CombatStat == 30)
+        {
+            EnnemiSpecialStat(3);
+        }
+
+        //Attaque de l'ennemi 3
+        if (CombatStat == 32)
+        {
+            EnnemiAttaque(3);
+        }
+
+        //reset des panels
+        if (CombatStat == 50)
+        {
+            FightSelectorComponent.ResetPannels();
+            CombatStat = 1;
+        }
+
+        if (CombatStat == 100)
+        {
+            SetPanelVictory();
+        }
+
+        if (CombatStat == 101)
+        {
+            SetPanelDefat();
         }
     }
 
-    //Methode qui instancie chaque object et entre les stats dans le slider Object
-    private void LoadIteamBar()
+    public void StartCombat()
     {
-        foreach (ItemData item in _playerInfoComponent.Inventory)
-        {
-            GameObject newObjectPanel = Instantiate(NewPrefabPanel, PanelSlideObject.transform);
-            EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
-            editPanelComponent.TxtName.text = item.SoObject.Name;
-            if (item.SoObject is SOWeapon)
-            {
-                SOWeapon soWeapon = (SOWeapon) item.SoObject;
-                editPanelComponent.TxtDamage.text = ""+soWeapon.Damage;
-                editPanelComponent.TxtCHT.text = "" + soWeapon.ChanceToHit;
-                editPanelComponent.TxtDurability.text = item.CurrantDurability + "/" + soWeapon.Durability;
-                switch (soWeapon.Target)
-                {
-                    case AttackTarget.Front :
-                        editPanelComponent.TxtTarget.text = "Front";
-                        break;
-                    case AttackTarget.Invest:
-                        editPanelComponent.TxtTarget.text = "Invert";
-                        break;
-                    case AttackTarget.Back:
-                        editPanelComponent.TxtTarget.text = "Back";
-                        break;
-                    case AttackTarget.Splash:
-                        editPanelComponent.TxtTarget.text = "Splash";
-                        break;
-                }
-                editPanelComponent.TxtSpecialEffect.enabled = false;
-                editPanelComponent.TxtTitleSpecialEffect.enabled = false;
-                
-               Vector2 size =PanelSlideObject.GetComponent<RectTransform>().sizeDelta;
-               PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
-            }
-            
-        }
+        CombatStat = 3;
+        FightSelectorComponent.SelectTime = false;
     }
 
     private void LoadPlayerStats()
     {
-        TxtHP.text = _playerInfoComponent.CurrentHP + "/" + _playerInfoComponent.MaxHP;
-        SliderHP.value = _playerInfoComponent.CurrentHP/(float)_playerInfoComponent.MaxHP;
-    }
-    //Methode du move de curseur
-    private void UpDateSelectorPos()
-    {
-        switch (_selectorStat)
-        {
-            case 1:
-                Selector.transform.position = Vector3.Lerp(Selector.transform.position,
-                    PanelSelectedObject1.transform.position, SelectorMoveSpeed);
-                break;
-            case 2:
-                Selector.transform.position = Vector3.Lerp(Selector.transform.position,
-                    PanelSelectedObject2.transform.position, SelectorMoveSpeed);
-                break;
-            case 3:
-                Selector.transform.position = Vector3.Lerp(Selector.transform.position,
-                    PanelSelectedStance.transform.position, SelectorMoveSpeed);
-                break;
-        }
-    }
-
-    private void PreSelectPanel()
-    {
-        float distanceMin = 1000;
-        foreach (RectTransform item in PanelSlideObject.transform)
-        {
-            if (distanceMin > (item.position - Selector.transform.position).magnitude)
-            {
-                distanceMin=(item.position - Selector.transform.position).magnitude;
-                _temporalHolder = item.gameObject;
-            }
-        }
-
-        if (_preSelectedPanel != _temporalHolder)
-        {
-            _preSelectedPanel?.GetComponent<CombatPanelAnimationComponent>().Deselected();
-            _temporalHolder.GetComponent<CombatPanelAnimationComponent>().Selected();
-            _preSelectedPanel = _temporalHolder;
-        }
-    }
-
-    private void PanelToposition(GameObject objectMove , Transform destination)
-    {
-        objectMove.transform.position = Vector3.Lerp(objectMove.transform.position, destination.position, 0.5f);
-    }
-
-    private void PassToNextSelectorStat()
-    {
-        switch (_selectorStat)
-        {
-            case 1:
-                _selectorStat = 2;
-            break;
-            case 2:
-                _selectorStat = 3; 
-                break;
-        }
+        TxtHP.text = PlayerInfoComponent.CurrentHP + "/" + PlayerInfoComponent.MaxHP;
+        //SliderHP.value = _playerInfoComponent.CurrentHP/(float)_playerInfoComponent.MaxHP;
     }
 
     private void SetEnnemis()
@@ -251,62 +184,274 @@ public class FightComonent : MonoBehaviour
                 break;
             case 3:
                 Ennemi1CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
-                Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
-                Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[2]);
+                Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[2]);
+                Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
                 break;
         }
     }
 
-   /* private void PlayerActionManager()
+    private void EnnemiSpecialStat(int ennemiIndex)
     {
-        if (_itemData1 is SOWeapon)
+        EnnemiCombatUIComponent ennemi = Ennemi1CombatUIComponent;
+        switch (ennemiIndex)
         {
-            SOWeapon weapon = (SOWeapon) _itemData1.SoObject;
-            if (weapon.Target == AttackTarget.Front)
+            case 1:
+                ennemi = Ennemi1CombatUIComponent;
+                CombatStat = 11;
+                break;
+            case 2:
+                ennemi = Ennemi2CombatUIComponent;
+                CombatStat = 21;
+                break;
+            case 3:
+                ennemi = Ennemi3CombatUIComponent;
+                CombatStat = 31;
+                break;
+        }
+
+        if (ennemi.SpecialStat != null)
+        {
+            ennemi.SpecialStat.MakeEffect(this, ennemi);
+            if (ennemi.SpecialStat is SOSpecialStatStun) return;
+            Invoke("DelayChangeCombatStat", 0.5f);
+            return;
+        }
+
+        DelayChangeCombatStat();
+    }
+
+    private void EnnemiAttaque(int ennemiIndex)
+    {
+        EnnemiCombatUIComponent ennemi = Ennemi1CombatUIComponent;
+        switch (ennemiIndex)
+        {
+            case 1:
+                ennemi = Ennemi1CombatUIComponent;
+                CombatStat = 19;
+                break;
+            case 2:
+                ennemi = Ennemi2CombatUIComponent;
+                CombatStat = 29;
+                break;
+            case 3:
+                ennemi = Ennemi3CombatUIComponent;
+                CombatStat = 49;
+                break;
+        }
+
+        if (ennemi.IsAlive)
+        {
+            PlayerInfoComponent.CurrentHP -= ennemi.MakeAttack();
+            if (IsDefeat())
             {
-                if (PannelEnnemi1.activeSelf)
-                {
-
-                }
-                else if (PannelEnnemi2.activeSelf)
-                {
-
-                }
-                else
-                {
-
-                }
+                CombatStat = 101;
+                return;
             }
 
-            PlayerStandardAttack((SOWeapon) _itemData1.SoObject);
+            Invoke("DelayChangeCombatStat", 1f);
+            return;
         }
-        
-    }*/
-    
 
-    private int PlayerStandardAttack(SOWeapon weapon)
+        CombatStat++;
+    }
+
+    private void CheckOfUse()
     {
-        int chanceToHit = -weapon.ChanceToHit + _playerInfoComponent.Dexerity;
+        SelectedStance.SoStance.CheckForUse(this, out IsStaneOnObject1, out IsStaneOnObject2);
+        Debug.Log(" stance pour arme 1 =" + IsStaneOnObject1 + "       Stance pour arme 2=" + IsStaneOnObject2);
+        CombatStat = 4;
+        DelayChangeCombatStat();
+    }
+
+    private void PlayerAttack1()
+    {
+        if (IsStaneOnObject1)
+        {
+            SelectedStance.SoStance.ExecutStance(this, 1);
+        }
+        else
+        {
+            Debug.Log(SelectedStance.SoStance.Name);
+            EnnemiCombatUIComponent target;
+            SOWeapon weapon = (SOWeapon) ItemData1.SoObject;
+            int damage = PlayerStandardAttack(weapon);
+            target = ChoseTarget(1, weapon.Target);
+            target.TakeDamage(damage);
+            if (weapon.SpecialEffect != null)
+            {
+                if (weapon.SpecialEffect.CheckForUse(this, target, 1))
+                {
+                    weapon.SpecialEffect.MakeSpecialEffect(this, target , 1);
+                }
+            }
+            ItemData1.CurrantDurability--;
+        }
+
+        if (IsVictory())
+        {
+            CombatStat = 100;
+            return;
+        }
+
+        CombatStat = 6;
+        Invoke("DelayChangeCombatStat", 2f);
+    }
+
+    private void PlayerAttack2()
+    {
+        if (IsStaneOnObject2)
+        {
+            SelectedStance.SoStance.ExecutStance(this, 2);
+        }
+        else
+        {
+            EnnemiCombatUIComponent target;
+            SOWeapon weapon = (SOWeapon) ItemData2.SoObject;
+            int damage = PlayerStandardAttack(weapon);
+            target = ChoseTarget(2, weapon.Target);
+            target.TakeDamage(damage);
+            if (weapon.SpecialEffect != null)
+            {
+                if (weapon.SpecialEffect.CheckForUse(this, target, 2))
+                {
+                    weapon.SpecialEffect.MakeSpecialEffect(this, target , 2);
+                }
+            }
+            ItemData2.CurrantDurability--;
+        }
+
+        if (IsVictory())
+        {
+            CombatStat = 100;
+            return;
+        }
+
+        CombatStat = 9;
+        Invoke("DelayChangeCombatStat", 2);
+    }
+
+    public int PlayerStandardAttack(SOWeapon weapon)
+    {
+        int chanceToHit = weapon.ChanceToHit + PlayerInfoComponent.Dexerity;
         float hitDice = Random.Range(0, 100);
+        //Debug.Log (" la dex du player est de ")
         int damage = 0;
         if (chanceToHit > hitDice)
         {
             if (hitDice < 10)
             {
                 Debug.Log("L'attaque touche en critique avec un jet de " + hitDice + "sur " + chanceToHit);
-                 damage= (weapon.Damage + _playerInfoComponent.Strengths)*2;
+                damage = (weapon.Damage + PlayerInfoComponent.Strengths) * 2;
             }
             else
             {
-                Debug.Log("L'attaque touche  avec un jet de " + hitDice + "sur " + chanceToHit); 
-                damage = weapon.Damage + _playerInfoComponent.Strengths;
+                Debug.Log("L'attaque touche  avec un jet de " + hitDice + "sur " + chanceToHit);
+                damage = weapon.Damage + PlayerInfoComponent.Strengths;
             }
         }
 
+        Debug.Log(weapon.Name + " inflige " + damage + " domage");
+
         return damage;
     }
-    
-    
-    
+
+    //Choisie la cible dattaquer
+    public EnnemiCombatUIComponent ChoseTarget(int itemNumb, AttackTarget targetOrder)
+    {
+        if (targetOrder == AttackTarget.Invest && itemNumb == 1)
+        {
+            itemNumb = 2;
+            targetOrder = AttackTarget.Front;
+        }
+
+        if (targetOrder == AttackTarget.Invest && itemNumb == 2)
+        {
+            itemNumb = 1;
+            targetOrder = AttackTarget.Front;
+        }
+
+        if (itemNumb == 1)
+        {
+            if (targetOrder == AttackTarget.Front)
+            {
+                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
+                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
+                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
+            }
+
+            if (targetOrder == AttackTarget.Back)
+            {
+                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
+                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
+                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
+            }
+        }
+
+        if (itemNumb == 2)
+        {
+            if (targetOrder == AttackTarget.Front)
+            {
+                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
+                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
+                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
+            }
+
+            if (targetOrder == AttackTarget.Back)
+            {
+                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
+                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
+                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
+            }
+        }
+
+        return null;
+    }
+
+    private void DelayChangeCombatStat()
+    {
+        CombatStat++;
+    }
+
+    private bool IsVictory()
+    {
+        if (Ennemi1CombatUIComponent.IsAlive) return false;
+        if (Ennemi2CombatUIComponent.IsAlive) return false;
+        if (Ennemi3CombatUIComponent.IsAlive) return false;
+        return true;
+    }
+
+    private bool IsDefeat()
+    {
+        if (PlayerInfoComponent.CurrentHP <= 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private void SetPanelVictory()
+    {
+        VictoryPanel.SetActive(true);
+    }
+
+    private void SetPanelDefat()
+    {
+        DefeatPanel.SetActive(true);
+    }
+
+    private void CheckSpecialStat()
+    {
+
+        if (PlayerInfoComponent.SpecialStat != null)
+        {
+            ImgSpecialStat.enabled = true;
+            ImgSpecialStat.sprite = PlayerInfoComponent.SpecialStat.Sprite;
+        }
+        else
+        {
+            ImgSpecialStat.enabled = false;
+        }
+    }
 
 }

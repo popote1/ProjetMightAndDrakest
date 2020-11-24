@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class EnnemiGroupComponent : MonoBehaviour
 {
-    public List<EnnemiInfo> Ennemis;
+    public List<EnnemiInfo> Ennemis = new List<EnnemiInfo>();
     public float DetectionDistance;
     public GameObject Ennemi1;
     public GameObject Ennemi2;
@@ -20,6 +20,7 @@ public class EnnemiGroupComponent : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log(SoEnnemis.Count);
         foreach (SOEnnemi so in SoEnnemis) {
           
             Ennemis.Add(new EnnemiInfo(so));

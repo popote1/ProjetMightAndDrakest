@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbcffe667fcb44499c8f47005858bd9, type: 3}
   m_Name: Goblin2
   m_EditorClassIdentifier: 
-  FrontIdelAnimations: []
+  FrontIdelAnimations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   FrontIdelFrameRate: 0
   LeftIdelAnimations: []
   LeftIdelFrameRate: 0

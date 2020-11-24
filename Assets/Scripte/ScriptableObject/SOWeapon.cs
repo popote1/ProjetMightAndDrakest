@@ -11,6 +11,7 @@ public class SOWeapon : SOObject
     public FightComonent.AttackTarget Target;
     public int Durability;
     public bool isTwoHand;
-    
+    public SOSpecialEffectGeneral SpecialEffect;
+
 
 }

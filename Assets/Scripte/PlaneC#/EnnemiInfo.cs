@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemiInfo : MonoBehaviour
+public class EnnemiInfo 
 {
    public string Name;
    public SOEnnemi SoEnnemi;
