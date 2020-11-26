@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584ceaaea3754db4187e304adf36b393, type: 3}
   m_Name: CoupDEpee
   m_EditorClassIdentifier: 
-  name: "Coup d'\xE9p\xE9e"
+  Name: "Coup d'\xE9p\xE9e"
   Damage: 3
   ChanceToHit: 50
+  SpecialEffect: {fileID: 0}

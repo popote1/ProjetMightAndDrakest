@@ -9,4 +9,5 @@ public class SOAttack : ScriptableObject
    public string Name;
    public int Damage;
    public int ChanceToHit;
+   public SOSpecialEffectGeneral SpecialEffect;
 }

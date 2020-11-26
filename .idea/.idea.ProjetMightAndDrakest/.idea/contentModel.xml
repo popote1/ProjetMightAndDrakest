@@ -85,13 +85,18 @@
             <e p="SOEnnemi.cs" t="Include" />
             <e p="SOEnnemiAnimation.cs" t="Include" />
             <e p="SOObject.cs" t="Include" />
+            <e p="SOShield.cs" t="Include" />
             <e p="SOSpecialEffectBurn.cs" t="Include" />
             <e p="SOSpecialEffectGeneral.cs" t="Include" />
+            <e p="SOSpecialEffectShilding.cs" t="Include" />
             <e p="SOSpecialEffetStun.cs" t="Include" />
             <e p="SOSpecialStatBurn.cs" t="Include" />
             <e p="SOSpecialStatGeneral.cs" t="Include" />
             <e p="SOSpecialStatStun.cs" t="Include" />
             <e p="SOStanceGeneral.cs" t="Include" />
+            <e p="SOUtilityEffectGeneral.cs" t="Include" />
+            <e p="SOUtilityEffectHealt.cs" t="Include" />
+            <e p="SOUtilityItem.cs" t="Include" />
             <e p="SOWeapon.cs" t="Include" />
             <e p="Stances" t="Include">
               <e p="SOStanceChaceDuDroite.cs" t="Include" />

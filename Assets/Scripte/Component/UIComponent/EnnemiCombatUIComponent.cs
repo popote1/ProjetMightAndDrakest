@@ -13,11 +13,12 @@ public class EnnemiCombatUIComponent : MonoBehaviour
     public TMP_Text EnnemiHP;
     public Slider SilderHP;
     public Image ImgSpecialStat;
+    public Image ImgShield;
+    public TMP_Text TxtShield;
     public EnnemiInfo EnnemiInfo;
     public ShakeComponent shakeComponent;
     [HideInInspector]public bool IsAlive;
     private int tempsSpecialEffet;
-
     public int TempsSpecialEffet
     {
         get => tempsSpecialEffet;
@@ -37,13 +38,14 @@ public class EnnemiCombatUIComponent : MonoBehaviour
             
         }
     }
-
     public SOSpecialStatGeneral SpecialStat;
+    public int ShieldValue;
 
     public void Awake()
     {
         PanelEnnemi.SetActive(false);
         HideSpecialStat();
+        ResetShild();
     }
 
     public void Update()
@@ -64,7 +66,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        EnnemiInfo.CurrentHP -= damage;
+        EnnemiInfo.CurrentHP -= Mathf.Clamp((damage-ShieldValue),0,damage);
         if (EnnemiInfo.CurrentHP <= 0)
         {
             EnnemiInfo.CurrentHP = 0;
@@ -80,9 +82,10 @@ public class EnnemiCombatUIComponent : MonoBehaviour
      PanelEnnemi.SetActive(false);   
     }
 
-    public int MakeAttack()
+    public int MakeAttack(FightComonent fightComonent)
     {
-        return MakeAttack(ChoseAttack());
+        
+        return MakeAttack(ChoseAttack(),fightComonent);
     }
 
     private EnnemiAttack ChoseAttack()
@@ -102,21 +105,28 @@ public class EnnemiCombatUIComponent : MonoBehaviour
         return null;
     }
 
-    private int MakeAttack(EnnemiAttack attack)
+    private int MakeAttack(EnnemiAttack attack,FightComonent fightComonent)
     {
         float generalChanceToHit = attack.SoAttack.ChanceToHit + EnnemiInfo.SoEnnemi.Dexterity;
         float hitRollDice = Random.Range(0, 100);
         if (generalChanceToHit >= hitRollDice)
         {
+            if (attack.SoAttack.SpecialEffect != null)
+            {
+                if (attack.SoAttack.SpecialEffect.CheckForUseOnPlayer(fightComonent))
+                {
+                    attack.SoAttack.SpecialEffect.MakeSpecialEffectOnPlayer(fightComonent);
+                }
+            }
             if (hitRollDice <= 10)
             {
-                Debug.Log(attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit+" en critique");
+                Debug.Log(transform.name+"  "+attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit+" en critique");
                 return MakeDamage(true, attack);
             }
-            Debug.Log(attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit);
+            Debug.Log(transform.name+"  "+attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit);
             return MakeDamage(false, attack);
         }
-        Debug.Log(attack.SoAttack.Name+" rate avec un "+hitRollDice+" sur "+generalChanceToHit);
+        Debug.Log(transform.name+"  "+attack.SoAttack.Name+" rate avec un "+hitRollDice+" sur "+generalChanceToHit);
         return 0;
     }
 
@@ -138,5 +148,20 @@ public class EnnemiCombatUIComponent : MonoBehaviour
     {
         ImgSpecialStat.enabled = false;
         SpecialStat = null;
+    }
+
+    public void AddShield(int value)
+    {
+        ShieldValue += value;
+        TxtShield.enabled = true;
+        ImgShield.enabled = true;
+        TxtShield.text = "" + ShieldValue;
+    }
+
+    public void ResetShild()
+    {
+        TxtShield.enabled = false;
+        ImgShield.enabled = false;
+        ShieldValue = 0;
     }
 }

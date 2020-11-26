@@ -5,7 +5,7 @@ using UnityEngine;
 public class SOSpecialEffectGeneral :ScriptableObject
 {
 
-    public virtual bool CheckForUse(FightComonent fightComonent,EnnemiCombatUIComponent ennemiCombatUIComponent, int weaponIndex)
+    public virtual bool CheckForUse(FightComonent fightComonent,List<EnnemiCombatUIComponent> ennemiCombatUIComponent, int weaponIndex)
     {
         return false;
     }
@@ -14,7 +14,7 @@ public class SOSpecialEffectGeneral :ScriptableObject
         return false;
     }
 
-    public virtual void MakeSpecialEffect(FightComonent fightComonent,EnnemiCombatUIComponent ennemiCombatUIComponent, int weaponIndex)
+    public virtual void MakeSpecialEffect(FightComonent fightComonent,List<EnnemiCombatUIComponent> ennemiCombatUIComponent, int weaponIndex)
     {
         
     }

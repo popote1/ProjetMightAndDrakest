@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using TMPro;
+using UnityEditor.Rendering.Universal.ShaderGUI;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -26,6 +27,8 @@ public class FightComonent : MonoBehaviour
     public TMP_Text TxtSpecialStatCharge;
     public TMP_Text TxtSpecialStatDescription;
     public Image ImgSelector;
+    public Image ImgShield;
+    public TMP_Text TxtShield;
     [Header("UI Ennemi")] public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi2CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi3CombatUIComponent;
@@ -51,12 +54,12 @@ public class FightComonent : MonoBehaviour
     [HideInInspector] public StanceInfo SelectedStance;
     [HideInInspector] public bool IsStaneOnObject1;
     [HideInInspector] public bool IsStaneOnObject2;
+    [HideInInspector] public int PlayerShieldValue;
 
     void Start()
     {
         PlayerInfoComponent = GetComponent<PlayerInfoComponent>();
         Cursor.lockState = CursorLockMode.Locked;
-        LoadPlayerStats();
         SetEnnemis();
         FightSelectorComponent.LoadIteamBar();
         FightSelectorComponent.LoadStancePanel();
@@ -66,10 +69,9 @@ public class FightComonent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         CheckSpecialStat();
-
-        SliderHP.value = Mathf.Lerp(SliderHP.value, PlayerInfoComponent.CurrentHP / (float) PlayerInfoComponent.MaxHP,
-            0.5f);
+        LoadPlayerStats();
         // effectue les effets Speciaux
         if (CombatStat == 1)
         {
@@ -145,6 +147,7 @@ public class FightComonent : MonoBehaviour
         if (CombatStat == 50)
         {
             FightSelectorComponent.ResetPannels();
+            ResetShield();
             CombatStat = 1;
         }
 
@@ -168,7 +171,8 @@ public class FightComonent : MonoBehaviour
     private void LoadPlayerStats()
     {
         TxtHP.text = PlayerInfoComponent.CurrentHP + "/" + PlayerInfoComponent.MaxHP;
-        //SliderHP.value = _playerInfoComponent.CurrentHP/(float)_playerInfoComponent.MaxHP;
+        SliderHP.value = Mathf.Lerp(SliderHP.value, PlayerInfoComponent.CurrentHP / (float) PlayerInfoComponent.MaxHP,
+            0.5f);
     }
 
     private void SetEnnemis()
@@ -209,12 +213,27 @@ public class FightComonent : MonoBehaviour
                 break;
         }
 
-        if (ennemi.SpecialStat != null)
+        if (ennemi.IsAlive)
         {
-            ennemi.SpecialStat.MakeEffect(this, ennemi);
-            if (ennemi.SpecialStat is SOSpecialStatStun) return;
-            Invoke("DelayChangeCombatStat", 0.5f);
-            return;
+            ennemi.ResetShild();
+            if (ennemi.SpecialStat != null)
+            {
+               
+                if (ennemi.SpecialStat is SOSpecialStatStun)
+                {
+                    switch (ennemiIndex)
+                    {
+                        case 1: CombatStat = 19; break;
+                        case 2: CombatStat = 29; break;
+                        case 3: CombatStat = 49; break;
+                    }
+                    Invoke("DelayChangeCombatStat", 0.5f);
+                    return;
+                }
+                ennemi.SpecialStat.MakeEffect(this, ennemi);
+                Invoke("DelayChangeCombatStat", 0.5f);
+                return;
+            }
         }
 
         DelayChangeCombatStat();
@@ -241,15 +260,16 @@ public class FightComonent : MonoBehaviour
 
         if (ennemi.IsAlive)
         {
-            PlayerInfoComponent.CurrentHP -= ennemi.MakeAttack();
-            if (IsDefeat())
-            {
-                CombatStat = 101;
-                return;
-            }
+            
+                PlayerTakeDamage( ennemi.MakeAttack(this));
+                if (IsDefeat())
+                {
+                    CombatStat = 101;
+                    return;
+                }
 
-            Invoke("DelayChangeCombatStat", 1f);
-            return;
+                Invoke("DelayChangeCombatStat", 1f); 
+                return;
         }
 
         CombatStat++;
@@ -265,34 +285,63 @@ public class FightComonent : MonoBehaviour
 
     private void PlayerAttack1()
     {
+        bool isTwoHanded  =false;
         if (IsStaneOnObject1)
         {
             SelectedStance.SoStance.ExecutStance(this, 1);
         }
-        else
+        else if (ItemData1.SoObject is SOWeapon)
         {
-            Debug.Log(SelectedStance.SoStance.Name);
-            EnnemiCombatUIComponent target;
+            List<EnnemiCombatUIComponent> targets;
             SOWeapon weapon = (SOWeapon) ItemData1.SoObject;
             int damage = PlayerStandardAttack(weapon);
-            target = ChoseTarget(1, weapon.Target);
-            target.TakeDamage(damage);
+            isTwoHanded = weapon.isTwoHand;
+            targets = ChoseTarget(1, weapon.Target);
+            foreach (var target in targets)
+            {
+                target.TakeDamage(damage);
+            }
             if (weapon.SpecialEffect != null)
             {
-                if (weapon.SpecialEffect.CheckForUse(this, target, 1))
+                if (weapon.SpecialEffect.CheckForUse(this, targets, 1))
                 {
-                    weapon.SpecialEffect.MakeSpecialEffect(this, target , 1);
+                    weapon.SpecialEffect.MakeSpecialEffect(this, targets, 1);
                 }
             }
-            ItemData1.CurrantDurability--;
+
+        }
+        else if (ItemData1.SoObject is SOShield)
+        {
+            SOShield shield = (SOShield) ItemData1.SoObject;
+            AddShield(shield.ShieldValue);
+        }
+        else if (ItemData1.SoObject is SOUtilityItem)
+        {
+            SOUtilityItem soUtilityItem = (SOUtilityItem) ItemData1.SoObject;
+            soUtilityItem.SoUtilityEffectGeneral.CombatUse(PlayerInfoComponent, this, 1);
         }
 
-        if (IsVictory())
+        if (!(ItemData1.SoObject is SOUtilityItem))
+        {
+            ItemData1.CurrantDurability--;
+            if (ItemData1.CurrantDurability == 0){
+                FightSelectorComponent.DestroyObject(ItemData1);
+            }
+        }
+    
+
+    if (IsVictory())
         {
             CombatStat = 100;
             return;
         }
 
+    if (isTwoHanded)
+    {
+        CombatStat = 9;
+        Invoke("DelayChangeCombatStat", 2f);
+        return;
+    }
         CombatStat = 6;
         Invoke("DelayChangeCombatStat", 2f);
     }
@@ -303,23 +352,42 @@ public class FightComonent : MonoBehaviour
         {
             SelectedStance.SoStance.ExecutStance(this, 2);
         }
-        else
+        else if (ItemData2. SoObject is SOWeapon)
         {
-            EnnemiCombatUIComponent target;
+            List<EnnemiCombatUIComponent> targets;
             SOWeapon weapon = (SOWeapon) ItemData2.SoObject;
             int damage = PlayerStandardAttack(weapon);
-            target = ChoseTarget(2, weapon.Target);
-            target.TakeDamage(damage);
+            targets = ChoseTarget(2, weapon.Target);
+            foreach (var target in targets)
+            {
+                target.TakeDamage(damage);
+            }
             if (weapon.SpecialEffect != null)
             {
-                if (weapon.SpecialEffect.CheckForUse(this, target, 2))
+                if (weapon.SpecialEffect.CheckForUse(this, targets, 2))
                 {
-                    weapon.SpecialEffect.MakeSpecialEffect(this, target , 2);
+                    weapon.SpecialEffect.MakeSpecialEffect(this, targets , 2);
                 }
             }
-            ItemData2.CurrantDurability--;
         }
-
+        else if (ItemData2.SoObject is SOShield)
+        {
+            SOShield shield = (SOShield) ItemData2.SoObject;
+            AddShield(shield.ShieldValue);
+        }
+        else if (ItemData2.SoObject is SOUtilityItem)
+        {
+            SOUtilityItem soUtilityItem = (SOUtilityItem)ItemData2.SoObject;
+            soUtilityItem.SoUtilityEffectGeneral.CombatUse(PlayerInfoComponent,this,2);
+        }
+        if (!(ItemData2.SoObject is SOUtilityItem))
+        {
+            ItemData2.CurrantDurability--;
+            if (ItemData2.CurrantDurability == 0){
+                FightSelectorComponent.DestroyObject(ItemData2);
+            }
+        }
+        
         if (IsVictory())
         {
             CombatStat = 100;
@@ -356,8 +424,9 @@ public class FightComonent : MonoBehaviour
     }
 
     //Choisie la cible dattaquer
-    public EnnemiCombatUIComponent ChoseTarget(int itemNumb, AttackTarget targetOrder)
+    public List<EnnemiCombatUIComponent> ChoseTarget(int itemNumb, AttackTarget targetOrder)
     {
+        List<EnnemiCombatUIComponent> ennemiCombatUIComponents=new List<EnnemiCombatUIComponent>();
         if (targetOrder == AttackTarget.Invest && itemNumb == 1)
         {
             itemNumb = 2;
@@ -374,16 +443,24 @@ public class FightComonent : MonoBehaviour
         {
             if (targetOrder == AttackTarget.Front)
             {
-                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
-                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
-                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
+                if (Ennemi1CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi1CombatUIComponent); return ennemiCombatUIComponents;} 
+                if (Ennemi2CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi2CombatUIComponent); return ennemiCombatUIComponents;} 
+                if (Ennemi3CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi3CombatUIComponent); return ennemiCombatUIComponents;} 
             }
 
             if (targetOrder == AttackTarget.Back)
             {
-                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
-                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
-                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
+                if (Ennemi2CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi2CombatUIComponent); return ennemiCombatUIComponents;}
+                if (Ennemi3CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi3CombatUIComponent); return ennemiCombatUIComponents;} 
+                if (Ennemi1CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi1CombatUIComponent); return ennemiCombatUIComponents;} 
+            }
+
+            if (targetOrder == AttackTarget.Splash)
+            {
+                if (Ennemi1CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi1CombatUIComponent); } 
+                if (Ennemi2CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi2CombatUIComponent); } 
+                if (Ennemi3CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi3CombatUIComponent); }
+                return ennemiCombatUIComponents;
             }
         }
 
@@ -391,16 +468,23 @@ public class FightComonent : MonoBehaviour
         {
             if (targetOrder == AttackTarget.Front)
             {
-                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
-                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
-                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
+                if (Ennemi3CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi3CombatUIComponent); return ennemiCombatUIComponents;} 
+                if (Ennemi2CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi2CombatUIComponent); return ennemiCombatUIComponents;} 
+                if (Ennemi1CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi1CombatUIComponent); return ennemiCombatUIComponents;} 
             }
 
             if (targetOrder == AttackTarget.Back)
             {
-                if (Ennemi2CombatUIComponent.IsAlive) return Ennemi2CombatUIComponent;
-                if (Ennemi1CombatUIComponent.IsAlive) return Ennemi1CombatUIComponent;
-                if (Ennemi3CombatUIComponent.IsAlive) return Ennemi3CombatUIComponent;
+                if (Ennemi2CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi2CombatUIComponent); return ennemiCombatUIComponents;} 
+                if (Ennemi1CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi1CombatUIComponent); return ennemiCombatUIComponents;} 
+                if (Ennemi3CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi3CombatUIComponent); return ennemiCombatUIComponents;} 
+            }
+            if (targetOrder == AttackTarget.Splash)
+            {
+                if (Ennemi1CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi1CombatUIComponent); } 
+                if (Ennemi2CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi2CombatUIComponent); } 
+                if (Ennemi3CombatUIComponent.IsAlive) {ennemiCombatUIComponents.Add(Ennemi3CombatUIComponent); }
+                return ennemiCombatUIComponents;
             }
         }
 
@@ -452,6 +536,26 @@ public class FightComonent : MonoBehaviour
         {
             ImgSpecialStat.enabled = false;
         }
+    }
+
+    public void AddShield(int add)
+    {
+        PlayerShieldValue += add;
+        ImgShield.enabled = true;
+        TxtShield.enabled = true;
+        TxtShield.text = "" + PlayerShieldValue;
+    }
+
+    public void ResetShield()
+    {
+        ImgShield.enabled = false;
+        TxtShield.enabled = false;
+        PlayerShieldValue = 0;
+    }
+
+    public void PlayerTakeDamage(int damage)
+    {
+        PlayerInfoComponent.CurrentHP -= Mathf.Clamp((damage - PlayerShieldValue), 0, damage);
     }
 
 }

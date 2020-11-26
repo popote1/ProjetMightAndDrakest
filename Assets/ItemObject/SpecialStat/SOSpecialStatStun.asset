@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Stun
   Sprite: {fileID: 21300000, guid: f0977a01787ae944aa7ad22bbea59a26, type: 3}
   Description: 
-  Durer: 1
+  Durer: 3
   DamagePerTurn: 0

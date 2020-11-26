@@ -14,6 +14,8 @@ public class FightSelectorComponent : MonoBehaviour
     public FightComonent FightComonent;
     [Header("Prefabs")]
     public GameObject NewPrefabPanel;
+    public GameObject NewShieldPrefabPanel;
+    public GameObject NewUtilityPanel;
     public GameObject NewStancePrefabsPanel;
     
     [Header("UI Selection")] 
@@ -85,23 +87,170 @@ public class FightSelectorComponent : MonoBehaviour
                         _preSelectedPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
                         if (_object1 != null)
                         {
-                            _object1.transform.SetParent(PanelSlideObject.transform);
+                            
+                            if (FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOWeapon)
+                            {
+                                SOWeapon weapon = (SOWeapon)FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                                if (weapon.isTwoHand)
+                                {
+                                    _object1.transform.SetParent(PanelSlideObject.transform);
+                                    
+                                    Destroy(_object2);
+                                }
+                                else
+                                {
+                                    _object1.transform.SetParent(PanelSlideObject.transform);
+                                }
+                            } else if (FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOShield)
+                            {
+                                SOShield weapon = (SOShield)FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                                if (weapon.IsTwoHanded)
+                                {
+                                    _object1.transform.SetParent(PanelSlideObject.transform);
+                                    Destroy(_object2);
+                                }
+                                else
+                                {
+                                    _object1.transform.SetParent(PanelSlideObject.transform);
+                                }
+                            }
+                            else
+                            {
+                                _object1.transform.SetParent(PanelSlideObject.transform);
+                            }
+                            
                         }
+                        
+                        if (FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOWeapon)
+                        {
+                            Debug.Log(" élément 1 avec l'index "+_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex +" et son nom est :"+FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject.Name);
+                            SOWeapon weapon = (SOWeapon)FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                            if (weapon.isTwoHand)
+                            {
+                                _object1 = _preSelectedPanel;
+                                _preSelectedPanel = null;
+                                PassToNextSelectorStat(2);
+                                PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
+                                FightComonent.ItemData1 = FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
+                                if (_object2!= null)
+                                {
+                                    _object2.transform.SetParent(PanelSlideObject.transform);
+                                    FightComonent.ItemData2 = null;
+                                }
+                                _object2= Instantiate(_object1, PanelSelectedObject2.transform);
+                                return;
+                            }
+                        }
+                        if (FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOShield)
+                        {
+                            SOShield shield = (SOShield)FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                            if (shield.IsTwoHanded)
+                            {
+                                _object1 = _preSelectedPanel;
+                                _preSelectedPanel = null;
+                                PassToNextSelectorStat(2);
+                                PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
+                                FightComonent.ItemData1 = FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
+                                if (_object2!= null)
+                                {
+                                    _object2.transform.SetParent(PanelObject.transform);
+                                    FightComonent.ItemData2 = null;
+                                    Instantiate(_object1, PanelSelectedObject2.transform);
+                                }
+                                return;
+                            }
+                        }
+                        
 
 
                         _object1 = _preSelectedPanel;
                         _preSelectedPanel = null;
                         PassToNextSelectorStat(2);
                         PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
-                            FightComonent.ItemData1 =
-                            FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
+                            FightComonent.ItemData1 = FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
                         break;
                     case 2:
                         _preSelectedPanel.transform.SetParent(PanelSelectedObject2.transform);
                         _preSelectedPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
-                        if (_object2 != null)
+                       if (_object2 != null)
                         {
-                            _object2.transform.SetParent(PanelSlideObject.transform);
+                            if (FightComonent.PlayerInfoComponent.Inventory[_object2.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOWeapon)
+                            {
+                                SOWeapon weapon = (SOWeapon)FightComonent.PlayerInfoComponent.Inventory[_object2.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                                if (weapon.isTwoHand)
+                                {
+                                    _object1.transform.SetParent(PanelSlideObject.transform);
+                                    _object1 = null;
+                                    Destroy(_object2);
+                                }
+                                else
+                                {
+                                    _object2.transform.SetParent(PanelSlideObject.transform);
+                                }
+                            } else if (FightComonent.PlayerInfoComponent.Inventory[_object2.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOShield)
+                            {
+                                SOShield weapon = (SOShield)FightComonent.PlayerInfoComponent.Inventory[_object2.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                                if (weapon.IsTwoHanded)
+                                {
+                                    _object1.transform.SetParent(PanelSlideObject.transform);
+                                    _object1 = null;
+                                    Destroy(_object2);
+                                }
+                                else
+                                {
+                                    _object2.transform.SetParent(PanelSlideObject.transform);
+                                }
+                            }
+                            else
+                            {
+                                _object2.transform.SetParent(PanelSlideObject.transform);
+                            }
+                        }
+                         if (FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOWeapon)
+                        {
+                            SOWeapon weapon = (SOWeapon)FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                            if (weapon.isTwoHand)
+                            {
+                                Debug.Log(" c'est a deux main");
+                                if (_object1 != null)
+                                {
+                                    _object1.transform.SetParent(PanelSlideObject.transform);
+                                }
+                                _object1 = _preSelectedPanel;
+                                _object1.transform.SetParent(PanelSelectedObject1.transform);
+                                _preSelectedPanel = null;
+                                PassToNextSelectorStat(3);
+                                PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
+                                FightComonent.ItemData1 = FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
+                                if (_object2!= null)
+                                {
+                                    _object2.transform.SetParent(PanelObject.transform);
+                                    FightComonent.ItemData2 = null;
+                                }
+
+                                
+                                _object2 = Instantiate(_object1, PanelSelectedObject2.transform);
+                                return;
+                            }
+                        }
+                        if (FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject is SOShield)
+                        {
+                            SOShield shield = (SOShield)FightComonent.PlayerInfoComponent.Inventory[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+                            if (shield.IsTwoHanded)
+                            {
+                                _object1 = _preSelectedPanel;
+                                _preSelectedPanel = null;
+                                PassToNextSelectorStat(2);
+                                PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
+                                FightComonent.ItemData1 = FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
+                                if (_object2!= null)
+                                {
+                                    _object2.transform.SetParent(PanelObject.transform);
+                                    FightComonent.ItemData2 = null;
+                                    Instantiate(_object1, PanelSelectedObject2.transform);
+                                }
+                                return;
+                            }
                         }
 
                         _object2 = _preSelectedPanel;
@@ -112,7 +261,6 @@ public class FightSelectorComponent : MonoBehaviour
                             FightComonent.PlayerInfoComponent.Inventory[_object2.GetComponent<EditPanelComponent>().InvetoryIndex];
                         break;
                     case 3 :
-                        Debug.Log(_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex);
                         if (FightComonent.Stances[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex]
                             .CoolDown == 0)
                         {
@@ -174,12 +322,13 @@ public class FightSelectorComponent : MonoBehaviour
     {
         foreach (ItemData item in FightComonent.PlayerInfoComponent.Inventory)
         {
-            GameObject newObjectPanel = Instantiate(NewPrefabPanel, PanelSlideObject.transform);
-            EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
-            editPanelComponent.TxtName.text = item.SoObject.Name;
-            editPanelComponent.InvetoryIndex = FightComonent.PlayerInfoComponent.Inventory.IndexOf(item);
+            
             if (item.SoObject is SOWeapon)
             {
+                GameObject newObjectPanel = Instantiate(NewPrefabPanel, PanelSlideObject.transform);
+                EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
+                editPanelComponent.TxtName.text = item.SoObject.Name;
+                editPanelComponent.InvetoryIndex = FightComonent.PlayerInfoComponent.Inventory.IndexOf(item);
                 SOWeapon soWeapon = (SOWeapon) item.SoObject;
                 editPanelComponent.TxtDamage.text = ""+soWeapon.Damage;
                 editPanelComponent.TxtCHT.text = "" + soWeapon.ChanceToHit;
@@ -199,13 +348,47 @@ public class FightSelectorComponent : MonoBehaviour
                         editPanelComponent.TxtTarget.text = "Splash";
                         break;
                 }
-                editPanelComponent.TxtSpecialEffect.enabled = false;
-                editPanelComponent.TxtTitleSpecialEffect.enabled = false;
+                if (soWeapon.SpecialEffect != null)
+                {
+                }
+                else
+                {
+                    editPanelComponent.TxtSpecialEffect.enabled = false;
+                    editPanelComponent.TxtTitleSpecialEffect.enabled = false;
+                }
                 
                 //Vector2 size =PanelSlideObject.GetComponent<RectTransform>().sizeDelta;
-                PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
+                
             }
-            
+
+            if (item.SoObject is SOShield)
+            {
+                GameObject newObjectPanel = Instantiate(NewShieldPrefabPanel, PanelSlideObject.transform);
+                EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
+                editPanelComponent.TxtName.text = item.SoObject.Name;
+                editPanelComponent.InvetoryIndex = FightComonent.PlayerInfoComponent.Inventory.IndexOf(item);
+                SOShield soShield = (SOShield) item.SoObject;
+                editPanelComponent.TxtDamage.text = "" + soShield.ShieldValue;
+                editPanelComponent.TxtDurability.text = item.CurrantDurability + "/" + soShield.Durability;
+                if (soShield.SpecialEffect != null)
+                {
+                }
+                else
+                {
+                    editPanelComponent.TxtSpecialEffect.enabled = false;
+                }
+            }
+
+            if (item.SoObject is SOUtilityItem)
+            {
+                GameObject newObjectPanel = Instantiate(NewUtilityPanel, PanelSlideObject.transform);
+                EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
+                editPanelComponent.TxtName.text = item.SoObject.Name;
+                editPanelComponent.InvetoryIndex = FightComonent.PlayerInfoComponent.Inventory.IndexOf(item);
+                SOUtilityItem soUtilityItem = (SOUtilityItem) item.SoObject;
+                editPanelComponent.TxtSpecialEffect.text = soUtilityItem.PracticalDescription;
+            }
+            PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
         }
     }
 
@@ -394,5 +577,10 @@ public class FightSelectorComponent : MonoBehaviour
         PanelStance.GetComponent<CombatSliderAnimationComponant>().ChangePosition();
         _selectModeobjects = !_selectModeobjects;
     }
-    
+
+    public void DestroyObject(ItemData item)
+    {
+        Debug.Log("L'item "+item.SoObject.Name + " s'est casser");
+        FightComonent.PlayerInfoComponent.Inventory.Remove(item);
+    }
 }

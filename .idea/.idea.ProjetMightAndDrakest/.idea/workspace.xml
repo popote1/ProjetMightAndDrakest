@@ -21,30 +21,30 @@
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/SOAnimation/Goblin2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SOAnimation/Goblin2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ennemis/EnnemisAttacksInfo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ennemis/EnnemisAttacksInfo/CoupDEpee.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ennemis/EnnemisAttacksInfo/CoupDEpee.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ennemis/EnnemisAttacksInfo/CoupDePoint.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ennemis/EnnemisAttacksInfo/CoupDePoint.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ennemis/EnnemisInfo/GoblinTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ennemis/EnnemisInfo/GoblinTest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnnemisAttacksInfo/CoupDEpee.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnnemisAttacksInfo/CoupDEpee.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnnemisAttacksInfo/CoupDePoint.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnnemisAttacksInfo/CoupDePoint.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemObject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/SpecialStat/SOSpecialStatStun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/SpecialStat/SOSpecialStatStun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/StancePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/StancePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/WeaponPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/WeaponPanel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FightScène.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FightScène.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatBurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatBurn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,19 +62,23 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -82,12 +86,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemiAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/UtilityScripte/AnimationTester.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ExplmentInputSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EditPanelComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/CombatPanelAnimationComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" />
@@ -96,21 +97,29 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatBurn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatBurn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" />
       </list>
     </option>
@@ -130,7 +139,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -172,7 +181,10 @@
       <workItem from="1606031392964" duration="17991000" />
       <workItem from="1606116305393" duration="16299000" />
       <workItem from="1606172827179" duration="2016000" />
-      <workItem from="1606243974417" duration="8100000" />
+      <workItem from="1606243974417" duration="9075000" />
+      <workItem from="1606293088490" duration="21286000" />
+      <workItem from="1606381544965" duration="5990000" />
+      <workItem from="1606394074062" duration="15515000" />
     </task>
     <servers />
   </component>
@@ -197,9 +209,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="185" key="SettingsEditor" timestamp="1605372461339">
+    <state x="461" y="185" key="SettingsEditor" timestamp="1606421014173">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606421014173" />
     <state x="461" y="185" key="SettingsEditor/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1605372461339" />
     <state width="498" height="457" key="SwitcherDM" timestamp="1606033304269">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -219,10 +232,10 @@
       <screen x="1920" y="279" width="1280" height="1024" />
     </state>
     <state x="1867" y="342" width="1296" height="1013" maximized="true" key="dock-window-2/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606068782486" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1605967468276">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1606403443014">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1605967468276" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606403443014" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1605374285492" />
   </component>
 </project>

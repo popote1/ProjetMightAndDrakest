@@ -7,13 +7,16 @@ public class SOSpecialEffectBurn : SOSpecialEffectGeneral
 {
     public SOSpecialStatBurn StatBurn;
 
-    public override bool CheckForUse(FightComonent fightComonent, EnnemiCombatUIComponent ennemiCombatUIComponent, int weaponIndex)
+    public override bool CheckForUse(FightComonent fightComonent, List<EnnemiCombatUIComponent> ennemiCombatUIComponents, int weaponIndex)
     {
-        
-        if (ennemiCombatUIComponent.SpecialStat == null&&ennemiCombatUIComponent.IsAlive)
+        foreach (var ennemiCombatUIComponent in ennemiCombatUIComponents)
         {
-            return true;
+            if (ennemiCombatUIComponent.SpecialStat == null&&ennemiCombatUIComponent.IsAlive)
+            {
+                return true;
+            }
         }
+        
         return false;
     }
 
@@ -21,22 +24,30 @@ public class SOSpecialEffectBurn : SOSpecialEffectGeneral
     {
         if (fightComonent.PlayerInfoComponent.SpecialStat==null)
         {
-            Debug.Log("L'ennemi n'a pas de statueSpecial");
+            Debug.Log("Le joueur n'a pas de statueSpecial");
             return true;
         }
+        Debug.Log("Le joueur a déjà un statueSpecial");
         return false;
     }
 
-    public override void MakeSpecialEffect(FightComonent fightComonent,EnnemiCombatUIComponent ennemiCombatUIComponent, int weaponIndex)
+    public override void MakeSpecialEffect(FightComonent fightComonent,List<EnnemiCombatUIComponent> ennemiCombatUIComponents, int weaponIndex)
     {
-        ennemiCombatUIComponent.SpecialStat = StatBurn;
-        ennemiCombatUIComponent.TempsSpecialEffet = StatBurn.Durer;
-        Debug.Log(" l'arme Inflige l'état brulure");
+        foreach (var ennemiCombatUIComponent in ennemiCombatUIComponents)
+        {
+            if (ennemiCombatUIComponent.SpecialStat == null && ennemiCombatUIComponent.IsAlive)
+            {
+                ennemiCombatUIComponent.SpecialStat = StatBurn;
+                ennemiCombatUIComponent.TempsSpecialEffet = StatBurn.Durer;
+                Debug.Log(" l'arme Inflige l'état brulure");
+            }
+        }
     }
 
     public override void MakeSpecialEffectOnPlayer(FightComonent fightComonent)
     {
         fightComonent.PlayerInfoComponent.SpecialStat = StatBurn;
+        fightComonent.PlayerInfoComponent.TempsSpecialEffect = StatBurn.Durer;
         Debug.Log("Ennemi inflige brulure");
     }
 }

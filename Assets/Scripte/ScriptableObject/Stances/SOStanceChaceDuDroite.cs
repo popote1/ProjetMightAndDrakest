@@ -19,18 +19,21 @@ public class SOStanceChaceDuDroite : SOStanceGeneral
     {
         if (weaponIndex == 2)
         {
-            EnnemiCombatUIComponent target;
+            List<EnnemiCombatUIComponent> targets;
             SOWeapon weapon = (SOWeapon) fightComonent.ItemData2.SoObject;
             int damage = fightComonent.PlayerStandardAttack(weapon);
-            target = fightComonent.ChoseTarget(2, weapon.Target);
-            target.TakeDamage(damage+damage/2); if (weapon.SpecialEffect != null)
+            targets = fightComonent.ChoseTarget(2, weapon.Target);
+            foreach (var target in targets)
             {
-                if (weapon.SpecialEffect.CheckForUse(fightComonent, target, weaponIndex))
+                target.TakeDamage(damage);
+            }
+            if (weapon.SpecialEffect != null)
+            {
+                if (weapon.SpecialEffect.CheckForUse(fightComonent, targets, weaponIndex))
                 {
-                    weapon.SpecialEffect.MakeSpecialEffect(fightComonent, target , weaponIndex);
+                    weapon.SpecialEffect.MakeSpecialEffect(fightComonent, targets , weaponIndex);
                 }
             }
-            fightComonent.ItemData2.CurrantDurability--;
             Debug.Log("La stance fait sont effet et fais"+damage+damage/2);
         }
 

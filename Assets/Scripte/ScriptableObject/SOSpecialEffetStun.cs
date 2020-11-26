@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SOSpecialEffectStun",menuName = "SO/Combat/SOSpecialEffect/StunEffect")]
-public class SOSpecialEffetStun :SOSpecialEffectGeneral
+[CreateAssetMenu(fileName = "SOSpecialEffectStun", menuName = "SO/Combat/SOSpecialEffect/StunEffect")]
+public class SOSpecialEffetStun : SOSpecialEffectGeneral
 {
     public SOSpecialStatStun StatStun;
 
-    public override bool CheckForUse(FightComonent fightComonent, EnnemiCombatUIComponent ennemiCombatUIComponent, int weaponIndex)
+    public override bool CheckForUse(FightComonent fightComonent,
+        List<EnnemiCombatUIComponent> ennemiCombatUIComponents, int weaponIndex)
     {
-        
-        if (ennemiCombatUIComponent.SpecialStat == null&&ennemiCombatUIComponent.IsAlive)
+        foreach (var ennemiCombatUIComponent in ennemiCombatUIComponents)
         {
-            return true;
+            if (ennemiCombatUIComponent.SpecialStat == null && ennemiCombatUIComponent.IsAlive)
+            {
+                if (ennemiCombatUIComponent.SpecialStat == null && ennemiCombatUIComponent.IsAlive)
+                {
+                    return true;
+                }
+            }
         }
+
         return false;
+        
     }
 
-    public override bool CheckForUseOnPlayer(FightComonent fightComonent)
+
+public override bool CheckForUseOnPlayer(FightComonent fightComonent)
     {
         if (fightComonent.PlayerInfoComponent.SpecialStat==null)
         {
@@ -26,10 +35,17 @@ public class SOSpecialEffetStun :SOSpecialEffectGeneral
         }
         return false;
     }
-    public override void MakeSpecialEffect(FightComonent fightComonent,EnnemiCombatUIComponent ennemiCombatUIComponent, int weaponIndex)
+
+    public override void MakeSpecialEffect(FightComonent fightComonent, List<EnnemiCombatUIComponent> ennemiCombatUIComponents, int weaponIndex)
     {
-        ennemiCombatUIComponent.SpecialStat = StatStun;
-        ennemiCombatUIComponent.TempsSpecialEffet = StatStun.Durer;
-        Debug.Log(" l'arme Inflige l'état brulure");
+        foreach (var ennemiCombatUIComponent in ennemiCombatUIComponents)
+        {
+            if (ennemiCombatUIComponent.SpecialStat == null && ennemiCombatUIComponent.IsAlive)
+            {
+                ennemiCombatUIComponent.SpecialStat = StatStun;
+                ennemiCombatUIComponent.TempsSpecialEffet = StatStun.Durer;
+                Debug.Log(" l'arme Inflige l'état brulure");
+            }
+        }
     }
 }

@@ -19,19 +19,22 @@ public class SOStanceRevertDuGauche : SOStanceGeneral
     {
         if (weaponIndex == 1)
         {
-            EnnemiCombatUIComponent target;
+            List<EnnemiCombatUIComponent> targets;
             SOWeapon weapon = (SOWeapon) fightComonent.ItemData1.SoObject;
             int damage = fightComonent.PlayerStandardAttack(weapon);
-            target = fightComonent.ChoseTarget(1, weapon.Target);
-            target.TakeDamage(damage+damage/2);
-            target.TakeDamage(damage+damage/2); if (weapon.SpecialEffect != null)
+            targets = fightComonent.ChoseTarget(1, weapon.Target);
+            foreach (var target in targets)
             {
-                if (weapon.SpecialEffect.CheckForUse(fightComonent, target, weaponIndex))
+                target.TakeDamage(damage/2);
+            }
+            if (weapon.SpecialEffect != null)
+            {
+                if (weapon.SpecialEffect.CheckForUse(fightComonent, targets, weaponIndex))
                 {
-                    weapon.SpecialEffect.MakeSpecialEffect(fightComonent, target , weaponIndex);
+                    weapon.SpecialEffect.MakeSpecialEffect(fightComonent, targets , weaponIndex);
                 }
             }
-            fightComonent.ItemData1.CurrantDurability--;
+           
             Debug.Log("La stance fait sont effet et fais"+damage+damage/2);
         }
 

@@ -14,5 +14,10 @@ public class ItemData
             SOWeapon weapon = (SOWeapon) item;
             CurrantDurability = weapon.Durability;
         }
+        if (item is SOShield)
+        {
+            SOShield shield= (SOShield) item;
+            CurrantDurability = shield.Durability;
+        }
     }
 }

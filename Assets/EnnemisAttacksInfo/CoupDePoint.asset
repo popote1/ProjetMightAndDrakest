@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584ceaaea3754db4187e304adf36b393, type: 3}
   m_Name: CoupDePoint
   m_EditorClassIdentifier: 
-  name: Coup de Point
+  Name: "Coup de point EnFlam\xE9"
   Damage: 2
   ChanceToHit: 50
+  SpecialEffect: {fileID: 11400000, guid: b065db4ba80595848abcb44866b39ce8, type: 2}
