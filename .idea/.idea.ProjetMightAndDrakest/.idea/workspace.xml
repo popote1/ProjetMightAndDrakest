@@ -79,6 +79,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -121,6 +130,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/PlayerControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" />
       </list>
     </option>
   </component>
@@ -185,6 +196,10 @@
       <workItem from="1606293088490" duration="21286000" />
       <workItem from="1606381544965" duration="5990000" />
       <workItem from="1606394074062" duration="15515000" />
+      <workItem from="1605858375071" duration="1251000" />
+      <workItem from="1605951577054" duration="106000" />
+      <workItem from="1605951692414" duration="27000" />
+      <workItem from="1605958196610" duration="6899000" />
     </task>
     <servers />
   </component>
