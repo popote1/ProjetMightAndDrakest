@@ -10,7 +10,11 @@ public class SOStanceRevertDuGauche : SOStanceGeneral
         Weapon1 = false;
         if (fightComonent.ItemData1.SoObject is SOWeapon)
         {
-            Weapon1 = true;
+            SOWeapon weapon = (SOWeapon) fightComonent.ItemData1.SoObject;
+            if (!weapon.isTwoHand)
+            {
+                Weapon1 = true;
+            }
         }
         Weapon2 = false;
     }

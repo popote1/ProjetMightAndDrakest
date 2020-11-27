@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49498303994cf3419daf66c8d79a512, type: 3}
   m_Name: UtilityEffect
   m_EditorClassIdentifier: 
-  HealtValue: 0
+  HealtValue: 10

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2159d63d43e581a4b89845bbd6f7bd2b, type: 3}
   m_Name: PotionDeSoin
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Potion deSoin
   CoolDescription: 
   WorldSprite: {fileID: 0}
   UISprite: {fileID: 0}
-  PracticalDescription: 
-  SoUtilityEffectGeneral: {fileID: 0}
+  PracticalDescription: Rend 10 PV
+  SoUtilityEffectGeneral: {fileID: 11400000, guid: 9f64a4d22fd2fac429586d7dfb38199e,
+    type: 2}

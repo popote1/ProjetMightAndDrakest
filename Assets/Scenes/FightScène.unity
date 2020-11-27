@@ -4967,7 +4967,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d6db3c68f8640e498a0b94a1a073f00, type: 2}
   - {fileID: 11400000, guid: 96a86fa02fa3d21449e7f9283376c1f5, type: 2}
   - {fileID: 11400000, guid: 5f603b5b991731a48b89094f1d93bd29, type: 2}
-  - {fileID: 11400000, guid: 1d290c0363d7b6a41a01397bbf219a8e, type: 2}
+  - {fileID: 11400000, guid: 2c3d58678c8175949bf2cd41c2006ab5, type: 2}
+  - {fileID: 11400000, guid: 6543894a35c3a404da8f455ef78f8a10, type: 2}
   SOStance:
   - {fileID: 11400000, guid: d0977896254692a419a80bd34767ad32, type: 2}
   - {fileID: 11400000, guid: c4287265ee058ca4da479042c603a6ab, type: 2}
@@ -5038,6 +5039,8 @@ MonoBehaviour:
   NewPrefabPanel: {fileID: 9084822389689797766, guid: f0090ca5fb0983a46bb6a504a8d3c685,
     type: 3}
   NewShieldPrefabPanel: {fileID: 9084822389689797766, guid: c049806cca643ab47a094c3c228bf609,
+    type: 3}
+  NewUtilityPanel: {fileID: 9084822389689797766, guid: a4a780c6c3f147f4a847b7edc90c9f51,
     type: 3}
   NewStancePrefabsPanel: {fileID: 9084822389689797766, guid: 65b522c405d0bd74abc8a18572ce4d1e,
     type: 3}

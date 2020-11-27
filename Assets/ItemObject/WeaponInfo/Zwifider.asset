@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd07c80099381404f8074fa80d81bd96, type: 3}
   m_Name: Zwifider
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Zwifider
   CoolDescription: 
   WorldSprite: {fileID: 0}
   UISprite: {fileID: 0}
-  Damage: 0
-  ChanceToHit: 0
-  Target: 0
-  Durability: 0
-  isTwoHand: 0
+  Damage: 5
+  ChanceToHit: 50
+  Target: 3
+  Durability: 3
+  isTwoHand: 1
   SpecialEffect: {fileID: 0}

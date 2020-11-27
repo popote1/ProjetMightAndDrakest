@@ -7,12 +7,23 @@ public class SOStanceChaceDuDroite : SOStanceGeneral
 {
     public override void CheckForUse(FightComonent fightComonent, out bool Weapon1, out bool Weapon2)
     {
+        Weapon1 = false;
         Weapon2 = false;
+        if (fightComonent.ItemData1.SoObject is SOWeapon)
+        {
+            SOWeapon weaponL = (SOWeapon) fightComonent.ItemData1.SoObject;
+            if (weaponL.isTwoHand)
+            {
+                
+                return;
+            }
+        }
+
         if (fightComonent.ItemData2.SoObject is SOWeapon)
         {
             Weapon2 = true;
         }
-        Weapon1 = false;
+        
     }
 
     public override void ExecutStance(FightComonent fightComonent, int weaponIndex)
