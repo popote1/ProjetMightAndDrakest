@@ -10,7 +10,6 @@
         </e>
         <e p="FirstCaracterControler" t="Include">
           <e p="Controls.cs" t="Include" />
-          <e p="Deplacement.cs" t="Include" />
           <e p="FirstControler.cs" t="Include" />
           <e p="PlayerFPS.cs" t="Include" />
         </e>
@@ -70,6 +69,7 @@
             <e p="EnnemiMaterialAnimationComponent.cs" t="Include" />
             <e p="FightComonent.cs" t="Include" />
             <e p="FightSelectorComponent.cs" t="Include" />
+            <e p="FPControlerComponent.cs" t="Include" />
             <e p="PlayerInfoComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
               <e p="CombatPanelAnimationComponent.cs" t="Include" />

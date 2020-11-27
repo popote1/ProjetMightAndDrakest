@@ -4,36 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Deplacement : MonoBehaviour
+public class FPControlerComponent: MonoBehaviour
 {
     public float Speed;
     public CharacterController CharacterController;
-    private Vector3 movement;
+    private Vector2 _movement;
+    private Vector3 _mouseRotation;
     public float MouseSensibility;
     
     
    public void TestDeplace(InputAction.CallbackContext callbackContext)
     {
         Debug.Log(callbackContext.ReadValue<Vector2>());
-        
-         movement = new Vector3(callbackContext.ReadValue<Vector2>().x, 0, callbackContext.ReadValue<Vector2>().y);   
+
+        _movement = callbackContext.ReadValue<Vector2>();
+        //_movement = transform.forward * callbackContext.ReadValue<Vector2>().y +transform.right * callbackContext.ReadValue<Vector2>().x;
     }
 
     public void TestMouseCamera(InputAction.CallbackContext callbackContext)
     {
-        this.gameObject.transform.Rotate(0f,callbackContext.ReadValue<Vector2>().x, 0f);
+        transform.Rotate(0f,callbackContext.ReadValue<Vector2>().x*Time.deltaTime*MouseSensibility, 0f);
         Debug.Log(callbackContext.ReadValue<Vector2>() + " Test mouse ");
-
-
-
     }
 
    private void Update()
    {
-
-       CharacterController.Move(movement * Speed * Time.deltaTime);
-       
-       
-       
+       CharacterController.Move((transform.forward*_movement.y+transform.right*_movement.x)*Speed*Time.deltaTime);
    }
 }

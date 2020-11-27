@@ -178,20 +178,20 @@
         },
         {
             "name": "ExplorationControl",
-            "id": "c16ceeef-9067-4b55-ab5e-af0f29a99304",
+            "id": "c3fe0bd8-3b7e-4e3e-a077-1740571ea1fe",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "InputDeplacement",
                     "type": "Value",
-                    "id": "d5551149-623d-42c4-baec-e1bc03c50141",
+                    "id": "95ae913f-6a2a-4934-a672-81278c315dae",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Camera",
+                    "name": "InputCamera",
                     "type": "Value",
-                    "id": "d4286799-3f65-4ecb-85f4-5059d4f0c696",
+                    "id": "efca20de-f89d-4ead-9da1-5cebffb89a8b",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -199,79 +199,123 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "eb3c9cfc-b0f1-484c-ae8c-708125bf02d7",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "f4b9f8cb-059d-4b38-8275-f76b6d79baa1",
+                    "name": "InputKeyboardZQSD",
+                    "id": "8c72c779-791e-4eb6-9186-542dbb8cbde6",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "InputDeplacement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "up",
-                    "id": "87f30a94-0462-46da-a4dd-f7dccb950b26",
+                    "id": "dd17780a-ba00-4b0e-8a81-0c7f0b595c7f",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "InputDeplacement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "d2c1c75a-81dd-4fc2-94cd-6ce4ccd1bfad",
+                    "id": "96738c95-b2e0-4fd6-a569-de7e18be4b10",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "InputDeplacement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "b84ae777-aa0d-49fa-a63b-d3e4ba37010e",
+                    "id": "05336f63-86b1-4efd-9645-c00ce779065b",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "InputDeplacement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "9b5e3897-023d-4a9e-abe6-886dab33a1d2",
+                    "id": "b9076a9b-d527-491e-9f6b-f0b4eb29d12d",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "InputDeplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "InputKeyboardArrow",
+                    "id": "b2d36119-3f9d-41fa-adda-9849931d26c6",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputDeplacement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "ff1106f4-6e8a-4fa3-842c-933ff29d7e7b",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputDeplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "27c7c8fb-f8f4-45c3-a420-fa8b537acccd",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputDeplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "2d922313-1e3f-451d-a37f-424eb8e277b5",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputDeplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "686e4218-1c80-4706-89df-573473abe249",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputDeplacement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "5a71a0b0-733b-4ace-9e41-8ca09ed431c7",
+                    "id": "58cce15d-3580-464d-b398-e90b39494c10",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera",
+                    "action": "InputCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

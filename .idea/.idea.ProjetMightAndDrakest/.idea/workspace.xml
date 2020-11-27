@@ -22,8 +22,9 @@
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +103,8 @@
         <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/FPControlerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
       </list>
     </option>
   </component>
@@ -170,7 +173,7 @@
       <workItem from="1605951577054" duration="106000" />
       <workItem from="1605951692414" duration="27000" />
       <workItem from="1605958196610" duration="6899000" />
-      <workItem from="1606465707359" duration="1520000" />
+      <workItem from="1606465707359" duration="5559000" />
     </task>
     <servers />
   </component>
