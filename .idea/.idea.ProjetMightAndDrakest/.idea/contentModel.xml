@@ -70,6 +70,7 @@
             <e p="FightComonent.cs" t="Include" />
             <e p="FightSelectorComponent.cs" t="Include" />
             <e p="FPControlerComponent.cs" t="Include" />
+            <e p="InventoryComponent.cs" t="Include" />
             <e p="PlayerInfoComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
               <e p="CombatPanelAnimationComponent.cs" t="Include" />
@@ -91,6 +92,7 @@
             <e p="SOEnnemi.cs" t="Include" />
             <e p="SOEnnemiAnimation.cs" t="Include" />
             <e p="SOObject.cs" t="Include" />
+            <e p="SOQuestItem.cs" t="Include" />
             <e p="SOShield.cs" t="Include" />
             <e p="SOSpecialEffectBurn.cs" t="Include" />
             <e p="SOSpecialEffectGeneral.cs" t="Include" />
