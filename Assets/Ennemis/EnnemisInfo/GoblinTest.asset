@@ -23,4 +23,4 @@ MonoBehaviour:
     Probability: 25
   - SoAttack: {fileID: 11400000, guid: 0936f060e8a02fc45a29f132c4ad9220, type: 2}
     Probability: 50
-  SoEnnemiAnimation: {fileID: 0}
+  SoEnnemiAnimation: {fileID: 11400000, guid: 219a9fbe6422f574bb165e8672d27eb2, type: 2}

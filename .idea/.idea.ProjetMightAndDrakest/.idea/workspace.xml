@@ -20,11 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModel/Test2/MurStandard/Murstandar2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModel/Test2/MurStandard/Murstandar2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModel/Test2/PlafondStandard/PlafondStandard2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModel/Test2/PlafondStandard/PlafondStandard2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModel/Test2/SolStandard/SolStqdqrd@.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModel/Test2/SolStandard/SolStqdqrd@.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/11.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ennemis/EnnemisInfo/GoblinTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ennemis/EnnemisInfo/GoblinTest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +86,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemiAnimation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/UtilityScripte/AnimationTester.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ExplmentInputSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EditPanelComponent.cs" />
@@ -78,7 +99,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
@@ -105,6 +125,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" />
         <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/FPControlerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
       </list>
     </option>
   </component>
@@ -173,7 +196,8 @@
       <workItem from="1605951577054" duration="106000" />
       <workItem from="1605951692414" duration="27000" />
       <workItem from="1605958196610" duration="6899000" />
-      <workItem from="1606465707359" duration="5559000" />
+      <workItem from="1606465707359" duration="18990000" />
+      <workItem from="1606554578356" duration="3432000" />
     </task>
     <servers />
   </component>
@@ -208,10 +232,10 @@
     </state>
     <state width="498" height="457" key="SwitcherDM/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606033304269" />
     <state width="498" height="446" key="SwitcherDM/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1605806379505" />
-    <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog" timestamp="1606065388499">
+    <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog" timestamp="1606556717567">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606065388499" />
+    <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606556717567" />
     <state x="1920" y="279" width="1296" height="1013" key="dock-window-1" timestamp="1606256616696">
       <screen x="1920" y="279" width="1280" height="1024" />
     </state>

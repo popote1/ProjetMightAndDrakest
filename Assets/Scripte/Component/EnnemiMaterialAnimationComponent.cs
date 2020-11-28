@@ -25,7 +25,7 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
     private float _timer;
     private bool _isLooping=true;
 
-    private void Awake()
+    private void Start()
     {
         if (EnnemiAnimation.FrontIdelAnimations != null)
         {
@@ -70,8 +70,11 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
 
     public void ChangeAnimationtype(AnimationType animationType)
     {
-        _animationType = animationType;
-        ChangeAniamation();
+        if (_animationType != animationType)
+        {
+            _animationType = animationType;
+            ChangeAniamation();
+        }
     }
 
     private void ChangeAniamation()
@@ -140,6 +143,7 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
                 break;
             
         }
+        _indexAnimation = 0;
     }
 
     public void SetFrameRate(float newFrameRate)

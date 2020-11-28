@@ -13,26 +13,11 @@ MonoBehaviour:
   m_Name: TestEnnemieAnimation
   m_EditorClassIdentifier: 
   FrontIdelAnimations:
-  - {fileID: 2100000, guid: 36df212bbe92fe74ea4c6a23cb6ba855, type: 2}
-  - {fileID: 2100000, guid: 0809c9cfc96e51a47a5d554c3ac758d9, type: 2}
-  - {fileID: 2100000, guid: 21926e7886b8eec47beffb719b20a8c5, type: 2}
-  - {fileID: 2100000, guid: acf2a1e2a945a244da095193af739359, type: 2}
-  - {fileID: 2100000, guid: af971580dcee99b43b0d1f329b1ec243, type: 2}
-  - {fileID: 2100000, guid: e57af940411a2874bba4bd60b27aae39, type: 2}
-  - {fileID: 2100000, guid: c60d82b6cb70dae439e649069b894977, type: 2}
-  - {fileID: 2100000, guid: 0029a4dfb79f68d429879b9af375675d, type: 2}
-  - {fileID: 2100000, guid: 0e563823a0e5f614da3f5a2de1bbb06a, type: 2}
-  - {fileID: 2100000, guid: 1119d340fb4b1f34faee588778110fd9, type: 2}
-  - {fileID: 2100000, guid: e2588a7996551284fa6b4e7e26a73cbe, type: 2}
-  - {fileID: 2100000, guid: e1842dfacd8b9c74699943d7b60ecf2f, type: 2}
-  - {fileID: 2100000, guid: 618f57f738b2976439abd40e54912122, type: 2}
-  FrontIdelFrameRate: 0.05
-  LeftIdelAnimations:
-  - {fileID: 2100000, guid: 36df212bbe92fe74ea4c6a23cb6ba855, type: 2}
-  - {fileID: 2100000, guid: acf2a1e2a945a244da095193af739359, type: 2}
-  - {fileID: 2100000, guid: 0029a4dfb79f68d429879b9af375675d, type: 2}
-  - {fileID: 2100000, guid: e1842dfacd8b9c74699943d7b60ecf2f, type: 2}
-  LeftIdelFrameRate: 0.5
+  - {fileID: 2100000, guid: d83afd5398d73b24dbf7d46bd02393b1, type: 2}
+  - {fileID: 2100000, guid: 920066b1d33d59143b7e1d0970c40acf, type: 2}
+  FrontIdelFrameRate: 0.5
+  LeftIdelAnimations: []
+  LeftIdelFrameRate: 0
   RightIdelAnimations: []
   RightIdelFrameRate: 0
   BackIdelAnimations:
@@ -55,14 +40,25 @@ MonoBehaviour:
   - {fileID: 2100000, guid: e2588a7996551284fa6b4e7e26a73cbe, type: 2}
   - {fileID: 2100000, guid: e1842dfacd8b9c74699943d7b60ecf2f, type: 2}
   - {fileID: 2100000, guid: 618f57f738b2976439abd40e54912122, type: 2}
-  FrontWalkFrameRate: 0.5
+  FrontWalkFrameRate: 0.07
   LeftWalkAnimations: []
   LeftWalkFrameRate: 0
   RightWalkAnimations: []
   RightWalkFrameRate: 0
   BackWalkAnimations: []
   BackWalkFrameRate: 0
-  AttackAnimations: []
-  AttackFrameFate: 0
-  DieAnimation: []
-  DieFrameRate: 0
+  AttackAnimations:
+  - {fileID: 2100000, guid: 087315db772d4364a86e8130629d1893, type: 2}
+  - {fileID: 2100000, guid: 6420f136e5521a741bce9be7fc5294d7, type: 2}
+  - {fileID: 2100000, guid: 4ef6005563ff0ce4891721c61202dbc2, type: 2}
+  - {fileID: 2100000, guid: 2bc4e649e65942a46aa6aed819ffb9f8, type: 2}
+  - {fileID: 2100000, guid: 5e2cd191f8b219346b8f4fb783b53209, type: 2}
+  - {fileID: 2100000, guid: 20b41426d0c785b46999cea1b825727f, type: 2}
+  AttackFrameFate: 0.1
+  DieAnimation:
+  - {fileID: 2100000, guid: c2c7bc6c72690fe418971ee319a921c0, type: 2}
+  - {fileID: 2100000, guid: 28ffc821eee19a649ad6eb241b26ae23, type: 2}
+  - {fileID: 2100000, guid: 2714d384decb68b4d8898e8a7a4f1ab5, type: 2}
+  - {fileID: 2100000, guid: 12525da6653c2744bb2e3626215ea474, type: 2}
+  - {fileID: 2100000, guid: dd8501fc91da4e14bace38b8a0936d20, type: 2}
+  DieFrameRate: 0.2
