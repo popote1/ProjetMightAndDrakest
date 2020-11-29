@@ -7,7 +7,7 @@ public class SliderAutiSizerComponent : MonoBehaviour
     public float SinglePanlSize;
 
     private RectTransform _rectTransform;
-    void Start()
+    void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
     }

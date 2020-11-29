@@ -22,9 +22,8 @@ public class SOUtilityEffectHealt : SOUtilityEffectGeneral
         }
     }
 
-    public override void WorldUse(PlayerInfoComponent playerInfoComponent)
-    {
-        playerInfoComponent.CurrentHP +=
-            Mathf.Clamp(playerInfoComponent.CurrentHP + HealtValue, 0, playerInfoComponent.MaxHP);
+    public override void WorldUse(InventoryComponent inventoryComponent) {
+        inventoryComponent.playerInfoComponent.CurrentHP = Mathf.Clamp(inventoryComponent.playerInfoComponent.CurrentHP + HealtValue, 0,inventoryComponent.playerInfoComponent.MaxHP);
+        inventoryComponent.DestroySelectedItem();
     }
 }

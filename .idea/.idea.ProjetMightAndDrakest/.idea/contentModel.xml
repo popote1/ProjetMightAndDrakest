@@ -93,6 +93,7 @@
             <e p="SOEnnemiAnimation.cs" t="Include" />
             <e p="SOObject.cs" t="Include" />
             <e p="SOQuestItem.cs" t="Include" />
+            <e p="SOQuestItemPetitCoffre.cs" t="Include" />
             <e p="SOShield.cs" t="Include" />
             <e p="SOSpecialEffectBurn.cs" t="Include" />
             <e p="SOSpecialEffectGeneral.cs" t="Include" />

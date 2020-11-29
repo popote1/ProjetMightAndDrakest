@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class InventoryComponent : MonoBehaviour
 {
@@ -17,15 +18,20 @@ public class InventoryComponent : MonoBehaviour
     public PlayerInfoComponent playerInfoComponent;
     public float PanelScrollSpeed;
     public Button ItemButton;
+    public Button UsButton;
+    public Button TrowButton;
+    public Button OptionButton;
+    public Button QuiteButton;
+    public Button QuiteButtonNon;
     [Header("Panels")] 
     public GameObject PanelDescriptionWeapon;
     public GameObject PanelDescriptionShield;
     public GameObject PanelDescriptionUtility;
     public GameObject PanelDescriptionStance;
     public GameObject PanelDescriptionOption;
-    public GameObject PanleButtonStandard;
-    public GameObject PanleButtonOption;
-    public GameObject PanleButtonIteam;
+    public GameObject PanelButtonStandard;
+    public GameObject PanelButtonOption;
+    public GameObject PanelButtonIteam;
     public GameObject PanelSliderItems;
     public GameObject PanelSliderStances;
     [Header("PlayerPanel")] 
@@ -69,10 +75,11 @@ public class InventoryComponent : MonoBehaviour
     public Slider SliderMousSencibility;
     public Slider SliderVolumeMusic;
     public Slider SliderVolumeSoundEffect;
-
     [Header("Sliders")]
     public ScrollRect ScrollRectItems;
     public ScrollRect ScrollRectStance;
+    [Header("Quite")] 
+    public GameObject PanelQuite;
     private enum InventorySlectorStat
     {
         Items,Stance,Option,nonne
@@ -81,6 +88,7 @@ public class InventoryComponent : MonoBehaviour
     private bool _scrollPanel;
     private GameObject _preselectedPanel;
     private GameObject _temporalHolder;
+    private ItemData _selectedItem;
 
     void Start() {
         LoadPlayerInfoPanel();
@@ -88,11 +96,15 @@ public class InventoryComponent : MonoBehaviour
         LoadStancePanel();
         _inventorySelectorStat = InventorySlectorStat.Items;
         ShowDesciptionPanel(1);
+        ShowButtonPanel(1);
         _scrollPanel = true;
     }
 
     void Update() {
         PreSelectPanel();
+        SliderPlayerHP.value = Mathf.Lerp(SliderPlayerHP.value,
+            (float) playerInfoComponent.CurrentHP / playerInfoComponent.MaxHP, 0.5f);
+        TxtPlayerHP.text = playerInfoComponent.CurrentHP + "/" + playerInfoComponent.MaxHP;
     }
 
     public void UIItemButtonSelected() {
@@ -126,6 +138,80 @@ public class InventoryComponent : MonoBehaviour
             _scrollPanel = false;
         }
     }
+
+    public void UIButtonItem() {
+        ShowButtonPanel(2);
+        _selectedItem = _preselectedPanel.GetComponent<EditPanelComponent>().ItemData;
+        _scrollPanel = false;
+        if (_selectedItem.SoObject is SOWeapon || _selectedItem.SoObject is SOShield) UsButton.gameObject.SetActive(false);
+        if (_selectedItem.SoObject is SOUtilityItem)
+        {
+            UsButton.gameObject.SetActive(true);
+            UsButton.onClick.AddListener(delegate
+            {
+                ((SOUtilityItem)_selectedItem.SoObject).SoUtilityEffectGeneral.WorldUse(this);
+                UIButtonIteamReturn();
+                UsButton.onClick.RemoveAllListeners();
+            });
+        }
+        if (_selectedItem.SoObject is SOQuestItem){
+            SOQuestItem item = (SOQuestItem) _selectedItem.SoObject;
+            if (item.CheckWorldUse())
+            {
+                UsButton.gameObject.SetActive(true);
+                UsButton.onClick.AddListener(delegate
+                {
+                    ((SOQuestItem)_selectedItem.SoObject).WorldUse(this);
+                    UIButtonIteamReturn();
+                    UsButton.onClick.RemoveAllListeners();
+                });
+            }
+            else
+            {
+                UsButton.gameObject.SetActive(false);
+            }
+        }
+        if (UsButton.gameObject.activeSelf) UsButton.Select();else TrowButton.Select();
+        ScrollRectItems.velocity =Vector2.zero;
+    }
+
+    public void UIButtonIteamReturn() {
+        ShowButtonPanel(1);
+        _selectedItem = null;
+        _scrollPanel = true;
+        ItemButton.Select();
+    }
+    public void UIButtonOption()
+    {
+        ShowButtonPanel(3);
+        SliderMousSencibility.Select();
+    }
+    public void UIButtonOptionReturn()
+    {
+        ShowButtonPanel(1);
+        OptionButton.Select();
+    }
+    public void UIButtonQuite()
+    {
+        PanelQuite.SetActive(true);
+        QuiteButtonNon.Select();
+    }
+
+    public void UIButtonReprendre()
+    {
+        
+    }
+
+    public void UIButtonQuiteYes()
+    {
+        Application.Quit();
+    }
+    public void UIButtonQuiteNon()
+    {
+        PanelQuite.SetActive(false);
+        QuiteButton.Select();
+    }
+    
     public void ScrollPanel(InputAction.CallbackContext callbackContext) {
         if (_scrollPanel) {
             if (_inventorySelectorStat==InventorySlectorStat.Items) {
@@ -159,76 +245,11 @@ public class InventoryComponent : MonoBehaviour
     }
     public void LoadIteamBar()
     {
-        foreach (ItemData item in playerInfoComponent.Inventory)
-        {
-            if (item.SoObject is SOWeapon)
-            {
-                GameObject newObjectPanel = Instantiate(NewWeaopnPanel, PanelSliderItems.transform);
-                EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
-                editPanelComponent.TxtName.text = item.SoObject.Name;
-                editPanelComponent.InvetoryIndex = playerInfoComponent.Inventory.IndexOf(item);
-                SOWeapon soWeapon = (SOWeapon) item.SoObject;
-                editPanelComponent.TxtDamage.text = ""+soWeapon.Damage;
-                editPanelComponent.TxtCHT.text = "" + soWeapon.ChanceToHit;
-                editPanelComponent.TxtDurability.text = item.CurrantDurability + "/" + soWeapon.Durability;
-                switch (soWeapon.Target)
-                {
-                    case FightComonent.AttackTarget.Front :
-                        editPanelComponent.TxtTarget.text = "Front";
-                        break;
-                    case FightComonent.AttackTarget.Invest:
-                        editPanelComponent.TxtTarget.text = "Invert";
-                        break;
-                    case FightComonent.AttackTarget.Back:
-                        editPanelComponent.TxtTarget.text = "Back";
-                        break;
-                    case FightComonent.AttackTarget.Splash:
-                        editPanelComponent.TxtTarget.text = "Splash";
-                        break;
-                }
-                if (soWeapon.SpecialEffect != null)
-                {
-                }
-                else
-                {
-                    editPanelComponent.TxtSpecialEffect.enabled = false;
-                    editPanelComponent.TxtTitleSpecialEffect.enabled = false;
-                }
-            }
-
-            if (item.SoObject is SOShield)
-            {
-                GameObject newObjectPanel = Instantiate(NewShealdPanel, PanelSliderItems.transform);
-                EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
-                editPanelComponent.TxtName.text = item.SoObject.Name;
-                editPanelComponent.InvetoryIndex = playerInfoComponent.Inventory.IndexOf(item);
-                SOShield soShield = (SOShield) item.SoObject;
-                editPanelComponent.TxtDamage.text = "" + soShield.ShieldValue;
-                editPanelComponent.TxtDurability.text = item.CurrantDurability + "/" + soShield.Durability;
-                if (soShield.SpecialEffect != null)
-                {
-                }
-                else
-                {
-                    editPanelComponent.TxtSpecialEffect.enabled = false;
-                }
-            }
-            if (item.SoObject is SOUtilityItem)
-            {
-                GameObject newObjectPanel = Instantiate(NewUtilityPanel, PanelSliderItems.transform);
-                EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
-                editPanelComponent.TxtName.text = item.SoObject.Name;
-                editPanelComponent.InvetoryIndex = playerInfoComponent.Inventory.IndexOf(item);
-                SOUtilityItem soUtilityItem = (SOUtilityItem) item.SoObject;
-                editPanelComponent.TxtSpecialEffect.text = soUtilityItem.PracticalDescription;
-            }
-            PanelSliderItems.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
-        }
+        foreach (ItemData item in playerInfoComponent.Inventory) LoadNewItemPanel(item);
+        PanelSliderItems.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
     }
-    public void LoadStancePanel()
-    {
-        foreach (SOStanceGeneral stance in playerInfoComponent.SOStance)
-        {
+    public void LoadStancePanel() {
+        foreach (SOStanceGeneral stance in playerInfoComponent.SOStance) {
             GameObject newObjectPanel = Instantiate(NewStancePanel, PanelSliderStances.transform);
             EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
             editPanelComponent.TxtName.text = stance.Name;
@@ -270,7 +291,7 @@ public class InventoryComponent : MonoBehaviour
             _temporalHolder.GetComponent<CombatPanelAnimationComponent>().Selected();
             _preselectedPanel = _temporalHolder; 
             if(_inventorySelectorStat==InventorySlectorStat.Items)LoadItemPanel();
-            if(_inventorySelectorStat==InventorySlectorStat.Stance)LoadStanceInfoPanel();
+            if(_inventorySelectorStat==InventorySlectorStat.Stance)LoadStanceDescriptionPanel();
         }
     }
 
@@ -288,28 +309,39 @@ public class InventoryComponent : MonoBehaviour
             case 5: PanelDescriptionShield.SetActive(true); break;
         }
     }
+
+    private void ShowButtonPanel(int index) {
+        PanelButtonStandard.SetActive(false);
+        PanelButtonIteam.SetActive(false);
+        PanelButtonOption.SetActive(false);
+        switch (index) {
+            case 1: PanelButtonStandard.SetActive(true); break;
+            case 2 :PanelButtonIteam.SetActive(true); break;
+            case 3 :PanelButtonOption.SetActive(true); break;
+        }
+    }
     private void LoadItemPanel() {
-        SOObject item = playerInfoComponent.Inventory[_preselectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex].SoObject;
+        SOObject item = _preselectedPanel.GetComponent<EditPanelComponent>().ItemData.SoObject;
         if (item is SOWeapon) {
             ShowDesciptionPanel(1);
-            LoadWeaponPanel(playerInfoComponent.Inventory[_preselectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex],(SOWeapon)item);
+            LoadWeaponDescriptionPanel(_preselectedPanel.GetComponent<EditPanelComponent>().ItemData,(SOWeapon)item);
         }
         if (item is SOShield) {
             ShowDesciptionPanel(5);
-            LoadShildPanel(playerInfoComponent.Inventory[_preselectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex],(SOShield)item);
+            LoadShildDescriptionPanel(_preselectedPanel.GetComponent<EditPanelComponent>().ItemData,(SOShield)item);
         }
         if (item is SOUtilityItem) {
-            ShowDesciptionPanel(1);
-            LoadUilityPanel((SOUtilityItem)item);
+            ShowDesciptionPanel(2);
+            LoadUilityDescriptionPanel((SOUtilityItem)item);
         }
         if (item is SOQuestItem) {
-            ShowDesciptionPanel(1);
-            LoadQuestPanel((SOQuestItem)item);
+            ShowDesciptionPanel(2);
+            LoadQuestDescriptionPanel((SOQuestItem)item);
             
         }
     }
 
-    private void LoadWeaponPanel(ItemData weaponInfo,SOWeapon weapon) {
+    private void LoadWeaponDescriptionPanel(ItemData weaponInfo,SOWeapon weapon) {
         TxtWeaponName.text = weaponInfo.SoObject.Name;
         TxtWeaponDamage.text = weapon.Damage + "";
         TxtWeaponPrecision.text = weapon.ChanceToHit + "";
@@ -332,7 +364,7 @@ public class InventoryComponent : MonoBehaviour
         if (weapon.isTwoHand) TxtWeaponTwoHanded.enabled = true;else TxtWeaponTwoHanded.enabled = false;
     }
 
-    private void LoadShildPanel(ItemData shieldInfo, SOShield shield)
+    private void LoadShildDescriptionPanel(ItemData shieldInfo, SOShield shield)
     {
         TxtShieldName.text = shield.Name;
         TxtShieldDurability.text = shieldInfo.CurrantDurability + "/" + shield.Durability;
@@ -348,7 +380,7 @@ public class InventoryComponent : MonoBehaviour
         if (shield.IsTwoHanded) TxtShieldTwoHanded.enabled = true;else TxtShieldTwoHanded.enabled = false;
     }
 
-    private void LoadUilityPanel(SOUtilityItem item)
+    private void LoadUilityDescriptionPanel(SOUtilityItem item)
     {
         TxtUtilityName.text = item.Name;
         TxtUtilityCollDescription.text = item.CoolDescription;
@@ -356,7 +388,7 @@ public class InventoryComponent : MonoBehaviour
         ImgShieldIcone.sprite = item.UISprite;
     }
 
-    private void LoadQuestPanel(SOQuestItem item)
+    private void LoadQuestDescriptionPanel(SOQuestItem item)
     {
         TxtUtilityName.text = item.Name;
         TxtUtilityCollDescription.text = item.CoolDescription;
@@ -364,7 +396,7 @@ public class InventoryComponent : MonoBehaviour
         ImgShieldIcone.sprite = item.UISprite;
     }
 
-    private void LoadStanceInfoPanel()
+    private void LoadStanceDescriptionPanel()
     {
         SOStanceGeneral stance = playerInfoComponent.SOStance[_preselectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex];
         ShowDesciptionPanel(4);
@@ -374,4 +406,103 @@ public class InventoryComponent : MonoBehaviour
         TxtStanceCoolDown.text = stance.CoolDown+"";
         ImgStanceCoolImage.sprite = stance.CoolImage;
     }
+
+    public void DestroySelectedItem(){
+        Destroy((PanelSliderItems.transform.GetChild(playerInfoComponent.Inventory.IndexOf(_selectedItem))).gameObject);
+        PanelSliderItems.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
+        playerInfoComponent.Inventory.Remove(_selectedItem);
+        _selectedItem = null;
+    }
+
+    public void AddItemsToInventory(SOObject item){
+        ItemData newItem = new ItemData(item);
+        playerInfoComponent.Inventory.Add(newItem);
+        LoadNewItemPanel(newItem);
+        PanelSliderItems.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
+    }
+
+    public void LoadNewItemPanel(ItemData item)
+    {
+        if (item.SoObject is SOWeapon) {
+            GameObject newObjectPanel = Instantiate(NewWeaopnPanel, PanelSliderItems.transform);
+            EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
+            editPanelComponent.TxtName.text = item.SoObject.Name;
+            //editPanelComponent.InvetoryIndex = playerInfoComponent.Inventory.IndexOf(item);
+            editPanelComponent.ItemData = item;
+            SOWeapon soWeapon = (SOWeapon) item.SoObject;
+            editPanelComponent.TxtDamage.text = "" + soWeapon.Damage;
+            editPanelComponent.TxtCHT.text = "" + soWeapon.ChanceToHit;
+            editPanelComponent.TxtDurability.text = item.CurrantDurability + "/" + soWeapon.Durability;
+            switch (soWeapon.Target) {
+                case FightComonent.AttackTarget.Front:
+                    editPanelComponent.TxtTarget.text = "Front";
+                    break;
+                case FightComonent.AttackTarget.Invest:
+                    editPanelComponent.TxtTarget.text = "Invert";
+                    break;
+                case FightComonent.AttackTarget.Back:
+                    editPanelComponent.TxtTarget.text = "Back";
+                    break;
+                case FightComonent.AttackTarget.Splash:
+                    editPanelComponent.TxtTarget.text = "Splash";
+                    break;
+            }
+
+            if (soWeapon.SpecialEffect != null)
+            {
+            }
+            else
+            {
+                editPanelComponent.TxtSpecialEffect.enabled = false;
+                editPanelComponent.TxtTitleSpecialEffect.enabled = false;
+            }
+            newObjectPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
+        }
+
+        if (item.SoObject is SOShield)
+        {
+            GameObject newObjectPanel = Instantiate(NewShealdPanel, PanelSliderItems.transform);
+            EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
+            editPanelComponent.TxtName.text = item.SoObject.Name;
+            //editPanelComponent.InvetoryIndex = playerInfoComponent.Inventory.IndexOf(item);
+            editPanelComponent.ItemData = item;
+            SOShield soShield = (SOShield) item.SoObject;
+            editPanelComponent.TxtDamage.text = "" + soShield.ShieldValue;
+            editPanelComponent.TxtDurability.text = item.CurrantDurability + "/" + soShield.Durability;
+            if (soShield.SpecialEffect != null)
+            {
+            }
+            else
+            {
+                editPanelComponent.TxtSpecialEffect.enabled = false;
+            }
+            newObjectPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
+        }
+
+        if (item.SoObject is SOUtilityItem)
+        {
+            GameObject newObjectPanel = Instantiate(NewUtilityPanel, PanelSliderItems.transform);
+            EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
+            editPanelComponent.TxtName.text = item.SoObject.Name;
+            //editPanelComponent.InvetoryIndex = playerInfoComponent.Inventory.IndexOf(item);
+            editPanelComponent.ItemData = item;
+            SOUtilityItem soUtilityItem = (SOUtilityItem) item.SoObject;
+            editPanelComponent.TxtSpecialEffect.text = soUtilityItem.PracticalDescription;
+            newObjectPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
+        }
+        if (item.SoObject is SOQuestItem)
+        {
+            GameObject newObjectPanel = Instantiate(NewUtilityPanel, PanelSliderItems.transform);
+            EditPanelComponent editPanelComponent = newObjectPanel.GetComponent<EditPanelComponent>();
+            editPanelComponent.TxtName.text = item.SoObject.Name;
+            //editPanelComponent.InvetoryIndex = playerInfoComponent.Inventory.IndexOf(item);
+            editPanelComponent.ItemData = item;
+            SOQuestItem soUtilityItem = (SOQuestItem) item.SoObject;
+            editPanelComponent.TxtSpecialEffect.text = soUtilityItem.PracticalDescription;
+            newObjectPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
+        }
+    }
 }
+    
+    
+

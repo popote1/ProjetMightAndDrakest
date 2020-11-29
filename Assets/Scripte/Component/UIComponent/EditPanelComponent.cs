@@ -11,4 +11,5 @@ public class EditPanelComponent : MonoBehaviour
  public TMP_Text TxtSpecialEffect;
  public TMP_Text TxtTitleSpecialEffect;
  public int InvetoryIndex;
+ public ItemData ItemData;
 }

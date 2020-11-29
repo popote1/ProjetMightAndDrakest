@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,6 +37,11 @@ public class PlayerInfoComponent : MonoBehaviour
             Debug.Log("ajout "+item.Name+" à l'aventaire");
         }
         
+    }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame

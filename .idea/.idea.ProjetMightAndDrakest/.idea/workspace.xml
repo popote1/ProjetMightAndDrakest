@@ -21,9 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Inventory.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Inventory.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +41,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItemPetitCoffre.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,7 +82,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/CombatPanelAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ShakeComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" />
@@ -84,18 +91,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatBurn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" />
@@ -108,7 +111,13 @@
         <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/FPControlerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItemPetitCoffre.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" />
       </list>
     </option>
@@ -179,6 +188,7 @@
       <workItem from="1605951692414" duration="27000" />
       <workItem from="1605958196610" duration="6899000" />
       <workItem from="1606465707359" duration="5559000" />
+      <workItem from="1606639775321" duration="15632000" />
     </task>
     <servers />
   </component>
