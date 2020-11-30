@@ -8,9 +8,11 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using Object = System.Object;
 
 public class InventoryComponent : MonoBehaviour
 {
+    public HUDComponent HudComponent;
     public GameObject NewWeaopnPanel;
     public GameObject NewUtilityPanel;
     public GameObject NewShealdPanel;
@@ -89,8 +91,10 @@ public class InventoryComponent : MonoBehaviour
     private GameObject _preselectedPanel;
     private GameObject _temporalHolder;
     private ItemData _selectedItem;
+    private bool _inventoryOn;
 
-    void Start() {
+    public void LaunchInventory() {
+        ItemButton.Select();
         LoadPlayerInfoPanel();
         LoadIteamBar();
         LoadStancePanel();
@@ -98,13 +102,18 @@ public class InventoryComponent : MonoBehaviour
         ShowDesciptionPanel(1);
         ShowButtonPanel(1);
         _scrollPanel = true;
+        _inventoryOn = true;
     }
 
-    void Update() {
-        PreSelectPanel();
-        SliderPlayerHP.value = Mathf.Lerp(SliderPlayerHP.value,
-            (float) playerInfoComponent.CurrentHP / playerInfoComponent.MaxHP, 0.5f);
-        TxtPlayerHP.text = playerInfoComponent.CurrentHP + "/" + playerInfoComponent.MaxHP;
+    void Update()
+    {
+        if (_inventoryOn)
+        {
+            PreSelectPanel();
+            SliderPlayerHP.value = Mathf.Lerp(SliderPlayerHP.value,
+                (float) playerInfoComponent.CurrentHP / playerInfoComponent.MaxHP, 0.5f);
+            TxtPlayerHP.text = playerInfoComponent.CurrentHP + "/" + playerInfoComponent.MaxHP;
+        }
     }
 
     public void UIItemButtonSelected() {
@@ -199,7 +208,10 @@ public class InventoryComponent : MonoBehaviour
 
     public void UIButtonReprendre()
     {
-        
+        foreach (Transform item in PanelSliderItems.transform) Destroy(item.gameObject,0.1f);
+        foreach (Transform stance in PanelSliderStances.transform) Destroy(stance.gameObject,0.1f);
+        HudComponent.CloseInventory();
+        _inventoryOn = false;
     }
 
     public void UIButtonQuiteYes()

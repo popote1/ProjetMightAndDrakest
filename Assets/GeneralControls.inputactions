@@ -195,6 +195,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "OnClick",
+                    "type": "Button",
+                    "id": "7b365aff-0d86-4de6-a34f-b628738de0df",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -316,6 +324,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "InputCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab73fd4c-0e13-4078-a764-dc2cca7a4b55",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

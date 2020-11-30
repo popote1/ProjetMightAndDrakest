@@ -71,12 +71,14 @@
             <e p="FightSelectorComponent.cs" t="Include" />
             <e p="FPControlerComponent.cs" t="Include" />
             <e p="InventoryComponent.cs" t="Include" />
+            <e p="ItemComponent.cs" t="Include" />
             <e p="PlayerInfoComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
               <e p="CombatPanelAnimationComponent.cs" t="Include" />
               <e p="CombatSliderAnimationComponant.cs" t="Include" />
               <e p="EditPanelComponent.cs" t="Include" />
               <e p="EnnemiCombatUIComponent.cs" t="Include" />
+              <e p="HUDComponent.cs" t="Include" />
               <e p="ShakeComponent.cs" t="Include" />
               <e p="SliderAutiSizerComponent.cs" t="Include" />
             </e>
