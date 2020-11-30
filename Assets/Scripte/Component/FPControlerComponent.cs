@@ -15,7 +15,7 @@ public class FPControlerComponent: MonoBehaviour
     
    public void TestDeplace(InputAction.CallbackContext callbackContext)
     {
-        Debug.Log(callbackContext.ReadValue<Vector2>());
+       // Debug.Log(callbackContext.ReadValue<Vector2>());
 
         _movement = callbackContext.ReadValue<Vector2>();
         //_movement = transform.forward * callbackContext.ReadValue<Vector2>().y +transform.right * callbackContext.ReadValue<Vector2>().x;
@@ -24,7 +24,7 @@ public class FPControlerComponent: MonoBehaviour
     public void TestMouseCamera(InputAction.CallbackContext callbackContext)
     {
         transform.Rotate(0f,callbackContext.ReadValue<Vector2>().x*Time.deltaTime*MouseSensibility, 0f);
-        Debug.Log(callbackContext.ReadValue<Vector2>() + " Test mouse ");
+      //  Debug.Log(callbackContext.ReadValue<Vector2>() + " Test mouse ");
     }
 
    private void Update()
