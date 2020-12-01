@@ -11,7 +11,7 @@ public class FightComonent : MonoBehaviour
 {
     [Header("Custom Parameters")] [SerializeField]
     public EnnemiGroupComponent ennemiGroupComponent;
-
+    public PlayerInfoComponent PlayerInfoComponent;
     public FightSelectorComponent FightSelectorComponent;
 
 
@@ -25,11 +25,18 @@ public class FightComonent : MonoBehaviour
     public Image ImgSelector;
     public Image ImgShield;
     public TMP_Text TxtShield;
-    [Header("UI Ennemi")] public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
+    [Header("UI Ennemi")]
+    public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi2CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi3CombatUIComponent;
-    [Header("Temporal Elements")] public GameObject VictoryPanel;
+    [Header("EnnemiePos")] 
+    public GameObject Ennemi1;
+    public GameObject Ennemi2;
+    public GameObject Ennemi3;
+    [Header("Temporal Elements")] 
+    public GameObject VictoryPanel;
     public GameObject DefeatPanel;
+    public bool IsFighting;
 
     public enum AttackTarget
     {
@@ -38,8 +45,7 @@ public class FightComonent : MonoBehaviour
         Back,
         Splash
     }
-
-    [HideInInspector] public PlayerInfoComponent PlayerInfoComponent;
+    
     [HideInInspector] public int CombatStat = 1;
 
     //object séléctioner
@@ -52,109 +58,117 @@ public class FightComonent : MonoBehaviour
     [HideInInspector] public bool IsStaneOnObject2;
     [HideInInspector] public int PlayerShieldValue;
 
-    void Start()
+    public void StartFight()
     {
-        PlayerInfoComponent = GetComponent<PlayerInfoComponent>();
         Cursor.lockState = CursorLockMode.Locked;
         SetEnnemis();
         FightSelectorComponent.LoadIteamBar();
         FightSelectorComponent.LoadStancePanel();
         CheckSpecialStat();
+        IsFighting = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        CheckSpecialStat();
-        LoadPlayerStats();
-        // effectue les effets Speciaux
-        if (CombatStat == 1)
+        if (IsFighting)
         {
-            if (PlayerInfoComponent.SpecialStat != null)
-            {
-                PlayerInfoComponent.SpecialStat.MakeEffect(PlayerInfoComponent);
-            }
+            //Debug.Log(CombatStat);
             CheckSpecialStat();
-            CombatStat = 2;
-        }
+            LoadPlayerStats();
 
-        //Choix des armes
-        if (CombatStat == 2)
-        {
-            FightSelectorComponent.SelectTime = true;
-        }
+            if (Ennemi1CombatUIComponent.IsAlive) Ennemi1CombatUIComponent.shakeComponent.transform.position = Vector3.Lerp(Ennemi1CombatUIComponent.shakeComponent.transform.position, Ennemi1.transform.position, 0.05f);
+            if (Ennemi2CombatUIComponent.IsAlive) Ennemi2CombatUIComponent.shakeComponent.transform.position = Vector3.Lerp(Ennemi2CombatUIComponent.shakeComponent.transform.position, Ennemi2.transform.position, 0.05f);
+            if (Ennemi3CombatUIComponent.IsAlive) Ennemi3CombatUIComponent.shakeComponent.transform.position = Vector3.Lerp(Ennemi3CombatUIComponent.shakeComponent.transform.position, Ennemi3.transform.position, 0.05f);
+            // effectue les effets Speciaux
+            if (CombatStat == 1)
+            {
+                if (PlayerInfoComponent.SpecialStat != null)
+                {
+                    PlayerInfoComponent.SpecialStat.MakeEffect(PlayerInfoComponent);
+                }
 
-        //Analise de la stance
-        if (CombatStat == 3)
-        {
-            CheckOfUse();
-        }
+                CheckSpecialStat();
+                CombatStat = 2;
+            }
 
-        //Execution de l'object1
-        if (CombatStat == 5)
-        {
-            PlayerAttack1();
-        }
+            //Choix des armes
+            if (CombatStat == 2)
+            {
+                FightSelectorComponent.SelectTime = true;
+            }
 
-        //Execution de l'object2
-        if (CombatStat == 7)
-        {
-            PlayerAttack2();
-        }
+            //Analise de la stance
+            if (CombatStat == 3)
+            {
+                CheckOfUse();
+            }
 
-        //Résolution des effets sur Ennemi1
-        if (CombatStat == 10)
-        {
-            EnnemiSpecialStat(1);
-        }
+            //Execution de l'object1
+            if (CombatStat == 5)
+            {
+                PlayerAttack1();
+            }
 
-        //Attaque de l'ennemi 1
-        if (CombatStat == 12)
-        {
-            EnnemiAttaque(1);
-        }
+            //Execution de l'object2
+            if (CombatStat == 7)
+            {
+                PlayerAttack2();
+            }
 
-        //Résolution des effets sur Ennemi2
-        if (CombatStat == 20)
-        {
-            EnnemiSpecialStat(2);
-        }
+            //Résolution des effets sur Ennemi1
+            if (CombatStat == 10)
+            {
+                EnnemiSpecialStat(1);
+            }
 
-        //Attaque de l'ennemi 2
-        if (CombatStat == 22)
-        {
-            EnnemiAttaque(2);
-        }
+            //Attaque de l'ennemi 1
+            if (CombatStat == 12)
+            {
+                EnnemiAttaque(1);
+            }
 
-        //Résolution des effets sur Ennemi3
-        if (CombatStat == 30)
-        {
-            EnnemiSpecialStat(3);
-        }
+            //Résolution des effets sur Ennemi2
+            if (CombatStat == 20)
+            {
+                EnnemiSpecialStat(2);
+            }
 
-        //Attaque de l'ennemi 3
-        if (CombatStat == 32)
-        {
-            EnnemiAttaque(3);
-        }
+            //Attaque de l'ennemi 2
+            if (CombatStat == 22)
+            {
+                EnnemiAttaque(2);
+            }
 
-        //reset des panels
-        if (CombatStat == 50)
-        {
-            FightSelectorComponent.ResetPannels();
-            ResetShield();
-            CombatStat = 1;
-        }
+            //Résolution des effets sur Ennemi3
+            if (CombatStat == 30)
+            {
+                EnnemiSpecialStat(3);
+            }
 
-        if (CombatStat == 100)
-        {
-            SetPanelVictory();
-        }
+            //Attaque de l'ennemi 3
+            if (CombatStat == 32)
+            {
+                EnnemiAttaque(3);
+            }
 
-        if (CombatStat == 101)
-        {
-            SetPanelDefat();
+            //reset des panels
+            if (CombatStat == 50)
+            {
+                FightSelectorComponent.ResetPannels();
+                ResetShield();
+                CombatStat = 1;
+            }
+
+            if (CombatStat == 100)
+            {
+                SetPanelVictory();
+            }
+
+            if (CombatStat == 101)
+            {
+                SetPanelDefat();
+            }
         }
     }
 
@@ -177,15 +191,21 @@ public class FightComonent : MonoBehaviour
         {
             case 1:
                 Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
+                Ennemi2CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
                 break;
             case 2:
                 Ennemi1CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
+                Ennemi1CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
                 Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
+                Ennemi3CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
                 break;
             case 3:
                 Ennemi1CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
+                Ennemi1CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
                 Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[2]);
+                Ennemi2CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
                 Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
+                Ennemi3CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
                 break;
         }
     }

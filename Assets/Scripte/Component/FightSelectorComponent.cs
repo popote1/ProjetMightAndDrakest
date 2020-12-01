@@ -48,11 +48,14 @@ public class FightSelectorComponent : MonoBehaviour
 
     private void Update()
     {
-        if (_object1 != null) PanelToposition(_object1, PanelSelectedObject1.transform);
-        if (_object2 != null) PanelToposition(_object2, PanelSelectedObject2.transform);
-        if (_stancePanel!=null) PanelToposition( _stancePanel,PanelSelectedStance.transform);
-        UpDateSelectorPos();
-        PreSelectPanel();
+        if (FightComonent.IsFighting)
+        {
+            if (_object1 != null) PanelToposition(_object1, PanelSelectedObject1.transform);
+            if (_object2 != null) PanelToposition(_object2, PanelSelectedObject2.transform);
+            if (_stancePanel != null) PanelToposition(_stancePanel, PanelSelectedStance.transform);
+            UpDateSelectorPos();
+            PreSelectPanel();
+        }
     }
 
     public void ScrollPanel(InputAction.CallbackContext callbackContext)

@@ -17,7 +17,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
     public TMP_Text TxtShield;
     public EnnemiInfo EnnemiInfo;
     public ShakeComponent shakeComponent;
-    [HideInInspector]public bool IsAlive;
+    [HideInInspector]public bool IsAlive=false;
     private int tempsSpecialEffet;
     public int TempsSpecialEffet
     {
@@ -50,7 +50,8 @@ public class EnnemiCombatUIComponent : MonoBehaviour
 
     public void Update()
     {
-        SilderHP.value = Mathf.Lerp(SilderHP.value, (float) EnnemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP, 0.5f);
+        if (IsAlive) SilderHP.value = Mathf.Lerp(SilderHP.value, (float) EnnemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP, 0.5f);
+        
     }
 
 

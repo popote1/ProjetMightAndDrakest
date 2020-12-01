@@ -27,12 +27,15 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
 
     private void Start()
     {
-        if (EnnemiAnimation.FrontIdelAnimations != null)
+        if (EnnemiAnimation != null)
         {
-            _actualAnimation = EnnemiAnimation.FrontIdelAnimations;
-            _actualFrameRate = EnnemiAnimation.FrontIdelFrameRate;
-            MeshRenderer.material = _actualAnimation[_indexAnimation];
-            _indexAnimation++;
+            if (EnnemiAnimation.FrontIdelAnimations != null)
+            {
+                _actualAnimation = EnnemiAnimation.FrontIdelAnimations;
+                _actualFrameRate = EnnemiAnimation.FrontIdelFrameRate;
+                MeshRenderer.material = _actualAnimation[_indexAnimation];
+                _indexAnimation++;
+            }
         }
     }
     

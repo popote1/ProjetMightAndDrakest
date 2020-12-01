@@ -7,14 +7,17 @@ using UnityEngine.InputSystem;
 public class HUDComponent : MonoBehaviour
 {
     
-    [Header("TechnicalShit")] public Slider InventorySlyder;
+    [Header("TechnicalShit")]
+    public Slider InventorySlyder;
     public float TimeToOpeninventory;
     public CanvasGroup canvasGroup;
     public InventoryComponent InventoryComponent;
+    public FightComonent fightComonent;
     public GameObject PanelInventory;
     public PlayerInput PlayerInput;
     public GameObject PanelHUD;
-    public static bool IsExploring;
+    public GameObject PanelComabt;
+    public static bool IsExploring=true;
     private float _inventorytimer;
     private bool isClicked;
     private bool _showInventoryBar;
@@ -36,6 +39,8 @@ public class HUDComponent : MonoBehaviour
                 _inventorytimer = TimeToOpeninventory;
                 PanelInventory.SetActive(true);
                 PanelHUD.SetActive(false);
+                IsExploring = false;
+                Debug.Log("IsExploring esr false");
                 PlayerInput.actions.FindActionMap("ExplorationControl").Disable();
                 PlayerInput.actions.FindActionMap("MenuControl").Enable();
                 InventoryComponent.LaunchInventory();
@@ -77,9 +82,21 @@ public class HUDComponent : MonoBehaviour
 
     public void CloseInventory()
     {
+        IsExploring = true;
         PanelInventory.SetActive(false);
         PanelHUD.SetActive(true);
         PlayerInput.actions.FindActionMap("ExplorationControl").Enable();
         PlayerInput.actions.FindActionMap("MenuControl").Disable();
+    }
+
+    public void StartFight(EnnemiGroupComponent ennemiGroupComponent)
+    {
+        PlayerInput.actions.FindActionMap("CombatsControls").Enable();
+        PlayerInput.actions.FindActionMap("ExplorationControl").Disable();
+        IsExploring = false;
+        fightComonent.ennemiGroupComponent = ennemiGroupComponent;
+        PanelComabt.SetActive(true);
+        PanelHUD.SetActive(false);
+        fightComonent.StartFight();
     }
 }

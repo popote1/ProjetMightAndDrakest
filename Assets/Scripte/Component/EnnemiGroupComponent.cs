@@ -8,6 +8,7 @@ using UnityEngine.AI;
 public class EnnemiGroupComponent : MonoBehaviour
 {
     public List<EnnemiInfo> Ennemis = new List<EnnemiInfo>();
+    public float FightDistance;
     public float DetectionDistance;
     public float ChasingSpeed;
     public GameObject Ennemi1;
@@ -18,7 +19,6 @@ public class EnnemiGroupComponent : MonoBehaviour
     public float DistanceToPint;
     public float PatrolSpeed;
     public List<Transform> PatrolPoints;
-    public static bool IsExploring=true;
     [Header("TemporalTest")]
     public List<SOEnnemi> SoEnnemis;
 
@@ -32,6 +32,7 @@ public class EnnemiGroupComponent : MonoBehaviour
     {
         Debug.Log(SoEnnemis.Count);
         foreach (SOEnnemi so in SoEnnemis) {
+            Debug.Log(" création de l'info ennemi "+so.Name);
             Ennemis.Add(new EnnemiInfo(so));
         }
         IniteEnnemis();
@@ -45,10 +46,11 @@ public class EnnemiGroupComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsExploring)
+        if (HUDComponent.IsExploring)
         {
             if (!_chasingPlayer)
             {
+                navMeshAgent.speed = PatrolSpeed;
                 if (PatrolPoints.Count > 0)
                 {
                     if ((transform.position - _targetPos).magnitude < DistanceToPint)
@@ -82,8 +84,22 @@ public class EnnemiGroupComponent : MonoBehaviour
                 {
                     animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Walk);
                 }
+
+               
             }
-            
+            if ((transform.position - _player.position).magnitude < FightDistance)
+            {
+                Debug.Log(" début du comat");
+                _player.GetComponent<HUDComponent>().StartFight(this);
+            } 
+        }
+        else
+        {
+            navMeshAgent.speed = 0;
+            foreach (var animator in Animators)
+            {
+                animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
+            }
         }
     }
 
