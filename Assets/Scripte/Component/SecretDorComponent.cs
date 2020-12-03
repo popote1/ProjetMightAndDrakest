@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class SecretDorComponent : MonoBehaviour
 {
-    public void OpenDoor
+    public void OpenDoor()
+    {
+        transform.position += transform.up * 2;
+    }
 }

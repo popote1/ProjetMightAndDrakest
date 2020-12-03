@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
@@ -10,9 +11,10 @@ using Debug = UnityEngine.Debug;
 public class FightComonent : MonoBehaviour
 {
     [Header("Custom Parameters")] [SerializeField]
-    public EnnemiGroupComponent ennemiGroupComponent;
+    public EnnemiGroupComponent EnnemiGroupComponent;
     public PlayerInfoComponent PlayerInfoComponent;
     public FightSelectorComponent FightSelectorComponent;
+    [SerializeField] public HUDComponent HudComponent;
 
 
     [Header(("UI Perso Info"))] public Slider SliderHP;
@@ -60,12 +62,12 @@ public class FightComonent : MonoBehaviour
 
     public void StartFight()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         SetEnnemis();
         FightSelectorComponent.LoadIteamBar();
         FightSelectorComponent.LoadStancePanel();
         CheckSpecialStat();
         IsFighting = true;
+        CombatStat = 1;
     }
 
     // Update is called once per frame
@@ -156,6 +158,7 @@ public class FightComonent : MonoBehaviour
             if (CombatStat == 50)
             {
                 FightSelectorComponent.ResetPannels();
+                FightSelectorComponent.SetPanels();
                 ResetShield();
                 CombatStat = 1;
             }
@@ -187,25 +190,25 @@ public class FightComonent : MonoBehaviour
 
     private void SetEnnemis()
     {
-        switch (ennemiGroupComponent.Ennemis.Count)
+        switch (EnnemiGroupComponent.Ennemis.Count)
         {
             case 1:
-                Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
-                Ennemi2CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
+                Ennemi2CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
+                Ennemi2CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
                 break;
             case 2:
-                Ennemi1CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
-                Ennemi1CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
-                Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
-                Ennemi3CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
+                Ennemi1CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
+                Ennemi1CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
+                Ennemi3CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[1]);
+                Ennemi3CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
                 break;
             case 3:
-                Ennemi1CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
-                Ennemi1CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
-                Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[2]);
-                Ennemi2CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
-                Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
-                Ennemi3CombatUIComponent.shakeComponent = ennemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
+                Ennemi1CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
+                Ennemi1CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
+                Ennemi2CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[2]);
+                Ennemi2CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
+                Ennemi3CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[1]);
+                Ennemi3CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
                 break;
         }
     }
@@ -532,7 +535,11 @@ public class FightComonent : MonoBehaviour
 
     private void SetPanelVictory()
     {
-        VictoryPanel.SetActive(true);
+        Debug.Log("Victoire");
+        IsFighting = false;
+        EnnemiGroupComponent.Die();
+        HudComponent.EndFight();
+        FightSelectorComponent.ResetPannels();
     }
 
     private void SetPanelDefat()

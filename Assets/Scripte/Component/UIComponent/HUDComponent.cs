@@ -94,9 +94,18 @@ public class HUDComponent : MonoBehaviour
         PlayerInput.actions.FindActionMap("CombatsControls").Enable();
         PlayerInput.actions.FindActionMap("ExplorationControl").Disable();
         IsExploring = false;
-        fightComonent.ennemiGroupComponent = ennemiGroupComponent;
+        fightComonent.EnnemiGroupComponent = ennemiGroupComponent;
         PanelComabt.SetActive(true);
         PanelHUD.SetActive(false);
         fightComonent.StartFight();
+    }
+
+    public void EndFight()
+    {
+        PlayerInput.actions.FindActionMap("CombatsControls").Disable();
+        PlayerInput.actions.FindActionMap("ExplorationControl").Enable();
+        IsExploring = true;
+        PanelComabt.SetActive(false);
+        PanelHUD.SetActive(true);
     }
 }

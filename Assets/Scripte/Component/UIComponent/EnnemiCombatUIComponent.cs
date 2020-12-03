@@ -71,8 +71,10 @@ public class EnnemiCombatUIComponent : MonoBehaviour
         if (EnnemiInfo.CurrentHP <= 0)
         {
             EnnemiInfo.CurrentHP = 0;
-            
+            HideSpecialStat();
+            ResetShild();
             IsAlive = false;
+            
             Invoke("ClosePanel", 1.5f);
         }
         EnnemiHP.text = EnnemiInfo.CurrentHP + "/" + EnnemiInfo.SoEnnemi.MaxHP;

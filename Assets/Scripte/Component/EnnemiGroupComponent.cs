@@ -26,7 +26,8 @@ public class EnnemiGroupComponent : MonoBehaviour
     private int _nextPos=-1;
     private Transform _player;
     private bool _chasingPlayer;
-    
+    private bool _isdead;
+
 
     private void Awake()
     {
@@ -46,60 +47,52 @@ public class EnnemiGroupComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (HUDComponent.IsExploring)
-        {
-            if (!_chasingPlayer)
-            {
-                navMeshAgent.speed = PatrolSpeed;
-                if (PatrolPoints.Count > 0)
-                {
-                    if ((transform.position - _targetPos).magnitude < DistanceToPint)
-                    {
-                        SetNextPos();
+        if (!_isdead) {
+            if (HUDComponent.IsExploring) {
+                if (!_chasingPlayer) {
+                    navMeshAgent.speed = PatrolSpeed;
+                    if (PatrolPoints.Count > 0) {
+                        if ((transform.position - _targetPos).magnitude < DistanceToPint) {
+                            SetNextPos();
+                        }
+                        foreach (var animator in Animators) {
+                            animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Walk);
+                        }
+                    }
+                    else {
+                        foreach (var animator in Animators) {
+                            animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
+                        }
                     }
 
-                    foreach (var animator in Animators)
-                    {
+                    if ((transform.position - _player.position).magnitude < DetectionDistance) {
+                        _chasingPlayer = true;
+                    }
+                }
+                else {
+                    navMeshAgent.speed = ChasingSpeed;
+                    navMeshAgent.destination = _player.position;
+                    foreach (var animator in Animators) {
                         animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Walk);
                     }
-                }
-                else
-                {
-                    foreach (var animator in Animators)
-                    {
-                        animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
-                    }
+
+
                 }
 
-                if ((transform.position - _player.position).magnitude < DetectionDistance)
-                {
-                    _chasingPlayer = true;
+                if ((transform.position - _player.position).magnitude < FightDistance) {
+                    Debug.Log(" début du comat");
+                    _player.GetComponent<HUDComponent>().StartFight(this);
                 }
             }
-            else
-            {
-                navMeshAgent.speed = ChasingSpeed;
-                navMeshAgent.destination = _player.position;
-                foreach (var animator in Animators)
-                {
-                    animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Walk);
+            else {
+                navMeshAgent.speed = 0;
+                foreach (var animator in Animators) {
+                    animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
                 }
-
-               
             }
-            if ((transform.position - _player.position).magnitude < FightDistance)
-            {
-                Debug.Log(" début du comat");
-                _player.GetComponent<HUDComponent>().StartFight(this);
-            } 
         }
-        else
-        {
+        else {
             navMeshAgent.speed = 0;
-            foreach (var animator in Animators)
-            {
-                animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
-            }
         }
     }
 
@@ -162,5 +155,10 @@ public class EnnemiGroupComponent : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position , DetectionDistance);
+    }
+
+    public void Die()
+    {
+        _isdead = true;
     }
 }

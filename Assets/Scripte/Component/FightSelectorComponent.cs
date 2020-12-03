@@ -397,10 +397,7 @@ public class FightSelectorComponent : MonoBehaviour
 
     public void LoadStancePanel()
     {
-        foreach (SOStanceGeneral stance in FightComonent.PlayerInfoComponent.SOStance)
-        {
-            FightComonent.Stances.Add(new StanceInfo(stance));
-        }
+        DestroyStances();
         foreach (StanceInfo stance in FightComonent.Stances)
         {
             GameObject newObjectPanel = Instantiate(NewStancePrefabsPanel, PanelSliderStance.transform);
@@ -527,6 +524,11 @@ public class FightSelectorComponent : MonoBehaviour
         Destroy(_object1);
         Destroy(_object2);
         Destroy(_stancePanel);
+        
+    }
+
+    public void SetPanels()
+    {
         LoadIteamBar();
         ReloadStancePannel();
     }
@@ -586,4 +588,20 @@ public class FightSelectorComponent : MonoBehaviour
         Debug.Log("L'item "+item.SoObject.Name + " s'est casser");
         FightComonent.PlayerInfoComponent.Inventory.Remove(item);
     }
+
+    public void DestroyStances()
+    {
+        foreach (SOStanceGeneral stance in FightComonent.PlayerInfoComponent.SOStance)
+        {
+            FightComonent.Stances.Add(new StanceInfo(stance));
+        }
+    }
+
+    public void DestroySelecterdObject()
+    {
+        Destroy(_object1);
+        Destroy(_object2);
+        Destroy(_stancePanel);
+    }
+    
 }

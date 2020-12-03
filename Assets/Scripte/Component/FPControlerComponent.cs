@@ -11,9 +11,14 @@ public class FPControlerComponent: MonoBehaviour
     private Vector2 _movement;
     private Vector3 _mouseRotation;
     public float MouseSensibility;
-    
-    
-   public void TestDeplace(InputAction.CallbackContext callbackContext)
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
+
+    public void TestDeplace(InputAction.CallbackContext callbackContext)
     {
        // Debug.Log(callbackContext.ReadValue<Vector2>());
 
