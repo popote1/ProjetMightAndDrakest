@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -14,8 +13,7 @@ public class InteractComponent : MonoBehaviour
     private List<IInteracteble> Interactebles = new List<IInteracteble>();
     private GameObject[] SelectableInteraction;
     private GameObject PreselecteInteraction;
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +27,22 @@ public class InteractComponent : MonoBehaviour
         ChechSelectebles();
     }
 
+    public void AddSelectable(Collider selectable)
+    {
+        selectable.GetComponent<IInteracteble>().SetSelectable();
+        
+    }
+
+    public void RemoveSelectable(Collider selectable)
+    {
+        
+    }
+    
     private void ChechSelectebles() {
         List<IInteracteble> interactable = new List<IInteracteble>();
+        List<IInteracteble> removeList = new List<IInteracteble>();
         Collider[] colliders = Physics.OverlapSphere(SelectePoints.position, InteracteDistance);
+        
         foreach (Collider collider in colliders) {
             if (collider.GetComponent<IInteracteble>() != null) {
                 if (!Interactebles.Contains(collider.GetComponent<IInteracteble>())) {
@@ -42,16 +53,17 @@ public class InteractComponent : MonoBehaviour
             }
         }
 
-        if (Interactebles.Count > 0)
-        {
-            foreach (IInteracteble item in Interactebles)
+        
+        foreach (IInteracteble item in Interactebles) {
+            if (!interactable.Contains(item))
             {
-                if (!interactable.Contains(item))
-                {
-                    item.Intecract(SelectStat.none);
-                    //Interactebles.Remove(item);
-                }
+                item.Intecract(SelectStat.none);
+                removeList.Add(item);
             }
+        }
+
+        foreach (IInteracteble item in removeList) {
+            Interactebles.Remove(item);
         }
     }
     public void OnClick(InputAction.CallbackContext ctx) {

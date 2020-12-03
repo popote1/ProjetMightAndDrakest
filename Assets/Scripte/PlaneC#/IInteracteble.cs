@@ -4,6 +4,8 @@ using UnityEngine;
 
 interface IInteracteble
 {
-     
      void Intecract(InteractComponent.SelectStat selectStat);
+     void DesetSelectable();
+     void SetSelectable();
+     
 }

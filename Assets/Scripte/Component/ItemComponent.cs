@@ -7,9 +7,10 @@ public class ItemComponent : MonoBehaviour , IInteracteble
 {
     public SOObject SoObject;
     public ItemData ItemData;
+
     private MeshRenderer _meshRenderer;
     private LineRenderer _lineRenderer;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,7 @@ public class ItemComponent : MonoBehaviour , IInteracteble
         }
     }
 
-    private void SetSelectable()
+    public void SetSelectable()
     {
         Debug.Log("Objet en selectable");
         _lineRenderer.enabled = true;
@@ -50,7 +51,7 @@ public class ItemComponent : MonoBehaviour , IInteracteble
         _lineRenderer.SetPositions(linePos);
     }
 
-    private void DesetSelectable()
+    public void DesetSelectable()
     {
         Debug.Log("Objet Deséléctioner");
         _lineRenderer.enabled=false;
