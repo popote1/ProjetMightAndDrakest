@@ -19,7 +19,7 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
         
     }
 
-    public void Intecract()
+    public void Intecract(InteractComponent.SelectStat selectStat)
     {
         Debug.Log(" Le bouton est apuiller");
         Event.Invoke();

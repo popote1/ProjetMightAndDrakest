@@ -16,7 +16,7 @@ public class DoorComponent : MonoBehaviour , IInteracteble
         
     }
 
-    public void Intecract()
+    public void Intecract(InteractComponent.SelectStat selectStat)
     {
         Debug.Log(" la porte est ouverte");
 

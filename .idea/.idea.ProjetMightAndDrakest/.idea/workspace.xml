@@ -20,21 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/SecretDorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/SecretDorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/InteractComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/InteractComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/IInteracteble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/PlaneC#/IInteracteble.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,15 +108,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/UtilityScripte/SoundManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/IInteracteble.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/InteractComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/SecretDorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
@@ -131,6 +119,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/IInteracteble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/InteractComponent.cs" />
       </list>
     </option>
   </component>
@@ -208,6 +201,7 @@
       <workItem from="1606901964944" duration="93000" />
       <workItem from="1606925148943" duration="3041000" />
       <workItem from="1606980719942" duration="6722000" />
+      <workItem from="1606989780679" duration="8649000" />
     </task>
     <servers />
   </component>
@@ -246,12 +240,12 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606065388499" />
-    <state x="2500" y="1283" width="1296" height="1012" maximized="true" key="dock-window-1" timestamp="1606985608329">
+    <state x="2500" y="1283" width="1296" height="1012" maximized="true" key="dock-window-1" timestamp="1606990191054">
       <screen x="2189" y="1303" width="1920" height="1080" />
     </state>
     <state x="1739" y="262" width="1892" height="1067" maximized="true" key="dock-window-1/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606851970850" />
     <state x="2188" y="1292" width="1296" height="1012" key="dock-window-1/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1606982276601" />
-    <state x="2500" y="1283" width="1296" height="1012" maximized="true" key="dock-window-1/2189.1303.1920.1080/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1606985608329" />
+    <state x="2500" y="1283" width="1296" height="1012" maximized="true" key="dock-window-1/2189.1303.1920.1080/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1606990191054" />
     <state x="1867" y="342" width="1296" height="1013" maximized="true" key="dock-window-2" timestamp="1606068782486">
       <screen x="1920" y="279" width="1280" height="1024" />
     </state>

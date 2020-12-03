@@ -4,5 +4,6 @@ using UnityEngine;
 
 interface IInteracteble
 {
-     void Intecract();
+     
+     void Intecract(InteractComponent.SelectStat selectStat);
 }
