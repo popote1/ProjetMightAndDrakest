@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "Rapi\xE8re"
   CoolDescription: 
-  WorldSprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: 7872896faff45fd40b91cf5bdf566a4f, type: 2}
   UISprite: {fileID: 0}
   Damage: 6
   ChanceToHit: 70
   Target: 1
   Durability: 3
   isTwoHand: 0
+  SpecialEffect: {fileID: 0}

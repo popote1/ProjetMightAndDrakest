@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\xE9p\xE9e"
   CoolDescription: 
-  WorldSprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: e73bb1522abe89843a79d81570710216, type: 2}
   UISprite: {fileID: 0}
   Damage: 7
   ChanceToHit: 70
   Target: 0
   Durability: 5
   isTwoHand: 0
+  SpecialEffect: {fileID: 0}

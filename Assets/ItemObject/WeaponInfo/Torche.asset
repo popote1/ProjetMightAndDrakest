@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Torche
   CoolDescription: 
-  WorldSprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: b5fdbe00b4bc0ae43bd4c594fdfbe409, type: 2}
   UISprite: {fileID: 0}
   Damage: 1
   ChanceToHit: 50

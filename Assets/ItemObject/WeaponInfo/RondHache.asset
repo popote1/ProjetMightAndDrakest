@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rondache
   CoolDescription: 
-  WorldSprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: 18eb161ae94638548b09dcef2ba331ba, type: 2}
   UISprite: {fileID: 0}
   ShieldValue: 4
   Durability: 3

@@ -20,11 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Attack/1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Attack/1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Attack/2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Attack/2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/GoblinWalkTest1/9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/UtilityIteam/PotionDeSoin.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/UtilityIteam/PotionDeSoin.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Massue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Massue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Rapiere.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Rapiere.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/RondHache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/RondHache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Torche.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Torche.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Zwifider.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Zwifider.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/épée.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/épée.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PorteBois/ref/MaterielPorteBois.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PorteBois/ref/MaterielPorteBois.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,30 +57,38 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItemPetitCoffre.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ShakeComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/FollowWorldUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/SecretDorComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ShakeComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -105,6 +135,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" />
         <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/FPControlerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" />
       </list>
     </option>
   </component>

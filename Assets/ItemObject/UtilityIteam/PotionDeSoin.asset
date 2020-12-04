@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Potion deSoin
   CoolDescription: 
-  WorldSprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: 5648b61d7385ccf47bdb028b5d1f7e99, type: 2}
   UISprite: {fileID: 0}
   PracticalDescription: Rend 10 PV
   SoUtilityEffectGeneral: {fileID: 11400000, guid: 9f64a4d22fd2fac429586d7dfb38199e,

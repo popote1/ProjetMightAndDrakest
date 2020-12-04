@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Zwifider
   CoolDescription: 
-  WorldSprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: e73bb1522abe89843a79d81570710216, type: 2}
   UISprite: {fileID: 0}
   Damage: 5
   ChanceToHit: 50

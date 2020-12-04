@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Massue
   CoolDescription: 
-  WorldSprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: d5f997853e2067d4e90bafc519f2d1d2, type: 2}
   UISprite: {fileID: 0}
   Damage: 6
   ChanceToHit: 70
