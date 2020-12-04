@@ -24,4 +24,29 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
         Debug.Log(" Le bouton est apuiller");
         Event.Invoke();
     }
+    public void SetPreselctable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void SetSelectable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void DePreselectable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void DesetSelectable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool USe(PlayerInfoComponent playerInfoComponent)
+    {
+        throw new System.NotImplementedException();
+    }
+    
 }

@@ -69,7 +69,6 @@ public class HUDComponent : MonoBehaviour
 
     public void OnClick(InputAction.CallbackContext callbackContext)
     {
-        Debug.Log("Click");
         if (callbackContext.started)
         {
             isClicked = true;

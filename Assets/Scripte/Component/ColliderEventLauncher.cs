@@ -15,17 +15,17 @@ namespace Scripte.Component
     
         private void OnTriggerEnter(Collider other)
         {
-            throw new NotImplementedException();
+            OnEnterColliderEvent.Invoke(other);
         }
 
         private void OnTriggerStay(Collider other)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void OnTriggerExit(Collider other)
         {
-            throw new NotImplementedException();
+           OnExitColliderEvent.Invoke(other);
         }
     }
 }

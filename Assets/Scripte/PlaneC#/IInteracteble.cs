@@ -7,5 +7,9 @@ interface IInteracteble
      void Intecract(InteractComponent.SelectStat selectStat);
      void DesetSelectable();
      void SetSelectable();
-     
+
+     void SetPreselctable();
+     void DePreselectable();
+
+     bool USe(PlayerInfoComponent playerInfoComponent);
 }

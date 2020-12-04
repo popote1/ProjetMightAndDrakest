@@ -22,4 +22,29 @@ public class DoorComponent : MonoBehaviour , IInteracteble
 
         transform.position += transform.forward;
     }
+
+    public void SetPreselctable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void SetSelectable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void DePreselectable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void DesetSelectable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool USe(PlayerInfoComponent playerInfoComponent)
+    {
+        throw new System.NotImplementedException();
+    }
 }
