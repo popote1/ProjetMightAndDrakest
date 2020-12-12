@@ -10,4 +10,7 @@ public class SOAttack : ScriptableObject
    public int Damage;
    public int ChanceToHit;
    public SOSpecialEffectGeneral SpecialEffect;
+   public GameObject FX;
+   public AudioClip AudioClip;
+   public float volume;
 }

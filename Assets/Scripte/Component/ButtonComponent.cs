@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ButtonComponent : MonoBehaviour ,IInteracteble
 {
     public UnityEvent Event;
+    
+    public Sprite Icone;
+    public GameObject UIImage;
+    private GameObject _panel;
     
     // Start is called before the first frame update
     void Start()
@@ -21,32 +26,39 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
 
     public void Intecract(InteractComponent.SelectStat selectStat)
     {
-        Debug.Log(" Le bouton est apuiller");
-        Event.Invoke();
+       
     }
+
     public void SetPreselctable()
     {
-        throw new System.NotImplementedException();
+        _panel.transform.localScale = Vector3.one*2;
     }
 
     public void SetSelectable()
     {
-        throw new System.NotImplementedException();
+        Transform Canevas = GameObject.Find("Canvas").GetComponent<Canvas>().transform;
+        _panel = Instantiate(UIImage, Canevas);
+        _panel.AddComponent<FollowWorldUIComponent>();
+        _panel.GetComponent<FollowWorldUIComponent>().lookAt = transform;
+        _panel.GetComponent<Image>().sprite = Icone;
     }
 
     public void DePreselectable()
     {
-        throw new System.NotImplementedException();
+        _panel.transform.localScale = Vector3.one;
     }
 
     public void DesetSelectable()
     {
-        throw new System.NotImplementedException();
+        Destroy(_panel);
     }
 
     public bool USe(PlayerInfoComponent playerInfoComponent)
     {
-        throw new System.NotImplementedException();
+        Event.Invoke();
+        Destroy(_panel);
+        Destroy(this);
+        return true;
     }
     
 }

@@ -8,4 +8,8 @@ public class SOObject : ScriptableObject
   [TextArea]public string CoolDescription;
   public Material WorldSprite;
   public Sprite UISprite;
+  public GameObject FX;
+  public AudioClip AudioClip;
+  public float volume;
+  
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
@@ -27,6 +28,7 @@ public class FightComonent : MonoBehaviour
     public Image ImgSelector;
     public Image ImgShield;
     public TMP_Text TxtShield;
+    public Transform CenterScreen;
     [Header("UI Ennemi")]
     public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi2CombatUIComponent;
@@ -68,6 +70,8 @@ public class FightComonent : MonoBehaviour
         CheckSpecialStat();
         IsFighting = true;
         CombatStat = 1;
+        Vector3 combatdir= EnnemiGroupComponent.transform.position - transform.position;
+        transform.forward = new Vector3(combatdir.x, 0,combatdir.z);
     }
 
     // Update is called once per frame
@@ -319,6 +323,8 @@ public class FightComonent : MonoBehaviour
             foreach (var target in targets)
             {
                 target.TakeDamage(damage);
+                Instantiate(weapon.FX, target.shakeComponent.transform.position, Quaternion.identity);
+               
             }
             if (weapon.SpecialEffect != null)
             {
@@ -327,17 +333,22 @@ public class FightComonent : MonoBehaviour
                     weapon.SpecialEffect.MakeSpecialEffect(this, targets, 1);
                 }
             }
+            SoundManager.PlaySound(weapon.AudioClip,weapon.volume);
 
         }
         else if (ItemData1.SoObject is SOShield)
         {
             SOShield shield = (SOShield) ItemData1.SoObject;
             AddShield(shield.ShieldValue);
+            Instantiate(shield.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(shield.AudioClip,shield.volume);
         }
         else if (ItemData1.SoObject is SOUtilityItem)
         {
             SOUtilityItem soUtilityItem = (SOUtilityItem) ItemData1.SoObject;
             soUtilityItem.SoUtilityEffectGeneral.CombatUse(PlayerInfoComponent, this, 1);
+            Instantiate(soUtilityItem.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(soUtilityItem.AudioClip,soUtilityItem.volume);
         }
 
         if (!(ItemData1.SoObject is SOUtilityItem))
@@ -380,6 +391,7 @@ public class FightComonent : MonoBehaviour
             foreach (var target in targets)
             {
                 target.TakeDamage(damage);
+                Instantiate(weapon.FX, target.shakeComponent.transform.position, Quaternion.identity);
             }
             if (weapon.SpecialEffect != null)
             {
@@ -388,16 +400,21 @@ public class FightComonent : MonoBehaviour
                     weapon.SpecialEffect.MakeSpecialEffect(this, targets , 2);
                 }
             }
+            SoundManager.PlaySound(weapon.AudioClip,weapon.volume);
         }
         else if (ItemData2.SoObject is SOShield)
         {
             SOShield shield = (SOShield) ItemData2.SoObject;
             AddShield(shield.ShieldValue);
+            Instantiate(shield.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(shield.AudioClip,shield.volume);
         }
         else if (ItemData2.SoObject is SOUtilityItem)
         {
             SOUtilityItem soUtilityItem = (SOUtilityItem)ItemData2.SoObject;
             soUtilityItem.SoUtilityEffectGeneral.CombatUse(PlayerInfoComponent,this,2);
+            Instantiate(soUtilityItem.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(soUtilityItem.AudioClip,soUtilityItem.volume);
         }
         if (!(ItemData2.SoObject is SOUtilityItem))
         {

@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class HUDComponent : MonoBehaviour
 {
+    [Header("UIElements")] public Slider SliderHP;
+    public TMP_Text TxtHP;
+    public Image specialStat;
+    
     
     [Header("TechnicalShit")]
     public Slider InventorySlyder;
     public float TimeToOpeninventory;
     public CanvasGroup canvasGroup;
+    public PlayerInfoComponent PlayerInfoComponent;
     public InventoryComponent InventoryComponent;
     public FightComonent fightComonent;
     public GameObject PanelInventory;
@@ -25,7 +31,7 @@ public class HUDComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        specialStat.enabled = false;
     }
 
     void Update()
@@ -64,7 +70,9 @@ public class HUDComponent : MonoBehaviour
             canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 0, 0.1f);
         }
 
-        
+
+        SliderHP.value = Mathf.Lerp(SliderHP.value, (float)PlayerInfoComponent.CurrentHP / PlayerInfoComponent.MaxHP, 0.2f);
+        TxtHP.text = PlayerInfoComponent.CurrentHP + "/" + PlayerInfoComponent.MaxHP;
     }
 
     public void OnClick(InputAction.CallbackContext callbackContext)

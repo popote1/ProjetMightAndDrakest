@@ -63,6 +63,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
         EnnemiHP.text = ennemiInfo.CurrentHP + "/" + EnnemiInfo.SoEnnemi.MaxHP;
         SilderHP.value = (float)ennemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP;
         IsAlive = true;
+        
     }
 
     public void TakeDamage(int damage)
@@ -73,6 +74,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
             EnnemiInfo.CurrentHP = 0;
             HideSpecialStat();
             ResetShild();
+            shakeComponent.GetComponent<MeshRenderer>().enabled=(false);
             IsAlive = false;
             
             Invoke("ClosePanel", 1.5f);
@@ -127,6 +129,8 @@ public class EnnemiCombatUIComponent : MonoBehaviour
                 return MakeDamage(true, attack);
             }
             Debug.Log(transform.name+"  "+attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit);
+            Instantiate(attack.SoAttack.FX,fightComonent.CenterScreen);
+            SoundManager.PlaySound(attack.SoAttack.AudioClip,attack.SoAttack.volume);
             return MakeDamage(false, attack);
         }
         Debug.Log(transform.name+"  "+attack.SoAttack.Name+" rate avec un "+hitRollDice+" sur "+generalChanceToHit);

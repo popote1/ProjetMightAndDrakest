@@ -6,6 +6,6 @@ public class SecretDorComponent : MonoBehaviour
 {
     public void OpenDoor()
     {
-        transform.position += transform.up * 2;
+        transform.position += transform.up * 1.8f;
     }
 }

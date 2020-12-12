@@ -86,6 +86,7 @@ public class EnnemiGroupComponent : MonoBehaviour
             }
             else {
                 navMeshAgent.speed = 0;
+                navMeshAgent.velocity = Vector3.zero;
                 foreach (var animator in Animators) {
                     animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
                 }
@@ -93,6 +94,7 @@ public class EnnemiGroupComponent : MonoBehaviour
         }
         else {
             navMeshAgent.speed = 0;
+            navMeshAgent.velocity = Vector3.zero;
         }
     }
 

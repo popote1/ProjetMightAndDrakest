@@ -7,6 +7,8 @@ public class ItemComponent : MonoBehaviour , IInteracteble
 {
     public SOObject SoObject;
     public ItemData ItemData;
+    public AudioClip audioClip;
+    [Range(0,1)]public float volume=1;
     [Header("Prefabs Panel")]
     public GameObject WeaponPanel;
     public GameObject ShieldPanel;
@@ -88,6 +90,7 @@ public class ItemComponent : MonoBehaviour , IInteracteble
         Debug.Log(" Utilisation de l'object");
         if (playerInfoComponent.Inventory.Count < playerInfoComponent.InventoryLengths)
         {
+            SoundManager.PlaySound(audioClip,volume);
             playerInfoComponent.Inventory.Add(ItemData);
             Destroy(_infoPanel);
             Debug.Log(" je prend de l'object");
