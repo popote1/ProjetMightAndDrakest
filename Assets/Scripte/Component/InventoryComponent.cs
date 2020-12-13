@@ -94,7 +94,6 @@ public class InventoryComponent : MonoBehaviour
     private bool _inventoryOn;
 
     public void LaunchInventory() {
-        ItemButton.Select();
         LoadPlayerInfoPanel();
         LoadIteamBar();
         LoadStancePanel();
@@ -103,6 +102,7 @@ public class InventoryComponent : MonoBehaviour
         ShowButtonPanel(1);
         _scrollPanel = true;
         _inventoryOn = true;
+        ItemButton.Select();
     }
 
     void Update()
@@ -193,6 +193,7 @@ public class InventoryComponent : MonoBehaviour
     public void UIButtonOption()
     {
         ShowButtonPanel(3);
+        SetOptionSliders();
         SliderMousSencibility.Select();
     }
     public void UIButtonOptionReturn()
@@ -512,6 +513,31 @@ public class InventoryComponent : MonoBehaviour
             SOQuestItem soUtilityItem = (SOQuestItem) item.SoObject;
             editPanelComponent.TxtSpecialEffect.text = soUtilityItem.PracticalDescription;
             newObjectPanel.GetComponent<CombatPanelAnimationComponent>().Deselected();
+        }
+    }
+
+    private void SetOptionSliders()
+    {
+        SliderMousSencibility.value =
+            playerInfoComponent.gameObject.GetComponent<FPControlerComponent>().MouseSensibility / 0.5f;
+        SliderVolumeSoundEffect.value = SoundManager.volume;
+        SliderVolumeMusic.value = 1;
+    }
+
+    public void ChangeMouseSencibility()
+    {
+        if (_inventoryOn)
+        {
+            playerInfoComponent.gameObject.GetComponent<FPControlerComponent>().MouseSensibility =
+                SliderMousSencibility.value * 0.5f;
+        }
+    }
+
+    public void ChangeSoundVolume()
+    {
+        if (_inventoryOn)
+        {
+            SoundManager.volume = SliderVolumeSoundEffect.value;
         }
     }
 }

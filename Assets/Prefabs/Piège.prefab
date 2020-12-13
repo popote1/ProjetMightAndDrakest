@@ -69,13 +69,22 @@ MonoBehaviour:
   - {fileID: 6110290238942148863}
   - {fileID: 6110290238992706548}
   - {fileID: 6110290238705619785}
-  - {fileID: 6110290238705619785}
+  - {fileID: 6110290238259969007}
   SortieDeLance: 0
   TempoLancement: 1
   TempoRecharge: 5
+  TempoTik: 1
   Damage: 1
   OldPos: {x: -0.3, y: 0, z: -0.3}
   NewPos: {x: -0.3, y: 0, z: 0.3}
+  DetctionAudioClip: {fileID: 8300000, guid: 355bba63d0a9f634a86eb01636139c5b, type: 3}
+  DetectionVolume: 1
+  ActivationAudioClip: {fileID: 8300000, guid: 03c1cf9780ce06a4287eba3af0053334, type: 3}
+  ActivationVolume: 1
+  ReloadingAudioClip: {fileID: 8300000, guid: 01ac79631f174c441a4a1b2a44960a1d, type: 3}
+  ReloadingVolume: 1
+  ReloadedAudioClip: {fileID: 8300000, guid: 8e2011df10755584fa3fb2d1bdca73d9, type: 3}
+  ReloadedVolume: 1
 --- !u!1001 &8980377701802563565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -595,6 +604,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 554443559a6a88a47bb09c2508526428, type: 3}
+--- !u!1 &6110290238259969007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2912889330364657426, guid: 554443559a6a88a47bb09c2508526428,
+    type: 3}
+  m_PrefabInstance: {fileID: 8980377702467671293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8980377702594037822
 PrefabInstance:
   m_ObjectHideFlags: 0

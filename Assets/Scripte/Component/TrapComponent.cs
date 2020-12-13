@@ -9,12 +9,22 @@ public class TrapComponent : MonoBehaviour
     public float SortieDeLance;
     public float TempoLancement;
     public float TempoRecharge;
+    public float TempoTik;
     public int Damage;
     public Vector3 OldPos;
     public Vector3 NewPos;
+    public AudioClip DetctionAudioClip;
+    [Range(0, 1)] public float DetectionVolume = 1;
+    public AudioClip ActivationAudioClip;
+    [Range(0, 1)] public float ActivationVolume = 1;
+    public AudioClip ReloadingAudioClip;
+    [Range(0, 1)] public float ReloadingVolume = 1;
+    public AudioClip ReloadedAudioClip;
+    [Range(0, 1)] public float ReloadedVolume = 1;
     
     private int _trapStat = 1;
     private float _timer;
+    private float _tiketimer;
     void Start()
     {
         
@@ -47,7 +57,9 @@ public class TrapComponent : MonoBehaviour
            foreach (var lance in Lance)
            {
                lance.transform.localPosition = NewPos;
+              
            }
+           SoundManager.PlaySound(ActivationAudioClip,ActivationVolume);
 
            _trapStat = 4;
         }
@@ -61,11 +73,20 @@ public class TrapComponent : MonoBehaviour
                     lance.transform.localPosition = OldPos;
                 }
             }
+
+            _tiketimer += Time.deltaTime;
             _timer += Time.deltaTime;
+            if (_tiketimer >= TempoTik)
+            {
+                SoundManager.PlaySound(ReloadingAudioClip,ReloadingVolume);
+                _tiketimer = 0;
+            }
             if (_timer >= TempoRecharge)
             {
                 _timer = 0;
+                _tiketimer =0;
                 _trapStat = 1;
+                SoundManager.PlaySound(ReloadedAudioClip,ReloadedVolume);
             }
         }
     }
@@ -76,6 +97,7 @@ public class TrapComponent : MonoBehaviour
         {
             Debug.Log("Déclanche le combat");
             if (_trapStat == 1) _trapStat = 2;
+            SoundManager.PlaySound(DetctionAudioClip,DetectionVolume);
         }
     }
 }

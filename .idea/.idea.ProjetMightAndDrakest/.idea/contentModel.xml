@@ -83,11 +83,14 @@
             <e p="SoundManager.cs" t="Include" />
             <e p="TrapComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
+              <e p="ButtonEffectComponent.cs" t="Include" />
               <e p="CombatPanelAnimationComponent.cs" t="Include" />
               <e p="CombatSliderAnimationComponant.cs" t="Include" />
+              <e p="DialogueStartComponent.cs" t="Include" />
               <e p="EditPanelComponent.cs" t="Include" />
               <e p="EnnemiCombatUIComponent.cs" t="Include" />
               <e p="HUDComponent.cs" t="Include" />
+              <e p="MainMenuComponent.cs" t="Include" />
               <e p="ShakeComponent.cs" t="Include" />
               <e p="SliderAutiSizerComponent.cs" t="Include" />
             </e>

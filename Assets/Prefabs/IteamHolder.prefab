@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 7236560944687409787}
   - component: {fileID: 7236560944687409789}
   - component: {fileID: 7236560944687409791}
+  - component: {fileID: 2992681739001087859}
   - component: {fileID: 7236560944687409788}
   m_Layer: 0
   m_Name: IteamHolder
@@ -237,6 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoObject: {fileID: 11400000, guid: 65489ae2f030f5847b26c0ad70654b88, type: 2}
+  audioClip: {fileID: 8300000, guid: 4e221127fadb3f943a06719eba6cc77a, type: 3}
+  volume: 0.337
   WeaponPanel: {fileID: 9084822389689797766, guid: f0090ca5fb0983a46bb6a504a8d3c685,
     type: 3}
   ShieldPanel: {fileID: 9084822389689797766, guid: c049806cca643ab47a094c3c228bf609,
@@ -244,6 +247,25 @@ MonoBehaviour:
   UtilityPanel: {fileID: 9084822389689797766, guid: a4a780c6c3f147f4a847b7edc90c9f51,
     type: 3}
   Canvas: {fileID: 0}
+  EventOnPicking:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2992681739001087859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236560944687409784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97b8210bf7251848932b42bd1c436f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueText1: 
+  SkipIndex1: 0
+  DialogueText2: 
+  SkipIndex2: 0
 --- !u!54 &7236560944687409788
 Rigidbody:
   m_ObjectHideFlags: 0

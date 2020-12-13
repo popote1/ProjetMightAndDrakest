@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DoorComponent : MonoBehaviour , IInteracteble
@@ -8,13 +9,22 @@ public class DoorComponent : MonoBehaviour , IInteracteble
     public Sprite Icone;
     public GameObject UIImage;
     public Vector3 NewPos;
+    public AudioClip audioClip;
+    [Range(0,1)]public float Volume;
+    public Transform UIPoint;
+    [Header("KeyObject")] public SOObject Key;
+    public UnityEvent succesToOpen = new UnityEvent();
+    public UnityEvent FailToOpen = new UnityEvent();
 
     private GameObject _panel;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (UIPoint == null)
+        {
+            UIPoint = transform;
+        }
     }
 
     // Update is called once per frame
@@ -38,7 +48,7 @@ public class DoorComponent : MonoBehaviour , IInteracteble
         Transform Canevas = GameObject.Find("Canvas").GetComponent<Canvas>().transform;
         _panel = Instantiate(UIImage, Canevas);
         _panel.AddComponent<FollowWorldUIComponent>();
-        _panel.GetComponent<FollowWorldUIComponent>().lookAt = transform;
+        _panel.GetComponent<FollowWorldUIComponent>().lookAt = UIPoint;
         _panel.GetComponent<Image>().sprite = Icone;
     }
 
@@ -54,10 +64,43 @@ public class DoorComponent : MonoBehaviour , IInteracteble
 
     public bool USe(PlayerInfoComponent playerInfoComponent)
     {
-        transform.position = NewPos;
-        transform.Rotate(0,-90,0);
-        Destroy(_panel);
-        Destroy(this);
-        return true;
+        if (Key != null)
+        {
+            bool canOpen = false;
+            foreach (ItemData item in playerInfoComponent.Inventory)
+            {
+                if (item.SoObject == Key)
+                {
+                    canOpen = true;
+                    break;
+                }
+            }
+
+            if (canOpen)
+            {
+                succesToOpen.Invoke();
+                transform.localPosition = NewPos;
+                transform.Rotate(0, -90, 0);
+                Destroy(_panel);
+                SoundManager.PlaySound(audioClip, Volume);
+                Destroy(this);
+                return true;
+            }
+            else
+            {
+                FailToOpen.Invoke();
+                return false;
+            }
+        }
+        else
+        {
+            succesToOpen.Invoke();
+            transform.localPosition = NewPos;
+            transform.Rotate(0, -90, 0);
+            Destroy(_panel);
+            SoundManager.PlaySound(audioClip, Volume);
+            Destroy(this);
+            return true;
+        }
     }
 }

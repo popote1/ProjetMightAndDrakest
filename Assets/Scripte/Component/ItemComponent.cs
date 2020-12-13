@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ItemComponent : MonoBehaviour , IInteracteble
 {
@@ -14,6 +15,7 @@ public class ItemComponent : MonoBehaviour , IInteracteble
     public GameObject ShieldPanel;
     public GameObject UtilityPanel;
     public Canvas Canvas;
+    public UnityEvent EventOnPicking = new UnityEvent(); 
 
     private MeshRenderer _meshRenderer;
     private LineRenderer _lineRenderer;
@@ -87,13 +89,14 @@ public class ItemComponent : MonoBehaviour , IInteracteble
 
     public bool USe(PlayerInfoComponent playerInfoComponent)
     {
-        Debug.Log(" Utilisation de l'object");
+       
         if (playerInfoComponent.Inventory.Count < playerInfoComponent.InventoryLengths)
         {
             SoundManager.PlaySound(audioClip,volume);
             playerInfoComponent.Inventory.Add(ItemData);
             Destroy(_infoPanel);
             Debug.Log(" je prend de l'object");
+            EventOnPicking.Invoke();
             Destroy(gameObject);
             return true;
         }

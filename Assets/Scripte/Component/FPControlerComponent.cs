@@ -11,13 +11,21 @@ public class FPControlerComponent: MonoBehaviour
     private Vector2 _movement;
     private Vector3 _mouseRotation;
     public float MouseSensibility;
+    [Header("WalkEffects")]
+    public float StepTime;
+    public GameObject Camera;
+    public AnimationCurve easeType;
+    public AudioClip StepSound;
+    [Range(0,1)]public float StepVolume=1;
+    
+
+    private float _stepTimer;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-
-
+    
     public void TestDeplace(InputAction.CallbackContext callbackContext)
     {
        // Debug.Log(callbackContext.ReadValue<Vector2>());
@@ -35,5 +43,27 @@ public class FPControlerComponent: MonoBehaviour
    private void Update()
    {
        CharacterController.Move((transform.forward*_movement.y+transform.right*_movement.x)*Speed*Time.deltaTime);
+
+       if (_stepTimer != 0)
+       {
+           _stepTimer += Time.deltaTime;
+           if (_stepTimer >= StepTime)
+           {
+               if (_movement.magnitude != 0)
+               {
+                   SoundManager.PlaySound(StepSound, StepVolume);
+                   
+               }
+               LeanTween.moveY(Camera, Camera.transform.position.y+0.1f, StepTime).setEase(easeType);
+               _stepTimer = 0;
+           }
+       }
+       else
+       {
+           if (_movement.magnitude != 0)
+           {
+               _stepTimer += Time.deltaTime;
+           }
+       }
    }
 }
