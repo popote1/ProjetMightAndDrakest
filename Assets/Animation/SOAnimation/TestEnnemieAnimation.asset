@@ -25,7 +25,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  BackIdelFrameRate: 0
+  BackIdelFrameRate: 0.5
   FrontWalkAnimations:
   - {fileID: 2100000, guid: 36df212bbe92fe74ea4c6a23cb6ba855, type: 2}
   - {fileID: 2100000, guid: 0809c9cfc96e51a47a5d554c3ac758d9, type: 2}

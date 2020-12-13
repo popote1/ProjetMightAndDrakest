@@ -17,6 +17,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
     public TMP_Text TxtShield;
     public EnnemiInfo EnnemiInfo;
     public ShakeComponent shakeComponent;
+    public EnnemiMaterialAnimationComponent MatAnimator;
     [HideInInspector]public bool IsAlive=false;
     private int tempsSpecialEffet;
     public int TempsSpecialEffet
@@ -74,7 +75,8 @@ public class EnnemiCombatUIComponent : MonoBehaviour
             EnnemiInfo.CurrentHP = 0;
             HideSpecialStat();
             ResetShild();
-            shakeComponent.GetComponent<MeshRenderer>().enabled=(false);
+            //shakeComponent.GetComponent<MeshRenderer>().enabled=(false);
+            MatAnimator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Die);
             IsAlive = false;
             
             Invoke("ClosePanel", 1.5f);
@@ -89,7 +91,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
 
     public int MakeAttack(FightComonent fightComonent)
     {
-        
+        MatAnimator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Attack);
         return MakeAttack(ChoseAttack(),fightComonent);
     }
 

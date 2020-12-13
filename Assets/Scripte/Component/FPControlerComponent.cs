@@ -17,6 +17,8 @@ public class FPControlerComponent: MonoBehaviour
     public AnimationCurve easeType;
     public AudioClip StepSound;
     [Range(0,1)]public float StepVolume=1;
+
+    private float _Ypos;
     
 
     private float _stepTimer;
@@ -24,6 +26,7 @@ public class FPControlerComponent: MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        _Ypos = transform.position.y;
     }
     
     public void TestDeplace(InputAction.CallbackContext callbackContext)
@@ -43,6 +46,7 @@ public class FPControlerComponent: MonoBehaviour
    private void Update()
    {
        CharacterController.Move((transform.forward*_movement.y+transform.right*_movement.x)*Speed*Time.deltaTime);
+       transform.position = new Vector3(transform.position.x,_Ypos,transform.position.z);
 
        if (_stepTimer != 0)
        {

@@ -199,20 +199,26 @@ public class FightComonent : MonoBehaviour
             case 1:
                 Ennemi2CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
                 Ennemi2CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
+                Ennemi2CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi2.GetComponent<EnnemiMaterialAnimationComponent>();
                 break;
             case 2:
                 Ennemi1CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
                 Ennemi1CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
+                Ennemi1CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi1.GetComponent<EnnemiMaterialAnimationComponent>();
                 Ennemi3CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[1]);
                 Ennemi3CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
+                Ennemi3CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi3.GetComponent<EnnemiMaterialAnimationComponent>();
                 break;
             case 3:
                 Ennemi1CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
                 Ennemi1CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
+                Ennemi1CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi1.GetComponent<EnnemiMaterialAnimationComponent>();
                 Ennemi2CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[2]);
                 Ennemi2CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
+                Ennemi2CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi2.GetComponent<EnnemiMaterialAnimationComponent>();
                 Ennemi3CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[1]);
                 Ennemi3CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
+                Ennemi3CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi3.GetComponent<EnnemiMaterialAnimationComponent>();
                 break;
         }
     }
