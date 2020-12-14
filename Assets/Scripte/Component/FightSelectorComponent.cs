@@ -17,8 +17,9 @@ public class FightSelectorComponent : MonoBehaviour
     public GameObject NewShieldPrefabPanel;
     public GameObject NewUtilityPanel;
     public GameObject NewStancePrefabsPanel;
-    
+
     [Header("UI Selection")] 
+    public GameObject PanelPlayer;
     public GameObject Selector;
     public GameObject PanelObject;
     public GameObject PanelSlideObject;
@@ -28,7 +29,22 @@ public class FightSelectorComponent : MonoBehaviour
     public GameObject PanelSelectedObject2;
     public GameObject PanelSelectedStance;
 
-    [HideInInspector]public bool SelectTime;
+    private bool selectTime;
+
+    public bool SelectTime
+    {
+        get => selectTime;
+        set
+        {
+            selectTime = value;
+            if(selectTime==false)
+            {HideCombatSelector();}
+            else
+            {ShowCombatSelecotr();
+            }
+        }
+    }
+
     private ScrollRect _iteamScrollRect;
     private ScrollRect _stanceScrollRect;
     private GameObject _preSelectedPanel;
@@ -602,6 +618,18 @@ public class FightSelectorComponent : MonoBehaviour
         Destroy(_object1);
         Destroy(_object2);
         Destroy(_stancePanel);
+    }
+
+    public void HideCombatSelector()
+    {
+        LeanTween.moveY(PanelPlayer, 270, 0.5f);
+        Debug.Log("HidePanel");
+    }
+
+    public void ShowCombatSelecotr()
+    {
+        LeanTween.moveY(PanelPlayer, 540, 0.5f);  
+        Debug.Log("ShowPanel");
     }
     
 }

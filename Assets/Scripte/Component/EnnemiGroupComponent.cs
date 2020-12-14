@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 public class EnnemiGroupComponent : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class EnnemiGroupComponent : MonoBehaviour
     private Transform _player;
     private bool _chasingPlayer;
     private bool _isdead;
+    private bool _isInFight = false;
 
 
     private void Awake()
@@ -49,6 +51,7 @@ public class EnnemiGroupComponent : MonoBehaviour
     {
         if (!_isdead) {
             if (HUDComponent.IsExploring) {
+                _isInFight = false;
                 if (!_chasingPlayer) {
                     navMeshAgent.speed = PatrolSpeed;
                     if (PatrolPoints.Count > 0) {
@@ -60,9 +63,12 @@ public class EnnemiGroupComponent : MonoBehaviour
                         }
                     }
                     else {
-                        foreach (var animator in Animators) {
-                            animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
-                        }
+                        
+                            foreach (var animator in Animators)
+                            {
+                                animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
+                            }
+                       
                     }
 
                     if ((transform.position - _player.position).magnitude < DetectionDistance) {
@@ -87,9 +93,13 @@ public class EnnemiGroupComponent : MonoBehaviour
             else {
                 navMeshAgent.speed = 0;
                 navMeshAgent.velocity = Vector3.zero;
-                foreach (var animator in Animators) {
-                    animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
+                if (_isInFight==false)
+                {
+                    foreach (var animator in Animators) {
+                        animator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Idel);
+                    }
                 }
+                _isInFight = true;
             }
         }
         else {

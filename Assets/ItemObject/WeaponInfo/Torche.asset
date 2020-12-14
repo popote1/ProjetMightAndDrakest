@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Torche
   CoolDescription: 
   WorldSprite: {fileID: 2100000, guid: b5fdbe00b4bc0ae43bd4c594fdfbe409, type: 2}
-  UISprite: {fileID: 0}
+  UISprite: {fileID: 21300000, guid: 7785baa1519663d4881176be4bcfcecb, type: 3}
   FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
   AudioClip: {fileID: 8300000, guid: c72f38bb2a73a324291298b6e7283d1c, type: 3}
   volume: 1

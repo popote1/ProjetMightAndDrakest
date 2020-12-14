@@ -52,7 +52,11 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
                 {
                     if (_isLooping)
                     {
-                        _indexAnimation = 0;    
+                        _indexAnimation = 0;
+                    } 
+                    else  if (_animationType == AnimationType.Attack)
+                    {
+                       ChangeAnimationtype(AnimationType.Idel);
                     }
                     else
                     {

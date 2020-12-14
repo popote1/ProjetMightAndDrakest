@@ -36,7 +36,9 @@ public class SOStanceChaceDuDroite : SOStanceGeneral
             targets = fightComonent.ChoseTarget(2, weapon.Target);
             foreach (var target in targets)
             {
-                target.TakeDamage(damage);
+                target.TakeDamage(damage+damage/2);
+                Instantiate(weapon.FX, target.shakeComponent.transform.position, Quaternion.identity);
+                SoundManager.PlaySound(weapon.AudioClip,weapon.volume);
             }
             if (weapon.SpecialEffect != null)
             {

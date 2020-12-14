@@ -76,9 +76,9 @@ public class EnnemiCombatUIComponent : MonoBehaviour
             HideSpecialStat();
             ResetShild();
             //shakeComponent.GetComponent<MeshRenderer>().enabled=(false);
-            MatAnimator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Die);
             IsAlive = false;
-            
+            MatAnimator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Die);
+
             Invoke("ClosePanel", 1.5f);
         }
         EnnemiHP.text = EnnemiInfo.CurrentHP + "/" + EnnemiInfo.SoEnnemi.MaxHP;

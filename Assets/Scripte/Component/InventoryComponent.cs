@@ -17,6 +17,7 @@ public class InventoryComponent : MonoBehaviour
     public GameObject NewUtilityPanel;
     public GameObject NewShealdPanel;
     public GameObject NewStancePanel;
+    public GameObject NewWorldItem;
     public PlayerInfoComponent playerInfoComponent;
     public float PanelScrollSpeed;
     public Button ItemButton;
@@ -184,6 +185,14 @@ public class InventoryComponent : MonoBehaviour
         ScrollRectItems.velocity =Vector2.zero;
     }
 
+    public void UIButtonTrowItem()
+    {
+        GameObject newItem=Instantiate(NewWorldItem, playerInfoComponent.transform.position, Quaternion.identity);
+        newItem.GetComponent<ItemComponent>().ItemData = _selectedItem;
+        newItem.GetComponent<ItemComponent>().InitisilazeObject();
+        DestroySelectedItem();
+        UIButtonIteamReturn();
+    }
     public void UIButtonIteamReturn() {
         ShowButtonPanel(1);
         _selectedItem = null;
@@ -521,15 +530,15 @@ public class InventoryComponent : MonoBehaviour
         SliderMousSencibility.value =
             playerInfoComponent.gameObject.GetComponent<FPControlerComponent>().MouseSensibility / 0.5f;
         SliderVolumeSoundEffect.value = SoundManager.volume;
-        SliderVolumeMusic.value = 1;
+        SliderVolumeMusic.value =SoundManager.MusicVolume;
+        
     }
 
     public void ChangeMouseSencibility()
     {
         if (_inventoryOn)
         {
-            playerInfoComponent.gameObject.GetComponent<FPControlerComponent>().MouseSensibility =
-                SliderMousSencibility.value * 0.5f;
+            playerInfoComponent.gameObject.GetComponent<FPControlerComponent>().MouseSensibility = SliderMousSencibility.value * 0.5f;
         }
     }
 
@@ -540,6 +549,16 @@ public class InventoryComponent : MonoBehaviour
             SoundManager.volume = SliderVolumeSoundEffect.value;
         }
     }
+
+    public void ChangeMusicVolume()
+    {
+        if (_inventoryOn)
+        {
+            SoundManager.MusicVolume = SliderVolumeMusic.value;
+        }
+    }
+
+    
 }
     
     

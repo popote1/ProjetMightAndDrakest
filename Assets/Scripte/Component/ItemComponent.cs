@@ -44,6 +44,13 @@ public class ItemComponent : MonoBehaviour , IInteracteble
         
         _infoPanel.SetActive(false);
     }
+
+    public void InitisilazeObject()
+    {
+        SoObject = ItemData.SoObject;
+        _meshRenderer = GetComponentInChildren<MeshRenderer>();
+        _meshRenderer.material = SoObject.WorldSprite;
+    }
     
 
     public void Intecract(InteractComponent.SelectStat selectStat)
