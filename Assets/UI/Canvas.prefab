@@ -409,7 +409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1925222206451583300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4699,7 +4699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1925222207101688319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5090,17 +5090,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: sdhgm sgs dgsjg gjdgjohgiuh  osnjpojzu  p ipu  ahpiuhrfpuahf phfah hfafh  
+    ofhap oap ohfp^aoijaiozfj of noarhfoh ojrfoaf oafoor oroiajrf ranoijriofj a ij
+    f oijoijreojzkjvnvuij joo eoa orpeh ihoernjf soicvjoijoirln oaerhofv oero horozerlzegn
+    og zoiejg ovoerhfv ovejnv evzevnz veuvhze eivzievhziehv  uthlu juerjkcnjn  odrnoe
+    rizovonvoejr rofeoovit odgoejrgoin  eorij roj oefoveorve eorij e reroi jorvjlvjnr
+    eri jer eorijoierg eori er eor
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f24bd701ef09694faa76547811c118e, type: 2}
+  m_sharedMaterial: {fileID: -6333713483982798848, guid: 8f24bd701ef09694faa76547811c118e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5117,13 +5123,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5153,7 +5159,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -409.0399, y: -140.27283, z: -314.8108, w: -4.283142}
+  m_margin: {x: -394.0442, y: -140.27283, z: -298.62585, w: 5.786621}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

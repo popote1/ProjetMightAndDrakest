@@ -319,8 +319,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.08, y: 6, z: 2.75}
-  m_Center: {x: 0.32, y: 2.93, z: 0}
+  m_Size: {x: 2.6662207, y: 5.746988, z: 2.3801508}
+  m_Center: {x: 0.11311012, y: 3.056506, z: -0.18492553}
 --- !u!1 &1925582756632030694
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +851,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9120092753789423698}
-  - component: {fileID: 572592651178186728}
   m_Layer: 0
   m_Name: Pillier1 (1)
   m_TagString: Untagged
@@ -875,19 +874,6 @@ Transform:
   m_Father: {fileID: 6151599054757476001}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180.00002}
---- !u!65 &572592651178186728
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5852716123561209819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.08, y: 6, z: 2.75}
-  m_Center: {x: -0, y: 2.93, z: 0}
 --- !u!1 &6207561902884022610
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,7 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6151599054757476001}
   m_Layer: 0
-  m_Name: pilierDouble 1 (1)
+  m_Name: pilierDouble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

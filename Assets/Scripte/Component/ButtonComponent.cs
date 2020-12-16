@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonComponent : MonoBehaviour ,IInteracteble
 {
+    public bool DestroyOnUs = true;
     public UnityEvent Event;
     
     public Sprite Icone;
@@ -57,8 +58,13 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
     {
         Event.Invoke();
         Destroy(_panel);
-        Destroy(this);
+        if(DestroyOnUs)Destroy(this);
         return true;
+    }
+
+    public void SelfDestroy()
+    {
+        Destroy(this , 0.1f);
     }
     
 }
