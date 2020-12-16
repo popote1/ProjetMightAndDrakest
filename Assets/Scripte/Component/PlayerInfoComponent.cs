@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerInfoComponent : MonoBehaviour
 {
@@ -12,6 +15,9 @@ public class PlayerInfoComponent : MonoBehaviour
     public List<SOObject> SOInventory;
     public List<ItemData> Inventory=new List<ItemData>();
     public List<SOStanceGeneral> SOStance;
+
+    
+    
     private int tempsSpecialEffect;
 
     public int TempsSpecialEffect
@@ -28,6 +34,8 @@ public class PlayerInfoComponent : MonoBehaviour
         }
     }
     public SOSpecialStatGeneral SpecialStat;
+   
+    
     
     void Awake()
     {
@@ -38,11 +46,12 @@ public class PlayerInfoComponent : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
+    // Update is called once per frame
+    
   
 }

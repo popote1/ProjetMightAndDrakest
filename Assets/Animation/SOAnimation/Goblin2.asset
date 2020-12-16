@@ -13,25 +13,43 @@ MonoBehaviour:
   m_Name: Goblin2
   m_EditorClassIdentifier: 
   FrontIdelAnimations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  FrontIdelFrameRate: 0
+  - {fileID: 2100000, guid: a2b89ed33f707b74eb7bb68b6c881397, type: 2}
+  - {fileID: 2100000, guid: 6662d3a3390684c47a22d6128ee3c269, type: 2}
+  FrontIdelFrameRate: 0.2
   LeftIdelAnimations: []
   LeftIdelFrameRate: 0
   RightIdelAnimations: []
   RightIdelFrameRate: 0
-  BackIdelAnimations: []
-  BackIdelFrameRate: 0
-  FrontWalkAnimations: []
-  FrontWalkFrameRate: 0
+  BackIdelAnimations:
+  - {fileID: 2100000, guid: c1555b0afc07b97468cb5a15fb8b804f, type: 2}
+  - {fileID: 2100000, guid: 37027790477118241ba0f3dc1c30d7eb, type: 2}
+  BackIdelFrameRate: 0.5
+  FrontWalkAnimations:
+  - {fileID: 2100000, guid: df2de694f6239234da0b04da6390323a, type: 2}
+  - {fileID: 2100000, guid: 31355b8db03796c4bb433e8747110d20, type: 2}
+  - {fileID: 2100000, guid: 1ac75711ceee92f409deadf77f52ae14, type: 2}
+  FrontWalkFrameRate: 0.3
   LeftWalkAnimations: []
   LeftWalkFrameRate: 0
   RightWalkAnimations: []
   RightWalkFrameRate: 0
-  BackWalkAnimations: []
-  BackWalkFrameRate: 0
-  AttackAnimations: []
-  AttackFrameFate: 0
-  DieAnimation: []
-  DieFrameRate: 0
+  BackWalkAnimations:
+  - {fileID: 2100000, guid: 5c3a667e1e6ba0d4a82f5db9fa21a55b, type: 2}
+  - {fileID: 2100000, guid: 7bcc33902a3646146a2470fa994d2650, type: 2}
+  - {fileID: 2100000, guid: 9b84490ecbbb0994c9463a2a25933869, type: 2}
+  BackWalkFrameRate: 0.3
+  AttackAnimations:
+  - {fileID: 2100000, guid: e8ee11848a581d945bbb10e261b00f05, type: 2}
+  - {fileID: 2100000, guid: 1819a423faafbf34890571156cf1b3e0, type: 2}
+  - {fileID: 2100000, guid: 18aaaab859e8cfb43bb1b75dd801cfbf, type: 2}
+  - {fileID: 2100000, guid: 8e1e643988ae8a544986ad32b6132e80, type: 2}
+  - {fileID: 2100000, guid: 9826101b84b0c7b4c99c01dc6b6b3265, type: 2}
+  - {fileID: 2100000, guid: c40b3b723e20ac74eb0173a21400b0d4, type: 2}
+  AttackFrameFate: 0.15
+  DieAnimation:
+  - {fileID: 2100000, guid: 510bca9a557083d4b864a938dbdbce7c, type: 2}
+  - {fileID: 2100000, guid: 437bdf437c980574bbf224dadfff1f09, type: 2}
+  - {fileID: 2100000, guid: 4e0100a79a50d2140b7afc2351975cf8, type: 2}
+  - {fileID: 2100000, guid: 345e68a2c54cfad4eab709f105711330, type: 2}
+  - {fileID: 2100000, guid: ea8dfbc39e4191442a719458c7e8092c, type: 2}
+  DieFrameRate: 0.12

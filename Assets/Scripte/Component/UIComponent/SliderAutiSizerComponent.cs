@@ -7,14 +7,14 @@ public class SliderAutiSizerComponent : MonoBehaviour
     public float SinglePanlSize;
 
     private RectTransform _rectTransform;
-    void Start()
+    void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
     }
 
     public void ReSizePanel()
     {
-        Debug.Log("reload le panel avec "+transform.childCount+" panel dedant");
+//        Debug.Log("reload le panel avec "+transform.childCount+" panel dedant");
         _rectTransform.sizeDelta = new Vector2(10+transform.childCount*SinglePanlSize,_rectTransform.sizeDelta.y);
         Invoke("postResize",0.1f);
     }

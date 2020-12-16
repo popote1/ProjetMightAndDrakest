@@ -29,7 +29,9 @@ public class SOStanceRevertDuGauche : SOStanceGeneral
             targets = fightComonent.ChoseTarget(1, weapon.Target);
             foreach (var target in targets)
             {
-                target.TakeDamage(damage/2);
+                target.TakeDamage(damage+damage/2);
+                Instantiate(weapon.FX, target.shakeComponent.transform.position, Quaternion.identity);
+                SoundManager.PlaySound(weapon.AudioClip,weapon.volume);
             }
             if (weapon.SpecialEffect != null)
             {

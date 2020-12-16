@@ -25,14 +25,17 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
     private float _timer;
     private bool _isLooping=true;
 
-    private void Awake()
+    private void Start()
     {
-        if (EnnemiAnimation.FrontIdelAnimations != null)
+        if (EnnemiAnimation != null)
         {
-            _actualAnimation = EnnemiAnimation.FrontIdelAnimations;
-            _actualFrameRate = EnnemiAnimation.FrontIdelFrameRate;
-            MeshRenderer.material = _actualAnimation[_indexAnimation];
-            _indexAnimation++;
+            if (EnnemiAnimation.FrontIdelAnimations != null)
+            {
+                _actualAnimation = EnnemiAnimation.FrontIdelAnimations;
+                _actualFrameRate = EnnemiAnimation.FrontIdelFrameRate;
+                MeshRenderer.material = _actualAnimation[_indexAnimation];
+                _indexAnimation++;
+            }
         }
     }
     
@@ -49,7 +52,11 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
                 {
                     if (_isLooping)
                     {
-                        _indexAnimation = 0;    
+                        _indexAnimation = 0;
+                    } 
+                    else  if (_animationType == AnimationType.Attack)
+                    {
+                       ChangeAnimationtype(AnimationType.Idel);
                     }
                     else
                     {
@@ -70,8 +77,11 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
 
     public void ChangeAnimationtype(AnimationType animationType)
     {
-        _animationType = animationType;
-        ChangeAniamation();
+        if (_animationType != animationType)
+        {
+            _animationType = animationType;
+            ChangeAniamation();
+        }
     }
 
     private void ChangeAniamation()
@@ -140,6 +150,7 @@ public class EnnemiMaterialAnimationComponent : MonoBehaviour
                 break;
             
         }
+        _indexAnimation = 0;
     }
 
     public void SetFrameRate(float newFrameRate)

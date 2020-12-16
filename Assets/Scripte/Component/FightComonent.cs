@@ -1,9 +1,7 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using TMPro;
-using UnityEditor.Rendering.Universal.ShaderGUI;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -14,9 +12,10 @@ using Debug = UnityEngine.Debug;
 public class FightComonent : MonoBehaviour
 {
     [Header("Custom Parameters")] [SerializeField]
-    public EnnemiGroupComponent ennemiGroupComponent;
-
+    public EnnemiGroupComponent EnnemiGroupComponent;
+    public PlayerInfoComponent PlayerInfoComponent;
     public FightSelectorComponent FightSelectorComponent;
+    [SerializeField] public HUDComponent HudComponent;
 
 
     [Header(("UI Perso Info"))] public Slider SliderHP;
@@ -29,11 +28,19 @@ public class FightComonent : MonoBehaviour
     public Image ImgSelector;
     public Image ImgShield;
     public TMP_Text TxtShield;
-    [Header("UI Ennemi")] public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
+    public Transform CenterScreen;
+    [Header("UI Ennemi")]
+    public EnnemiCombatUIComponent Ennemi1CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi2CombatUIComponent;
     public EnnemiCombatUIComponent Ennemi3CombatUIComponent;
-    [Header("Temporal Elements")] public GameObject VictoryPanel;
+    [Header("EnnemiePos")] 
+    public GameObject Ennemi1;
+    public GameObject Ennemi2;
+    public GameObject Ennemi3;
+    [Header("Temporal Elements")] 
+    public GameObject VictoryPanel;
     public GameObject DefeatPanel;
+    public bool IsFighting;
 
     public enum AttackTarget
     {
@@ -42,8 +49,7 @@ public class FightComonent : MonoBehaviour
         Back,
         Splash
     }
-
-    [HideInInspector] public PlayerInfoComponent PlayerInfoComponent;
+    
     [HideInInspector] public int CombatStat = 1;
 
     //object séléctioner
@@ -56,109 +62,120 @@ public class FightComonent : MonoBehaviour
     [HideInInspector] public bool IsStaneOnObject2;
     [HideInInspector] public int PlayerShieldValue;
 
-    void Start()
+    public void StartFight()
     {
-        PlayerInfoComponent = GetComponent<PlayerInfoComponent>();
-        Cursor.lockState = CursorLockMode.Locked;
         SetEnnemis();
         FightSelectorComponent.LoadIteamBar();
         FightSelectorComponent.LoadStancePanel();
         CheckSpecialStat();
+        IsFighting = true;
+        CombatStat = 1;
+        Vector3 combatdir= EnnemiGroupComponent.transform.position - transform.position;
+        transform.forward = new Vector3(combatdir.x, 0,combatdir.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        CheckSpecialStat();
-        LoadPlayerStats();
-        // effectue les effets Speciaux
-        if (CombatStat == 1)
+        if (IsFighting)
         {
-            if (PlayerInfoComponent.SpecialStat != null)
-            {
-                PlayerInfoComponent.SpecialStat.MakeEffect(PlayerInfoComponent);
-            }
+            //Debug.Log(CombatStat);
             CheckSpecialStat();
-            CombatStat = 2;
-        }
+            LoadPlayerStats();
 
-        //Choix des armes
-        if (CombatStat == 2)
-        {
-            FightSelectorComponent.SelectTime = true;
-        }
+            if (Ennemi1CombatUIComponent.IsAlive) Ennemi1CombatUIComponent.shakeComponent.transform.position = Vector3.Lerp(Ennemi1CombatUIComponent.shakeComponent.transform.position, Ennemi1.transform.position, 0.05f);
+            if (Ennemi2CombatUIComponent.IsAlive) Ennemi2CombatUIComponent.shakeComponent.transform.position = Vector3.Lerp(Ennemi2CombatUIComponent.shakeComponent.transform.position, Ennemi2.transform.position, 0.05f);
+            if (Ennemi3CombatUIComponent.IsAlive) Ennemi3CombatUIComponent.shakeComponent.transform.position = Vector3.Lerp(Ennemi3CombatUIComponent.shakeComponent.transform.position, Ennemi3.transform.position, 0.05f);
+            // effectue les effets Speciaux
+            if (CombatStat == 1)
+            {
+                if (PlayerInfoComponent.SpecialStat != null)
+                {
+                    PlayerInfoComponent.SpecialStat.MakeEffect(PlayerInfoComponent);
+                }
 
-        //Analise de la stance
-        if (CombatStat == 3)
-        {
-            CheckOfUse();
-        }
+                CheckSpecialStat();
+                CombatStat = 2;
+            }
 
-        //Execution de l'object1
-        if (CombatStat == 5)
-        {
-            PlayerAttack1();
-        }
+            //Choix des armes
+            if (CombatStat == 2)
+            {
+                FightSelectorComponent.SelectTime = true;
+            }
 
-        //Execution de l'object2
-        if (CombatStat == 7)
-        {
-            PlayerAttack2();
-        }
+            //Analise de la stance
+            if (CombatStat == 3)
+            {
+                CheckOfUse();
+            }
 
-        //Résolution des effets sur Ennemi1
-        if (CombatStat == 10)
-        {
-            EnnemiSpecialStat(1);
-        }
+            //Execution de l'object1
+            if (CombatStat == 5)
+            {
+                PlayerAttack1();
+            }
 
-        //Attaque de l'ennemi 1
-        if (CombatStat == 12)
-        {
-            EnnemiAttaque(1);
-        }
+            //Execution de l'object2
+            if (CombatStat == 7)
+            {
+                PlayerAttack2();
+            }
 
-        //Résolution des effets sur Ennemi2
-        if (CombatStat == 20)
-        {
-            EnnemiSpecialStat(2);
-        }
+            //Résolution des effets sur Ennemi1
+            if (CombatStat == 10)
+            {
+                EnnemiSpecialStat(1);
+            }
 
-        //Attaque de l'ennemi 2
-        if (CombatStat == 22)
-        {
-            EnnemiAttaque(2);
-        }
+            //Attaque de l'ennemi 1
+            if (CombatStat == 12)
+            {
+                EnnemiAttaque(1);
+            }
 
-        //Résolution des effets sur Ennemi3
-        if (CombatStat == 30)
-        {
-            EnnemiSpecialStat(3);
-        }
+            //Résolution des effets sur Ennemi2
+            if (CombatStat == 20)
+            {
+                EnnemiSpecialStat(2);
+            }
 
-        //Attaque de l'ennemi 3
-        if (CombatStat == 32)
-        {
-            EnnemiAttaque(3);
-        }
+            //Attaque de l'ennemi 2
+            if (CombatStat == 22)
+            {
+                EnnemiAttaque(2);
+            }
 
-        //reset des panels
-        if (CombatStat == 50)
-        {
-            FightSelectorComponent.ResetPannels();
-            ResetShield();
-            CombatStat = 1;
-        }
+            //Résolution des effets sur Ennemi3
+            if (CombatStat == 30)
+            {
+                EnnemiSpecialStat(3);
+            }
 
-        if (CombatStat == 100)
-        {
-            SetPanelVictory();
-        }
+            //Attaque de l'ennemi 3
+            if (CombatStat == 32)
+            {
+                EnnemiAttaque(3);
+            }
 
-        if (CombatStat == 101)
-        {
-            SetPanelDefat();
+            //reset des panels
+            if (CombatStat == 50)
+            {
+                FightSelectorComponent.ResetPannels();
+                FightSelectorComponent.SetPanels();
+                ResetShield();
+                CombatStat = 1;
+            }
+
+            if (CombatStat == 100)
+            {
+                SetPanelVictory();
+            }
+
+            if (CombatStat == 101)
+            {
+                SetPanelDefat();
+            }
         }
     }
 
@@ -177,19 +194,31 @@ public class FightComonent : MonoBehaviour
 
     private void SetEnnemis()
     {
-        switch (ennemiGroupComponent.Ennemis.Count)
+        switch (EnnemiGroupComponent.Ennemis.Count)
         {
             case 1:
-                Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
+                Ennemi2CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
+                Ennemi2CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
+                Ennemi2CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi2.GetComponent<EnnemiMaterialAnimationComponent>();
                 break;
             case 2:
-                Ennemi1CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
-                Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
+                Ennemi1CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
+                Ennemi1CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
+                Ennemi1CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi1.GetComponent<EnnemiMaterialAnimationComponent>();
+                Ennemi3CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[1]);
+                Ennemi3CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
+                Ennemi3CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi3.GetComponent<EnnemiMaterialAnimationComponent>();
                 break;
             case 3:
-                Ennemi1CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[0]);
-                Ennemi2CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[2]);
-                Ennemi3CombatUIComponent.SetPanel(ennemiGroupComponent.Ennemis[1]);
+                Ennemi1CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[0]);
+                Ennemi1CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi1.GetComponent<ShakeComponent>();
+                Ennemi1CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi1.GetComponent<EnnemiMaterialAnimationComponent>();
+                Ennemi2CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[2]);
+                Ennemi2CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi2.GetComponent<ShakeComponent>();
+                Ennemi2CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi2.GetComponent<EnnemiMaterialAnimationComponent>();
+                Ennemi3CombatUIComponent.SetPanel(EnnemiGroupComponent.Ennemis[1]);
+                Ennemi3CombatUIComponent.shakeComponent = EnnemiGroupComponent.Ennemi3.GetComponent<ShakeComponent>();
+                Ennemi3CombatUIComponent.MatAnimator = EnnemiGroupComponent.Ennemi3.GetComponent<EnnemiMaterialAnimationComponent>();
                 break;
         }
     }
@@ -300,6 +329,8 @@ public class FightComonent : MonoBehaviour
             foreach (var target in targets)
             {
                 target.TakeDamage(damage);
+                Instantiate(weapon.FX, target.shakeComponent.transform.position, Quaternion.identity);
+               
             }
             if (weapon.SpecialEffect != null)
             {
@@ -308,17 +339,22 @@ public class FightComonent : MonoBehaviour
                     weapon.SpecialEffect.MakeSpecialEffect(this, targets, 1);
                 }
             }
+            SoundManager.PlaySound(weapon.AudioClip,weapon.volume);
 
         }
         else if (ItemData1.SoObject is SOShield)
         {
             SOShield shield = (SOShield) ItemData1.SoObject;
             AddShield(shield.ShieldValue);
+            Instantiate(shield.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(shield.AudioClip,shield.volume);
         }
         else if (ItemData1.SoObject is SOUtilityItem)
         {
             SOUtilityItem soUtilityItem = (SOUtilityItem) ItemData1.SoObject;
             soUtilityItem.SoUtilityEffectGeneral.CombatUse(PlayerInfoComponent, this, 1);
+            Instantiate(soUtilityItem.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(soUtilityItem.AudioClip,soUtilityItem.volume);
         }
 
         if (!(ItemData1.SoObject is SOUtilityItem))
@@ -361,6 +397,7 @@ public class FightComonent : MonoBehaviour
             foreach (var target in targets)
             {
                 target.TakeDamage(damage);
+                Instantiate(weapon.FX, target.shakeComponent.transform.position, Quaternion.identity);
             }
             if (weapon.SpecialEffect != null)
             {
@@ -369,16 +406,21 @@ public class FightComonent : MonoBehaviour
                     weapon.SpecialEffect.MakeSpecialEffect(this, targets , 2);
                 }
             }
+            SoundManager.PlaySound(weapon.AudioClip,weapon.volume);
         }
         else if (ItemData2.SoObject is SOShield)
         {
             SOShield shield = (SOShield) ItemData2.SoObject;
             AddShield(shield.ShieldValue);
+            Instantiate(shield.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(shield.AudioClip,shield.volume);
         }
         else if (ItemData2.SoObject is SOUtilityItem)
         {
             SOUtilityItem soUtilityItem = (SOUtilityItem)ItemData2.SoObject;
             soUtilityItem.SoUtilityEffectGeneral.CombatUse(PlayerInfoComponent,this,2);
+            Instantiate(soUtilityItem.FX,CenterScreen.position, Quaternion.identity);
+            SoundManager.PlaySound(soUtilityItem.AudioClip,soUtilityItem.volume);
         }
         if (!(ItemData2.SoObject is SOUtilityItem))
         {
@@ -516,7 +558,11 @@ public class FightComonent : MonoBehaviour
 
     private void SetPanelVictory()
     {
-        VictoryPanel.SetActive(true);
+        Debug.Log("Victoire");
+        IsFighting = false;
+        EnnemiGroupComponent.Die();
+        HudComponent.EndFight();
+        FightSelectorComponent.ResetPannels();
     }
 
     private void SetPanelDefat()

@@ -17,8 +17,9 @@ public class FightSelectorComponent : MonoBehaviour
     public GameObject NewShieldPrefabPanel;
     public GameObject NewUtilityPanel;
     public GameObject NewStancePrefabsPanel;
-    
+
     [Header("UI Selection")] 
+    public GameObject PanelPlayer;
     public GameObject Selector;
     public GameObject PanelObject;
     public GameObject PanelSlideObject;
@@ -28,7 +29,22 @@ public class FightSelectorComponent : MonoBehaviour
     public GameObject PanelSelectedObject2;
     public GameObject PanelSelectedStance;
 
-    [HideInInspector]public bool SelectTime;
+    private bool selectTime;
+
+    public bool SelectTime
+    {
+        get => selectTime;
+        set
+        {
+            selectTime = value;
+            if(selectTime==false)
+            {HideCombatSelector();}
+            else
+            {ShowCombatSelecotr();
+            }
+        }
+    }
+
     private ScrollRect _iteamScrollRect;
     private ScrollRect _stanceScrollRect;
     private GameObject _preSelectedPanel;
@@ -48,11 +64,14 @@ public class FightSelectorComponent : MonoBehaviour
 
     private void Update()
     {
-        if (_object1 != null) PanelToposition(_object1, PanelSelectedObject1.transform);
-        if (_object2 != null) PanelToposition(_object2, PanelSelectedObject2.transform);
-        if (_stancePanel!=null) PanelToposition( _stancePanel,PanelSelectedStance.transform);
-        UpDateSelectorPos();
-        PreSelectPanel();
+        if (FightComonent.IsFighting)
+        {
+            if (_object1 != null) PanelToposition(_object1, PanelSelectedObject1.transform);
+            if (_object2 != null) PanelToposition(_object2, PanelSelectedObject2.transform);
+            if (_stancePanel != null) PanelToposition(_stancePanel, PanelSelectedStance.transform);
+            UpDateSelectorPos();
+            PreSelectPanel();
+        }
     }
 
     public void ScrollPanel(InputAction.CallbackContext callbackContext)
@@ -394,10 +413,7 @@ public class FightSelectorComponent : MonoBehaviour
 
     public void LoadStancePanel()
     {
-        foreach (SOStanceGeneral stance in FightComonent.PlayerInfoComponent.SOStance)
-        {
-            FightComonent.Stances.Add(new StanceInfo(stance));
-        }
+        DestroyStances();
         foreach (StanceInfo stance in FightComonent.Stances)
         {
             GameObject newObjectPanel = Instantiate(NewStancePrefabsPanel, PanelSliderStance.transform);
@@ -524,6 +540,11 @@ public class FightSelectorComponent : MonoBehaviour
         Destroy(_object1);
         Destroy(_object2);
         Destroy(_stancePanel);
+        
+    }
+
+    public void SetPanels()
+    {
         LoadIteamBar();
         ReloadStancePannel();
     }
@@ -583,4 +604,32 @@ public class FightSelectorComponent : MonoBehaviour
         Debug.Log("L'item "+item.SoObject.Name + " s'est casser");
         FightComonent.PlayerInfoComponent.Inventory.Remove(item);
     }
+
+    public void DestroyStances()
+    {
+        foreach (SOStanceGeneral stance in FightComonent.PlayerInfoComponent.SOStance)
+        {
+            FightComonent.Stances.Add(new StanceInfo(stance));
+        }
+    }
+
+    public void DestroySelecterdObject()
+    {
+        Destroy(_object1);
+        Destroy(_object2);
+        Destroy(_stancePanel);
+    }
+
+    public void HideCombatSelector()
+    {
+        LeanTween.moveY(PanelPlayer, 270, 0.5f);
+        Debug.Log("HidePanel");
+    }
+
+    public void ShowCombatSelecotr()
+    {
+        LeanTween.moveY(PanelPlayer, 540, 0.5f);  
+        Debug.Log("ShowPanel");
+    }
+    
 }

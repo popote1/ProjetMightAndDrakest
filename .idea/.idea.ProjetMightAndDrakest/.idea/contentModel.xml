@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Projets\ProjetMightAndDarkness\ProjetMightAndDrakest" t="IncludeRecursive">
+    <e p="C:\GitHub\MightAndDarkest\ProjetMightAndDrakest" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -64,18 +64,34 @@
         </e>
         <e p="Scripte" t="Include">
           <e p="Component" t="Include">
+            <e p="AutoDestroyComponent.cs" t="Include" />
             <e p="BillboardComponent.cs" t="Include" />
+            <e p="ButtonComponent.cs" t="Include" />
+            <e p="ColliderEventLauncher.cs" t="Include" />
+            <e p="DoorComponent.cs" t="Include" />
             <e p="EnnemiGroupComponent.cs" t="Include" />
             <e p="EnnemiMaterialAnimationComponent.cs" t="Include" />
             <e p="FightComonent.cs" t="Include" />
             <e p="FightSelectorComponent.cs" t="Include" />
+            <e p="FollowWorldUIComponent.cs" t="Include" />
             <e p="FPControlerComponent.cs" t="Include" />
+            <e p="InteractComponent.cs" t="Include" />
+            <e p="InventoryComponent.cs" t="Include" />
+            <e p="ItemComponent.cs" t="Include" />
             <e p="PlayerInfoComponent.cs" t="Include" />
+            <e p="PuzzelComponent.cs" t="Include" />
+            <e p="SecretDorComponent.cs" t="Include" />
+            <e p="SoundManager.cs" t="Include" />
+            <e p="TrapComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
+              <e p="ButtonEffectComponent.cs" t="Include" />
               <e p="CombatPanelAnimationComponent.cs" t="Include" />
               <e p="CombatSliderAnimationComponant.cs" t="Include" />
+              <e p="DialogueStartComponent.cs" t="Include" />
               <e p="EditPanelComponent.cs" t="Include" />
               <e p="EnnemiCombatUIComponent.cs" t="Include" />
+              <e p="HUDComponent.cs" t="Include" />
+              <e p="MainMenuComponent.cs" t="Include" />
               <e p="ShakeComponent.cs" t="Include" />
               <e p="SliderAutiSizerComponent.cs" t="Include" />
             </e>
@@ -83,7 +99,9 @@
           <e p="PlaneC#" t="Include">
             <e p="EnnemiAttack.cs" t="Include" />
             <e p="EnnemiInfo.cs" t="Include" />
+            <e p="IInteracteble.cs" t="Include" />
             <e p="ItemData.cs" t="Include" />
+            <e p="PuzzelEllement.cs" t="Include" />
             <e p="StanceInfo.cs" t="Include" />
           </e>
           <e p="ScriptableObject" t="Include">
@@ -91,6 +109,8 @@
             <e p="SOEnnemi.cs" t="Include" />
             <e p="SOEnnemiAnimation.cs" t="Include" />
             <e p="SOObject.cs" t="Include" />
+            <e p="SOQuestItem.cs" t="Include" />
+            <e p="SOQuestItemPetitCoffre.cs" t="Include" />
             <e p="SOShield.cs" t="Include" />
             <e p="SOSpecialEffectBurn.cs" t="Include" />
             <e p="SOSpecialEffectGeneral.cs" t="Include" />
@@ -150,7 +170,7 @@
       <e p="ProjetMightAndDrakest.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Neren\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Neren\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_ProjetMightAndDrakest.238954163.00" t="ExcludeRecursive" />
+    <e p="C:\Users\popotePC2\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\popotePC2\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_ProjetMightAndDrakest.353142108.00" t="ExcludeRecursive" />
   </component>
 </project>

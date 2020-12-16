@@ -20,11 +20,133 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Idel/1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Idel/1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Idel/2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/Goblin1Idel/2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak1/1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak1/1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak1/n1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak1/n1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak2/2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak2/2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak2/n2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak2/n2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak3/3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak3/3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak3/n3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak3/n3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak4/4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak4/4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak4/n4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak4/n4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak5/5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak5/5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak5/n5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak5/n5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak6/6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak6/6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak6/n6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 attak/GoblinAttak6/n6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack1/1 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack1/1 back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack1/n1 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack1/n1 back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack2/2 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack2/2 back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack2/n2 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleBack/goblin2 idleBack2/n2 back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront1/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront1/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront1/n1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront1/n1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront2/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront2/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront2/n2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 idleFront/goblin2 idleFront2/n2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere1/arriere 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere1/arriere 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere1/arriere n1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere1/arriere n1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere2/arriere 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere2/arriere 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere2/arriere n2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere2/arriere n2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere3/arriere n3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere3/arriere n3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere3/arriere3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere1/goblin2 marcheArriere3/arriere3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-1/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-1/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-1/n1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-1/n1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-2/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-2/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-2/n2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-2/n2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-3/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-3/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-3/n3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 marcheArriere2/goblin2 marcheArriere2-3/n3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort1/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort1/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort1/n1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort1/n1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort2/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort2/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort2/n2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort2/n2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort3/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort3/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort3/n3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort3/n3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort4/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort4/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort4/n4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort4/n4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort5.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort5/5 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort5/5 (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort5/n5 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationMaterials/goblin2 mort/goblin2 mort5/n5 (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/1 back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/1 back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/2 back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/2 back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/n1 back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/n1 back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/n2 back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleBack/n2 back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/n1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/n1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/n2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 idleFront/n2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere 1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere 2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere n1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere n1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere n2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere n2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere n3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere n3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere1/arriere3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/n1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/n1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/n2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/n2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/n3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 marcheArriere2/n3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/5 (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/5 (1).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n5 (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationSprites/goblin2 mort/n5 (1).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/SOAnimation/Goblin2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SOAnimation/Goblin2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SOAnimation/TestEnnemieAnimation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_AnnimationRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,76 +157,95 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/PuzzelEllement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ShakeComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/FollowWorldUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItemPetitCoffre.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/BillboardComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/SecretDorComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOQuestItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemiAnimation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/UtilityScripte/AnimationTester.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ExplmentInputSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EditPanelComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/CombatPanelAnimationComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOEnnemi.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ShakeComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatBurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOShield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/ItemData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectGeneral.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectBurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectShilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" />
         <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/PlayerControler.cs" />
         <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/Deplacement.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/FPControlerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/AutoDestroyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/EnnemiInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/TrapComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ButtonComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ButtonEffectComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/SecretDorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/DialogueStartComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/MainMenuComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/SoundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" />
-        <option value="$PROJECT_DIR$/Assets/FirstCaracterControler/FPControlerComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PiegeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/PuzzelEllement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" />
       </list>
     </option>
   </component>
@@ -175,6 +316,11 @@
       <workItem from="1605958196610" duration="6899000" />
       <workItem from="1606465707359" duration="5559000" />
       <workItem from="1607013706621" duration="655000" />
+      <workItem from="1607586667364" duration="6077000" />
+      <workItem from="1607767926890" duration="18310000" />
+      <workItem from="1607853617230" duration="15708000" />
+      <workItem from="1607935999304" duration="10360000" />
+      <workItem from="1608106643909" duration="5154000" />
     </task>
     <servers />
   </component>
@@ -222,10 +368,13 @@
       <screen x="1920" y="279" width="1280" height="1024" />
     </state>
     <state x="1867" y="342" width="1296" height="1013" maximized="true" key="dock-window-2/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606068782486" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1606403443014">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="-730" y="-442" width="672" height="1181" key="search.everywhere.popup" timestamp="1608107872056">
+      <screen x="-1080" y="-851" width="1080" height="1880" />
     </state>
+    <state x="-730" y="-442" width="672" height="1181" key="search.everywhere.popup/0.0.1920.1040/-1080.-851.1080.1880/1920.0.1920.1040@-1080.-851.1080.1880" timestamp="1608107872056" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/2189.1303.1152.648/1920.279.1280.1024@0.0.1920.1080" timestamp="1606403443014" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/2189.1303.1920.1080/1920.279.1280.1024@0.0.1920.1080" timestamp="1607868884143" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/2189.1303.1152.648/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1605374285492" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/2189.1303.1920.1080/1920.279.1280.1024/0.0.1920.1080@0.0.1920.1080" timestamp="1607778892959" />
   </component>
 </project>

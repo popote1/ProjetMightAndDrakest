@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "Rapi\xE8re"
   CoolDescription: 
-  WorldSprite: {fileID: 0}
-  UISprite: {fileID: 0}
+  WorldSprite: {fileID: 2100000, guid: 7872896faff45fd40b91cf5bdf566a4f, type: 2}
+  UISprite: {fileID: 21300000, guid: 925d907c9de8f7e438efc711004c4598, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
+  AudioClip: {fileID: 8300000, guid: c72f38bb2a73a324291298b6e7283d1c, type: 3}
+  volume: 1
   Damage: 6
   ChanceToHit: 70
   Target: 1
   Durability: 3
   isTwoHand: 0
+  SpecialEffect: {fileID: 0}

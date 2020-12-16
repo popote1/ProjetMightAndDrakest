@@ -6,6 +6,10 @@ public class SOObject : ScriptableObject
 {
   public string Name;
   [TextArea]public string CoolDescription;
-  public Sprite WorldSprite;
+  public Material WorldSprite;
   public Sprite UISprite;
+  public GameObject FX;
+  public AudioClip AudioClip;
+  public float volume;
+  
 }

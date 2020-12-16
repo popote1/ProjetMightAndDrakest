@@ -167,7 +167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 87.8}
+  m_AnchoredPosition: {x: 0, y: 59.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6858462249081712603
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 220237015921258131}
   - component: {fileID: 3881349349195728665}
   m_Layer: 5
-  m_Name: ShieldPanel 1
+  m_Name: UtilityPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,8 +334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8350753656491814422, guid: e8f55ea5ba764054099a9e1e4309f590,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60e232129e1283f4d89c7605403e07e8, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

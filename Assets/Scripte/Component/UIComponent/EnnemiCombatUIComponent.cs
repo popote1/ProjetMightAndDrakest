@@ -17,7 +17,8 @@ public class EnnemiCombatUIComponent : MonoBehaviour
     public TMP_Text TxtShield;
     public EnnemiInfo EnnemiInfo;
     public ShakeComponent shakeComponent;
-    [HideInInspector]public bool IsAlive;
+    public EnnemiMaterialAnimationComponent MatAnimator;
+    [HideInInspector]public bool IsAlive=false;
     private int tempsSpecialEffet;
     public int TempsSpecialEffet
     {
@@ -50,7 +51,8 @@ public class EnnemiCombatUIComponent : MonoBehaviour
 
     public void Update()
     {
-        SilderHP.value = Mathf.Lerp(SilderHP.value, (float) EnnemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP, 0.5f);
+        if (IsAlive) SilderHP.value = Mathf.Lerp(SilderHP.value, (float) EnnemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP, 0.5f);
+        
     }
 
 
@@ -62,6 +64,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
         EnnemiHP.text = ennemiInfo.CurrentHP + "/" + EnnemiInfo.SoEnnemi.MaxHP;
         SilderHP.value = (float)ennemiInfo.CurrentHP / EnnemiInfo.SoEnnemi.MaxHP;
         IsAlive = true;
+        
     }
 
     public void TakeDamage(int damage)
@@ -70,8 +73,12 @@ public class EnnemiCombatUIComponent : MonoBehaviour
         if (EnnemiInfo.CurrentHP <= 0)
         {
             EnnemiInfo.CurrentHP = 0;
-            
+            HideSpecialStat();
+            ResetShild();
+            //shakeComponent.GetComponent<MeshRenderer>().enabled=(false);
             IsAlive = false;
+            MatAnimator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Die);
+
             Invoke("ClosePanel", 1.5f);
         }
         EnnemiHP.text = EnnemiInfo.CurrentHP + "/" + EnnemiInfo.SoEnnemi.MaxHP;
@@ -84,7 +91,7 @@ public class EnnemiCombatUIComponent : MonoBehaviour
 
     public int MakeAttack(FightComonent fightComonent)
     {
-        
+        MatAnimator.ChangeAnimationtype(EnnemiMaterialAnimationComponent.AnimationType.Attack);
         return MakeAttack(ChoseAttack(),fightComonent);
     }
 
@@ -124,6 +131,8 @@ public class EnnemiCombatUIComponent : MonoBehaviour
                 return MakeDamage(true, attack);
             }
             Debug.Log(transform.name+"  "+attack.SoAttack.Name+" touche avec un "+hitRollDice+" sur "+generalChanceToHit);
+            Instantiate(attack.SoAttack.FX,fightComonent.CenterScreen);
+            SoundManager.PlaySound(attack.SoAttack.AudioClip,attack.SoAttack.volume);
             return MakeDamage(false, attack);
         }
         Debug.Log(transform.name+"  "+attack.SoAttack.Name+" rate avec un "+hitRollDice+" sur "+generalChanceToHit);
