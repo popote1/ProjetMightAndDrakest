@@ -82,6 +82,7 @@
             <e p="PlayerInfoComponent.cs" t="Include" />
             <e p="PuzzelComponent.cs" t="Include" />
             <e p="SecretDorComponent.cs" t="Include" />
+            <e p="ShakeComponent.cs" t="Include" />
             <e p="SoundManager.cs" t="Include" />
             <e p="TrapComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
@@ -93,7 +94,6 @@
               <e p="EnnemiCombatUIComponent.cs" t="Include" />
               <e p="HUDComponent.cs" t="Include" />
               <e p="MainMenuComponent.cs" t="Include" />
-              <e p="ShakeComponent.cs" t="Include" />
               <e p="SliderAutiSizerComponent.cs" t="Include" />
             </e>
           </e>

@@ -11,13 +11,23 @@ public class PlayerInfoComponent : MonoBehaviour
     public int Strengths;
     public int Dexerity;
     public int MaxHP;
-    public int CurrentHP;
     public List<SOObject> SOInventory;
     public List<ItemData> Inventory=new List<ItemData>();
     public List<SOStanceGeneral> SOStance;
+    public ShakeComponent shakeComponent;
 
-    
-    
+    public int CurrentHP
+    {
+        get => currentHp;
+        set
+        {
+            currentHp = value; 
+            shakeComponent.StartShake();
+        }
+    }
+    private int currentHp;
+
+
     private int tempsSpecialEffect;
 
     public int TempsSpecialEffect

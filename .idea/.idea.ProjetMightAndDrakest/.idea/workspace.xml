@@ -167,7 +167,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectHealt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/PlaneC#/PuzzelEllement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ShakeComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOUtilityEffectGeneral.cs" root0="FORCE_HIGHLIGHTING" />
@@ -195,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EditPanelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/ShakeComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOStanceGeneral.cs" />
@@ -203,7 +201,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatBurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/SliderAutiSizerComponent.cs" />
@@ -243,9 +240,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/PiegeComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/PuzzelEllement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/ShakeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
       </list>
     </option>
   </component>
@@ -268,6 +267,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/build/Nouveau dossier\ProjetMightAndDarkest.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\GitHub\MightAndDarkest\ProjetMightAndDrakest\build\Nouveau dossier" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -320,7 +327,7 @@
       <workItem from="1607767926890" duration="18310000" />
       <workItem from="1607853617230" duration="15708000" />
       <workItem from="1607935999304" duration="10360000" />
-      <workItem from="1608106643909" duration="5154000" />
+      <workItem from="1608106643909" duration="7604000" />
     </task>
     <servers />
   </component>
