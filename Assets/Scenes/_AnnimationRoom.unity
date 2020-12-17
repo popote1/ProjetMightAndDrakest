@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 775750842}
-  EnnemiAnimation: {fileID: 11400000, guid: db82669855db51b4d84341b346d0965d, type: 2}
+  EnnemiAnimation: {fileID: 11400000, guid: 3c39752c7a83bf548b0f1b48e651f6b1, type: 2}
   _actualFrameRate: 0
 --- !u!64 &775750841
 MeshCollider:

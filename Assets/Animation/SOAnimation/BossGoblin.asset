@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbcffe667fcb44499c8f47005858bd9, type: 3}
+  m_Name: BossGoblin
+  m_EditorClassIdentifier: 
+  FrontIdelAnimations:
+  - {fileID: 2100000, guid: 6f961e25efac6a642a3e0a80dfab978f, type: 2}
+  - {fileID: 2100000, guid: bbb25286a5159d84abff5a8b0aee3f09, type: 2}
+  FrontIdelFrameRate: 0.5
+  LeftIdelAnimations: []
+  LeftIdelFrameRate: 0
+  RightIdelAnimations: []
+  RightIdelFrameRate: 0
+  BackIdelAnimations: []
+  BackIdelFrameRate: 0
+  FrontWalkAnimations:
+  - {fileID: 2100000, guid: 22831ac841187764398fa69095b6762f, type: 2}
+  - {fileID: 2100000, guid: ae3512bac63b2f64bb3811e02a65141c, type: 2}
+  - {fileID: 2100000, guid: a026d4cc623f08b46b58085262e5973b, type: 2}
+  - {fileID: 2100000, guid: 10b27dafe20b731448e30b6090911baf, type: 2}
+  - {fileID: 2100000, guid: b56a26d166a90c1458485caa491a3e28, type: 2}
+  - {fileID: 2100000, guid: f5977c2f46d11e64dbcd72620264259f, type: 2}
+  - {fileID: 2100000, guid: 99d155cca79f2de49add07a35f8cfca4, type: 2}
+  - {fileID: 2100000, guid: a482e19ed37c5c344941b427dffb5b54, type: 2}
+  FrontWalkFrameRate: 0.1
+  LeftWalkAnimations: []
+  LeftWalkFrameRate: 0
+  RightWalkAnimations: []
+  RightWalkFrameRate: 0
+  BackWalkAnimations: []
+  BackWalkFrameRate: 0
+  AttackAnimations:
+  - {fileID: 2100000, guid: 3e41ff1c27a42f24ba73d460a476c557, type: 2}
+  - {fileID: 2100000, guid: b40526f2adc6b12439b650655432fe23, type: 2}
+  - {fileID: 2100000, guid: 774e0bdda534e0d488f069f27c26ec30, type: 2}
+  - {fileID: 2100000, guid: 1a1d88080c18c5647b047de6565c5bee, type: 2}
+  - {fileID: 2100000, guid: 0753b3d8d9dfbf0438f96dbe327acb46, type: 2}
+  - {fileID: 2100000, guid: 738f4f070c8985441a4cce5fae387b45, type: 2}
+  AttackFrameFate: 0.1
+  DieAnimation:
+  - {fileID: 2100000, guid: 698088a8f7051354799865f0f7d7f465, type: 2}
+  - {fileID: 2100000, guid: 9caf8bcf521f2bf4caf41c2ae637c281, type: 2}
+  - {fileID: 2100000, guid: ec134d340b5493e499284a159ae39819, type: 2}
+  - {fileID: 2100000, guid: b911b907a21d4354495ebed19d9c3f34, type: 2}
+  - {fileID: 2100000, guid: 64c09a0be32e2944db3c6f043f9f43e7, type: 2}
+  DieFrameRate: 0.15

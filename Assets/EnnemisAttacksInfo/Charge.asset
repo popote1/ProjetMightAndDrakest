@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584ceaaea3754db4187e304adf36b393, type: 3}
+  m_Name: Charge
+  m_EditorClassIdentifier: 
+  Name: Charger
+  Damage: 4
+  ChanceToHit: 55
+  SpecialEffect: {fileID: 0}
+  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
+  AudioClip: {fileID: 8300000, guid: a9c2259b15095fb4d956757c136525b6, type: 3}
+  volume: 1

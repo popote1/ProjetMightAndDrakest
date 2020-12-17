@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7924b1658257541aba36e799e63f33, type: 3}
   m_Name: GoblinTest
   m_EditorClassIdentifier: 
-  Name: Goblin de Test
+  Name: "Goblin Ch\xE9tif"
   MaxHP: 20
   Strenght: 2
   Dexterity: 30
   Attacks:
   - SoAttack: {fileID: 11400000, guid: 4513fb5eeb885aa4899bb2815e91c173, type: 2}
-    Probability: 25
+    Probability: 60
   - SoAttack: {fileID: 11400000, guid: 853558f0dc40b7c428b0671455c354a1, type: 2}
-    Probability: 25
-  - SoAttack: {fileID: 11400000, guid: 0936f060e8a02fc45a29f132c4ad9220, type: 2}
-    Probability: 50
+    Probability: 40
   SoEnnemiAnimation: {fileID: 11400000, guid: 219a9fbe6422f574bb165e8672d27eb2, type: 2}

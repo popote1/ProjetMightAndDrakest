@@ -11,6 +11,9 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
     
     public Sprite Icone;
     public GameObject UIImage;
+    public AudioClip Clip;
+    [Range(0, 1)] public float Volume=1;
+    
     private GameObject _panel;
     
     // Start is called before the first frame update
@@ -59,6 +62,7 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
         Event.Invoke();
         Destroy(_panel);
         if(DestroyOnUs)Destroy(this);
+        SoundManager.PlaySound(Clip,Volume);
         return true;
     }
 

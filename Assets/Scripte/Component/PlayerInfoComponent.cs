@@ -11,6 +11,7 @@ public class PlayerInfoComponent : MonoBehaviour
     public int Strengths;
     public int Dexerity;
     public int MaxHP;
+    public int StartHP;
     public List<SOObject> SOInventory;
     public List<ItemData> Inventory=new List<ItemData>();
     public List<SOStanceGeneral> SOStance;
@@ -21,8 +22,13 @@ public class PlayerInfoComponent : MonoBehaviour
         get => currentHp;
         set
         {
+            if (value < currentHp)
+            {
+                shakeComponent.StartShake();
+            }
             currentHp = value; 
-            shakeComponent.StartShake();
+            
+            
         }
     }
     private int currentHp;
@@ -59,6 +65,7 @@ public class PlayerInfoComponent : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        CurrentHP = StartHP;
     }
 
     // Update is called once per frame

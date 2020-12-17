@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1786361438734382572}
+  - component: {fileID: 1217668143989345690}
   m_Layer: 0
   m_Name: Caisse
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1217668143989345690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405614492666539862}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0840435, y: 1.0487844, z: 1.0042422}
+  m_Center: {x: -0.2452581, y: -0.0837819, z: 0.24180102}
 --- !u!1 &5800877616088341792
 GameObject:
   m_ObjectHideFlags: 0

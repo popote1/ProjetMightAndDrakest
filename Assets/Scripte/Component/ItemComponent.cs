@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+[ExecuteInEditMode]
 public class ItemComponent : MonoBehaviour , IInteracteble
 {
     public SOObject SoObject;
@@ -41,7 +41,7 @@ public class ItemComponent : MonoBehaviour , IInteracteble
         _infoPanel.AddComponent<FollowWorldUIComponent>();
         _infoPanel.GetComponent<FollowWorldUIComponent>().lookAt = transform;
         _infoPanel.GetComponent<FollowWorldUIComponent>().OffSet = transform.up;
-        
+        gameObject.name = SoObject.Name;
         _infoPanel.SetActive(false);
     }
 
@@ -51,7 +51,19 @@ public class ItemComponent : MonoBehaviour , IInteracteble
         _meshRenderer = GetComponentInChildren<MeshRenderer>();
         _meshRenderer.material = SoObject.WorldSprite;
     }
-    
+    [ContextMenu("Set Item Info")]
+     public void SetSOInformation ()
+    {
+        _meshRenderer = GetComponentInChildren<MeshRenderer>();
+        if (_meshRenderer.material != SoObject.WorldSprite)
+        { 
+            _lineRenderer = GetComponent<LineRenderer>();
+            ItemData= new ItemData(SoObject);
+            _meshRenderer.material = SoObject.WorldSprite;
+            gameObject.name = SoObject.Name;
+           
+        }
+    }
 
     public void Intecract(InteractComponent.SelectStat selectStat)
     {

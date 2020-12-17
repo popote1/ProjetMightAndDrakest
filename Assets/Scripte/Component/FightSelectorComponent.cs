@@ -148,7 +148,7 @@ public class FightSelectorComponent : MonoBehaviour
                             {
                                 _object1 = _preSelectedPanel;
                                 _preSelectedPanel = null;
-                                PassToNextSelectorStat(2);
+                                PassToNextSelectorStat(3);
                                 PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
                                 FightComonent.ItemData1 = FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
                                 if (_object2!= null)
@@ -167,7 +167,7 @@ public class FightSelectorComponent : MonoBehaviour
                             {
                                 _object1 = _preSelectedPanel;
                                 _preSelectedPanel = null;
-                                PassToNextSelectorStat(2);
+                                PassToNextSelectorStat(3);
                                 PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
                                 FightComonent.ItemData1 = FightComonent.PlayerInfoComponent.Inventory[_object1.GetComponent<EditPanelComponent>().InvetoryIndex];
                                 if (_object2!= null)
@@ -484,9 +484,9 @@ public class FightSelectorComponent : MonoBehaviour
             float distanceMin = 1000;
             foreach (RectTransform item in PanelSlideObject.transform)
             {
-                if (distanceMin > (item.position - Selector.transform.position).magnitude)
+                if (distanceMin > (item.position - PanelStance.transform.position).magnitude)
                 {
-                    distanceMin = (item.position - Selector.transform.position).magnitude;
+                    distanceMin = (item.position -PanelStance.transform.position).magnitude;
                     _temporalHolder = item.gameObject;
                 }
             }
@@ -496,9 +496,9 @@ public class FightSelectorComponent : MonoBehaviour
             float distanceMin = 1000;
             foreach (RectTransform item in PanelSliderStance.transform)
             {
-                if (distanceMin > (item.position - Selector.transform.position).magnitude)
+                if (distanceMin > (item.position - PanelStance.transform.position).magnitude)
                 {
-                    distanceMin = (item.position - Selector.transform.position).magnitude;
+                    distanceMin = (item.position - PanelStance.transform.position).magnitude;
                     _temporalHolder = item.gameObject;
                 }
             }

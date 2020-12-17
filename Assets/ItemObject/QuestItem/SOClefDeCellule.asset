@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Clef  de Cellule
   CoolDescription: 'Petit Clef Rouiller '
-  WorldSprite: {fileID: 2100000, guid: f93e1f6c6a2f3544c939cc34c65ea7a0, type: 2}
-  UISprite: {fileID: 21300000, guid: 2fad450b3c597364cb1fec57cd873341, type: 3}
+  WorldSprite: {fileID: 2100000, guid: 73fda66e8eda42c42becc46491317952, type: 2}
+  UISprite: {fileID: 21300000, guid: ea3b945a2a61e5444a67bc259e0a4545, type: 3}
   FX: {fileID: 0}
   AudioClip: {fileID: 0}
   volume: 0

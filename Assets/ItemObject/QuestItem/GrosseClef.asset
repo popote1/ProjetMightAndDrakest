@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2159d63d43e581a4b89845bbd6f7bd2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 53da828923cef5849a096ba6a7324edc, type: 3}
   m_Name: GrosseClef
   m_EditorClassIdentifier: 
-  Name: 
-  CoolDescription: 
-  WorldSprite: {fileID: 0}
-  UISprite: {fileID: 0}
+  Name: GrosseClef
+  CoolDescription: sdlkhfsdflgv
+  WorldSprite: {fileID: 2100000, guid: 651390eb710661545b6ae07388271afa, type: 2}
+  UISprite: {fileID: 21300000, guid: 0aa834c35a9e5a84e80d1fdf36bcf11c, type: 3}
   FX: {fileID: 0}
   AudioClip: {fileID: 0}
   volume: 0
-  PracticalDescription: 
-  SoUtilityEffectGeneral: {fileID: 0}
+  PracticalDescription: "Une grosse clef qui dois ouvrir une grosse c\xE9rure"

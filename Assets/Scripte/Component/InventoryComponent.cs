@@ -407,7 +407,7 @@ public class InventoryComponent : MonoBehaviour
         TxtUtilityName.text = item.Name;
         TxtUtilityCollDescription.text = item.CoolDescription;
         TxtUtilityPracticalDescription.text = item.PracticalDescription;
-        ImgShieldIcone.sprite = item.UISprite;
+        ImgUtilityIcone.sprite = item.UISprite;
     }
 
     private void LoadQuestDescriptionPanel(SOQuestItem item)
@@ -415,7 +415,7 @@ public class InventoryComponent : MonoBehaviour
         TxtUtilityName.text = item.Name;
         TxtUtilityCollDescription.text = item.CoolDescription;
         TxtUtilityPracticalDescription.text = item.PracticalDescription;
-        ImgShieldIcone.sprite = item.UISprite;
+        ImgUtilityIcone.sprite = item.UISprite;
     }
 
     private void LoadStanceDescriptionPanel()

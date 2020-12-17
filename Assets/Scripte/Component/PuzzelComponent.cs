@@ -11,6 +11,8 @@ public class PuzzelComponent : MonoBehaviour
     public List<PuzzelEllement> PuzzelElements;
     public List<GameObject> GameObjectElements;
     public bool PuzzelComplet;
+    public AudioClip OncompletSound;
+    [Range(0, 1)] public float Volume=1;
     public UnityEvent OnPuzzelComplet;
     // Start is called before the first frame update
     void Start()
@@ -64,12 +66,15 @@ public class PuzzelComponent : MonoBehaviour
         foreach (PuzzelEllement element in PuzzelElements)
         {
             if (element.CurrentPos != 0) isDone = false;
+            
         }
 
         if (isDone)
         {
+            Debug.Log("Enigme Reussi");
             foreach (GameObject element in GameObjectElements) element.GetComponent<ButtonComponent>().SelfDestroy();
             PuzzelComplet = true;
+            SoundManager.PlaySound(OncompletSound,Volume);
             OnPuzzelComplet.Invoke();
         }
     }
