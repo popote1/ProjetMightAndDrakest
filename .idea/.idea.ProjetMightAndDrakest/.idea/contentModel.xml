@@ -115,6 +115,7 @@
             <e p="SOQuestItem.cs" t="Include" />
             <e p="SOQuestItemPetitCoffre.cs" t="Include" />
             <e p="SOShield.cs" t="Include" />
+            <e p="SOSpecialEffectAddWeapon.cs" t="Include" />
             <e p="SOSpecialEffectBurn.cs" t="Include" />
             <e p="SOSpecialEffectGeneral.cs" t="Include" />
             <e p="SOSpecialEffectShilding.cs" t="Include" />
