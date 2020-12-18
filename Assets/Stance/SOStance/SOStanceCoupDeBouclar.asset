@@ -17,4 +17,4 @@ MonoBehaviour:
   CoolDescription: "\r\nEn dernier recours, votre bouclier peut toujours vous \xEAtre
     d\u2019une autre utilit\xE9 !\r\n"
   PracticalDescription: "\nLes boucliers infligent 5 D\xE9g\xE2ts\r\n"
-  CoolImage: {fileID: 0}
+  CoolImage: {fileID: 21300000, guid: a97c171805793ec41b68f23421a75548, type: 3}

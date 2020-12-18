@@ -17,4 +17,4 @@ MonoBehaviour:
   CoolDescription: "\r\nUne technique aussi efficace que difficile \xE0 ma\xEEtriser.
     Si vous ne poss\xE9dez pas le bon type d\u2019arme, elle ne fonctionnera pas.\r\n"
   PracticalDescription: "D\xE9g\xE2ts x2 si attaque avec une arme 2 mains"
-  CoolImage: {fileID: 0}
+  CoolImage: {fileID: 21300000, guid: aff5d91624ddbe949a4eb3810e632654, type: 3}

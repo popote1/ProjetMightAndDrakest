@@ -20,32 +20,101 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/GameObject 1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/GameObject 1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/fx_coup_tranchant3.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/fx_coup_tranchant3.controller.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D/Font/Liebing SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D/Font/Liebing SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FX/animationFX/FXCoupTranchant.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/animationFX/FXCoupTranchant.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FX/fx_coupPic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/fx_coupPic.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FX/fx_tranchant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/fx_tranchant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Zwifider.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Zwifider.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ShieldPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ShieldPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/StancePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/StancePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UtilityPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UtilityPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/WeaponPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/WeaponPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_assommant/fx_coup_assommant9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Assiette/Assiette.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Assiette/Assiette.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille1/Bouteille1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille1/Bouteille1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille2/Bouteille2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille2/Bouteille2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille3/Bouteille3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille3/Bouteille3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille4/Bouteille4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouteille4/Bouteille4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouton/Bouton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Bouton/Bouton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/BoutonEnigme/BoutonEnigme.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/BoutonEnigme/BoutonEnigme.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/CageThoracique/CageThoracique.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/CageThoracique/CageThoracique.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/CoffreCouvercle/CoffreCouvercle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/CoffreCouvercle/CoffreCouvercle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Cote/Cote.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Cote/Cote.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Couchette/Couchette.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Couchette/Couchette.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Crane/Crane.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Crane/Crane.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Drapeau/Drapeau.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Drapeau/Drapeau.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Etagere2/Etagere.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Etagere2/Etagere.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre1/Livre1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre1/Livre1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre2/Livre2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre2/Livre2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre3/Livre3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre3/Livre3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre4/Livre4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre4/Livre4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre5/Livre5.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Livre5/Livre5.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Os/Os1pret.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Os/Os1pret.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/PiegeBase/PiegeBase.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/PiegeBase/PiegeBase.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/PiegeLance/PiegeLance.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/PiegeLance/PiegeLance.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Sac1/SacType1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Sac1/SacType1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Sac2/SacType2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Sac2/SacType2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Table2/Table2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Table2/Table2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Tabouret/Tabouret.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Tabouret/Tabouret.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Tonneau/Tonneau.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Tonneau/Tonneau.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Torche1/Torche1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Torche1/Torche1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Verre1/Verre1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Verre1/Verre1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Verre2/Verre2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Verre2/Verre2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/ref/MaterialCoffreCouvercle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/ref/MaterialCoffreCouvercle.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/InteractComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/InteractComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest/NavMesh.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceChanceDuDroit.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceChanceDuDroit.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceCoupDeBouclar.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceCoupDeBouclar.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceDemacia.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceDemacia.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceFeinte.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceFeinte.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceReverDuGauche.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceReverDuGauche.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +304,7 @@
       <workItem from="1608154163311" duration="1264000" />
       <workItem from="1608191515150" duration="7802000" />
       <workItem from="1608228665031" duration="1989000" />
-      <workItem from="1608231700936" duration="25468000" />
+      <workItem from="1608231700936" duration="25479000" />
     </task>
     <servers />
   </component>

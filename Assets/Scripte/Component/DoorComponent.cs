@@ -54,7 +54,10 @@ public class DoorComponent : MonoBehaviour , IInteracteble
 
     public void DePreselectable()
     {
-        _panel.transform.localScale = Vector3.one;
+        if (_panel != null)
+        {
+            _panel.transform.localScale = Vector3.one;
+        }
     }
 
     public void DesetSelectable()

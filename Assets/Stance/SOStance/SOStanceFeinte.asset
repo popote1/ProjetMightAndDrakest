@@ -17,4 +17,4 @@ MonoBehaviour:
   CoolDescription: "Ce coup ne permet pas de se prot\xE9ger compl\xE8tement, mais
     au prochain, vous serez mieux pr\xE9par\xE9."
   PracticalDescription: "+3 d\u2019armure / Main gauche -2 d\xE9g\xE2ts"
-  CoolImage: {fileID: 0}
+  CoolImage: {fileID: 21300000, guid: 0993296e699a37543bb8b553b71fc86c, type: 3}
