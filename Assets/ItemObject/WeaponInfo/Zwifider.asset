@@ -19,7 +19,7 @@ MonoBehaviour:
     ultime baiser de la benjamine.\u201D\r"
   WorldSprite: {fileID: 2100000, guid: e73bb1522abe89843a79d81570710216, type: 2}
   UISprite: {fileID: 21300000, guid: ae4bc3d07cd6da54983621b41cdc39b2, type: 3}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 1690e3aefec273945b2295721794d11c, type: 3}
   AudioClip: {fileID: 8300000, guid: da26d185407bee84db40ff7724dd866c, type: 3}
   volume: 1
   Damage: 8

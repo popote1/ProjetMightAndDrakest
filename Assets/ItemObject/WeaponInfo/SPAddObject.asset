@@ -16,7 +16,7 @@ MonoBehaviour:
   CoolDescription: Ramasse un object au sol
   WorldSprite: {fileID: 0}
   UISprite: {fileID: 0}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 70873b46cf1b96f47b7a9b89b9f29f4c, type: 3}
   AudioClip: {fileID: 8300000, guid: 4e221127fadb3f943a06719eba6cc77a, type: 3}
   volume: 1
   Damage: 0

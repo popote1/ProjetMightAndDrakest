@@ -19,7 +19,7 @@ MonoBehaviour:
     ont perdu la vie \xE0 force d\u2019en abuser."
   WorldSprite: {fileID: 2100000, guid: 5648b61d7385ccf47bdb028b5d1f7e99, type: 2}
   UISprite: {fileID: 21300000, guid: 289c8c7a193a7da428e57a56fa0ea9a9, type: 3}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 6cb8f5cb24cb6a94bbee968bd04df39d, type: 3}
   AudioClip: {fileID: 8300000, guid: 3c430953f834133408cd60bcdb6981ee, type: 3}
   volume: 1
   PracticalDescription: Rend 10 point de vie
