@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0633bbabf3aade48bbf81001b6cc1fa, type: 3}
+  m_Name: Pavois
+  m_EditorClassIdentifier: 
+  Name: 
+  CoolDescription: "On dit que le rouge est une couleur passionn\xE9e. Pour cette
+    vieille arm\xE9e, c\u2019\xE9tait de la provocation. Il aura suffit qu\u2019un
+    soldat l\xE2che quitte les lieux en plein combat pour ensuite abandonner sans
+    mal ce bouclier qui autrefois, brillait comme le sang au soleil. Quel dommage
+    que la peinture soit autant effrit\xE9e..."
+  WorldSprite: {fileID: 2100000, guid: c8b1acddec8bb1548bf88440b2344cb1, type: 2}
+  UISprite: {fileID: 21300000, guid: 3095d9ad422d66c4ab3a8ad74adbc3dd, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 63f025a3f26a11a498473a598c386a75, type: 3}
+  AudioClip: {fileID: 8300000, guid: b4fe048dc278e614589846c4126dc948, type: 3}
+  volume: 1
+  ShieldValue: -5
+  Durability: 4
+  IsTwoHanded: 1
+  SpecialEffect: {fileID: 0}

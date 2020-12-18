@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2159d63d43e581a4b89845bbd6f7bd2b, type: 3}
+  m_Name: PotionDeForce
+  m_EditorClassIdentifier: 
+  Name: 
+  CoolDescription: "Un vieux fou dans la for\xEAt s\u2019obstinait \xE0 trouver la
+    recette miracle qui donnerait la Force \xE0 quiconque. Qu\u2019est ce que la
+    Force ? On ne sait pas vraiment, cet homme ne parvenait jamais \xE0 donner une
+    description claire. Selon lui, elle permet de d\xE9placer des montagnes et d\u2019\xE9craser
+    des donjons, mais personne n\u2019irait \xE9couter des \xE9lucubrations pareilles..."
+  WorldSprite: {fileID: 2100000, guid: d64a19401bec2e447963bd4cce5de77c, type: 2}
+  UISprite: {fileID: 21300000, guid: fe4e8b42e64e6a046bdabf8d86c43178, type: 3}
+  FX: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: ed5dc6e07b2fa064790a0efbcfecad10, type: 3}
+  volume: 1
+  PracticalDescription: Augmente la force de 2
+  SoUtilityEffectGeneral: {fileID: 0}

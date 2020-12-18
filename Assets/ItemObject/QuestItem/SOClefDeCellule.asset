@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: SOClefDeCellule
   m_EditorClassIdentifier: 
   Name: Clef  de Cellule
-  CoolDescription: 'Petit Clef Rouiller '
+  CoolDescription: "Est ce que toutes les cellules de ce donjon peuvent s\u2019ouvrir
+    avec la m\xEAme cl\xE9 ? Les serrures sont-elles identiques ? C\u2019est fou
+    combien ces gobelins semblent suffisamment intelligents pour enfermer autrui
+    mais assez b\xEAtes pour ne pas forger des cl\xE9s diff\xE9rentes..."
   WorldSprite: {fileID: 2100000, guid: 73fda66e8eda42c42becc46491317952, type: 2}
   UISprite: {fileID: 21300000, guid: ea3b945a2a61e5444a67bc259e0a4545, type: 3}
   FX: {fileID: 0}
   AudioClip: {fileID: 0}
   volume: 0
-  PracticalDescription: Permet d'ouvrir le port dune des cellule du donjon
+  PracticalDescription: "Cette cl\xE9 correspond aux serrures des cellules"

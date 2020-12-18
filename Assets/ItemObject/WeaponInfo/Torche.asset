@@ -13,15 +13,20 @@ MonoBehaviour:
   m_Name: Torche
   m_EditorClassIdentifier: 
   Name: Torche
-  CoolDescription: 
+  CoolDescription: "Dans les t\xE9n\xE8bres de la nuit, Wohiak avan\xE7a, \xE9clair\xE9
+    par la faible lumi\xE8re de sa torche. Arriv\xE9 \xE0 la maison de son cousin,
+    il ne put que constater le passage des gobelins, les corps mutil\xE9s des cr\xE9atures
+    gisant partout autour. Un dernier \xE9tait visiblement encore vivant. Wohiak
+    le retourna sur le dos puis l\u2019acheva d\u2019un coup de torche br\xFBlante
+    dans l\u2019orbite gauche."
   WorldSprite: {fileID: 2100000, guid: b5fdbe00b4bc0ae43bd4c594fdfbe409, type: 2}
   UISprite: {fileID: 21300000, guid: 7785baa1519663d4881176be4bcfcecb, type: 3}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
-  AudioClip: {fileID: 8300000, guid: c72f38bb2a73a324291298b6e7283d1c, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 76545782e1db239429b9fb4f178fa5ff, type: 3}
+  AudioClip: {fileID: 8300000, guid: f7106c44fc4265b4aa98567ede187be6, type: 3}
   volume: 1
-  Damage: 1
+  Damage: 4
   ChanceToHit: 50
   Target: 0
-  Durability: 2
+  Durability: 4
   isTwoHand: 0
   SpecialEffect: {fileID: 11400000, guid: b065db4ba80595848abcb44866b39ce8, type: 2}

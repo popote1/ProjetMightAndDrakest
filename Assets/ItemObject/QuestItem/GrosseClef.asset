@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: GrosseClef
   m_EditorClassIdentifier: 
   Name: GrosseClef
-  CoolDescription: sdlkhfsdflgv
+  CoolDescription: "Un jour, un gobelin plus malin que les autres eut l\u2019id\xE9e
+    de forger une \xE9norme cl\xE9, plus robuste et plus clinquante que celles d\xE9j\xE0
+    fabriqu\xE9es\u2026 \u201CIl faut qu\u2019on puisse la reconna\xEEtre pour ne
+    pas se tromper !\u201D avait-il d\xE9clar\xE9 dans son langage de cr\xE9ature
+    barbare. Mais ses semblables \xE9taient bien trop stupides pour comprendre une
+    logique aussi simple..."
   WorldSprite: {fileID: 2100000, guid: 651390eb710661545b6ae07388271afa, type: 2}
   UISprite: {fileID: 21300000, guid: 0aa834c35a9e5a84e80d1fdf36bcf11c, type: 3}
   FX: {fileID: 0}
   AudioClip: {fileID: 0}
   volume: 0
-  PracticalDescription: "Une grosse clef qui dois ouvrir une grosse c\xE9rure"
+  PracticalDescription: "Une si grosse cl\xE9 ne peut qu\u2019ouvrir une porte cachant
+    quelque chose."

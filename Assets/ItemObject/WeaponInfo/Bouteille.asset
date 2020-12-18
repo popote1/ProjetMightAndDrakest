@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd07c80099381404f8074fa80d81bd96, type: 3}
+  m_Name: Bouteille
+  m_EditorClassIdentifier: 
+  Name: 
+  CoolDescription: "Bolner prit une gorg\xE9e pour se r\xE9chauffer durant cette
+    nuit froide. Comme bien souvent, la garde de nuit de la porte n\u2019\xE9tait
+    vraiment rien de plus qu\u2019un protocole. Plus qu\u2019une v\xE9ritable n\xE9cessit\xE9,
+    mais il fallait bien s\u2019en accommoder. Soudain, Wohiak sortit du village
+    en courant, une torche \xE0 la main. La surprise fit presque tomber la bouteille
+    des mains de Bolner."
+  WorldSprite: {fileID: 2100000, guid: 19abf51ed1104cc40bf361467bf7cef3, type: 2}
+  UISprite: {fileID: 21300000, guid: 789bb6183e8252c4ebedfc266cf78eb5, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 76545782e1db239429b9fb4f178fa5ff, type: 3}
+  AudioClip: {fileID: 8300000, guid: d219a8ba48c12394dbafcdbf95a5705a, type: 3}
+  volume: 1
+  Damage: 2
+  ChanceToHit: 70
+  Target: 0
+  Durability: 2
+  isTwoHand: 0
+  SpecialEffect: {fileID: 0}
