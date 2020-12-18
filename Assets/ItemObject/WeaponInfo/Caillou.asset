@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd07c80099381404f8074fa80d81bd96, type: 3}
   m_Name: Caillou
   m_EditorClassIdentifier: 
-  Name: Cailou
-  CoolDescription: 
+  Name: Caillou
+  CoolDescription: "Annia venait de coucher sa fille et finissait de pr\xE9parer
+    un repas pour elle et son mari qui ne tardera pas \xE0 rentrer. Au moment o\xF9
+    la porte s'ouvrit, son sourire se transforma en expression de terreur.  D\xE9couvrant
+    que la chose qui venait de passer la porte n\u2019\xE9tait pas son mari mais
+    une bande de gobelins, la premi\xE8re chose qu\u2019elle attrapa fut un simple
+    caillou."
   WorldSprite: {fileID: 2100000, guid: 5e789fb30af473c4e8c10a75448bd9ba, type: 2}
   UISprite: {fileID: 21300000, guid: 5a0fe4a7d26793345bde2dcd849c69d5, type: 3}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
-  AudioClip: {fileID: 8300000, guid: 47f2c75aefca0034292087d5e791f819, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 76545782e1db239429b9fb4f178fa5ff, type: 3}
+  AudioClip: {fileID: 8300000, guid: 78e1e0118cb289440b7d6253f567613e, type: 3}
   volume: 1
   Damage: 2
   ChanceToHit: 60
