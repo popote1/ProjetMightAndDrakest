@@ -7,7 +7,6 @@ public class InteractComponent : MonoBehaviour
 {
     public PlayerInfoComponent playerInfoComponent;
     public enum SelectStat{none,selectable,Preselected,Selec}
-    public GameObject Interaction;
     public Transform SelectePoints;
     public float InteracteDistance;
 

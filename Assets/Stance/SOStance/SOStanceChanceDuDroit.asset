@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "Chac\xE9 du Droit"
   CoolDown: 2
-  CoolDescription: 
+  CoolDescription: "Si le point gauche est d\xE9j\xE0 un peu trop en sang, il ne
+    reste plus qu\u2019\xE0 frapper avec la droite... "
   PracticalDescription: "Plus 50% de d\xE9gas avec l'arme de droite"
   CoolImage: {fileID: 0}

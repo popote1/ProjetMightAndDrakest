@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd07c80099381404f8074fa80d81bd96, type: 3}
   m_Name: Zwifider
   m_EditorClassIdentifier: 
-  Name: Zwifider
+  Name: Zweihander
   CoolDescription: "\u201CLa lumi\xE8re d\u2019Av\xE9liane resplendira sur ceux qui
     ont perc\xE9 les t\xE9n\xE8bres de la nuit.\r\nLes coupables seront jug\xE9s
     par la Cadette et pass\xE9s au fil de l\u2019\xE9p\xE9e, ne recevant qu\u2019un
     ultime baiser de la benjamine.\u201D\r"
-  WorldSprite: {fileID: 2100000, guid: e73bb1522abe89843a79d81570710216, type: 2}
-  UISprite: {fileID: 21300000, guid: ae4bc3d07cd6da54983621b41cdc39b2, type: 3}
+  WorldSprite: {fileID: 2100000, guid: a62773ac2be13d148b29ee162c24d04b, type: 2}
+  UISprite: {fileID: 21300000, guid: 3924ef2e8d9cb234db7261490931a778, type: 3}
   FX: {fileID: 4015691442708638874, guid: 1690e3aefec273945b2295721794d11c, type: 3}
   AudioClip: {fileID: 8300000, guid: da26d185407bee84db40ff7724dd866c, type: 3}
   volume: 1

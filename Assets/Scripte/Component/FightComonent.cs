@@ -318,6 +318,8 @@ public class FightComonent : MonoBehaviour
         if (IsStaneOnObject1)
         {
             SelectedStance.SoStance.ExecutStance(this, 1);
+            if(ItemData1.SoObject is SOWeapon) if (((SOWeapon) ItemData1.SoObject).isTwoHand) isTwoHanded = true;
+            if(ItemData1.SoObject is SOShield) if (((SOShield) ItemData1.SoObject).IsTwoHanded) isTwoHanded = true;
         }
         else if (ItemData1.SoObject is SOWeapon)
         {

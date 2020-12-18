@@ -86,6 +86,7 @@
             <e p="ShakeComponent.cs" t="Include" />
             <e p="SoundManager.cs" t="Include" />
             <e p="SpaceTrigger.cs" t="Include" />
+            <e p="StanceHolder.cs" t="Include" />
             <e p="TrapComponent.cs" t="Include" />
             <e p="UIComponent" t="Include">
               <e p="ButtonEffectComponent.cs" t="Include" />
@@ -131,6 +132,9 @@
             <e p="SOWeapon.cs" t="Include" />
             <e p="Stances" t="Include">
               <e p="SOStanceChaceDuDroite.cs" t="Include" />
+              <e p="SOStanceCoupDeBouclar.cs" t="Include" />
+              <e p="SOStanceDemacia.cs" t="Include" />
+              <e p="SOStanceFeinte.cs" t="Include" />
               <e p="SOStanceRevertDuGauche.cs" t="Include" />
             </e>
           </e>

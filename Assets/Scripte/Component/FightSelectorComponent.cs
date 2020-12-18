@@ -229,7 +229,7 @@ public class FightSelectorComponent : MonoBehaviour
 
                         _object1 = _preSelectedPanel;
                         _preSelectedPanel = null;
-                        PassToNextSelectorStat(2);
+                        
                         if (_object1.GetComponent<EditPanelComponent>().TxtName.text != SpecalAttack1.Name &&
                             _object1.GetComponent<EditPanelComponent>().TxtName.text != SpecalAttack2.Name)
                         {
@@ -247,6 +247,14 @@ public class FightSelectorComponent : MonoBehaviour
                                 FightComonent.ItemData1=new ItemData(SpecalAttack2);
                             }
                             
+                        }
+                        if (_object2 != null && _stancePanel != null)
+                        {
+                            FightComonent.StartCombat();
+                        }
+                        else
+                        {
+                            PassToNextSelectorStat(2); 
                         }
 
                         break;
@@ -373,7 +381,6 @@ public class FightSelectorComponent : MonoBehaviour
 
                         _object2 = _preSelectedPanel;
                         _preSelectedPanel = null;
-                        PassToNextSelectorStat(3);
                         PanelSlideObject.GetComponent<SliderAutiSizerComponent>().ReSizePanel();
                         if (_object2.GetComponent<EditPanelComponent>().TxtName.text != SpecalAttack1.Name &&
                             _object2.GetComponent<EditPanelComponent>().TxtName.text != SpecalAttack2.Name)
@@ -393,6 +400,15 @@ public class FightSelectorComponent : MonoBehaviour
                             }
                             
                         }
+                        if (_object1 != null && _stancePanel != null)
+                        {
+                            FightComonent.StartCombat();
+                        }
+                        else
+                        {
+                            PassToNextSelectorStat(3); 
+                        }
+
                         break;
                     case 3 :
                         if (FightComonent.Stances[_preSelectedPanel.GetComponent<EditPanelComponent>().InvetoryIndex]

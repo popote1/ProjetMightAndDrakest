@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rever du Gauche
   CoolDown: 2
-  CoolDescription: 
+  CoolDescription: "Rien ne vaut un bon coup de poing pour d\xE9marrer les hostilit\xE9s,
+    n\u2019est-ce pas ?"
   PracticalDescription: "Plus 50% de d\xE9gas avec l'arme de Gauche"
   CoolImage: {fileID: 0}

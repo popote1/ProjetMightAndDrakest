@@ -176,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3674255754953435974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.212}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6876055444282231507}
@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3820217304575669836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.3}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6876055444282231507}
@@ -225,7 +225,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6687278656706246917
 MonoBehaviour:
@@ -987,9 +987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInfoComponent: {fileID: 6876055444282231469}
-  Interaction: {fileID: 0}
   SelectePoints: {fileID: 9154315558422427768}
-  InteracteDistance: 1
+  InteracteDistance: 0.7
 --- !u!1 &6876055444412860957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1046,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.2
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -2206,6 +2205,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416395035944625291, guid: 8b500c27d1d5f4a4eb7017e81d0bb197,
+        type: 3}
+      propertyPath: m_text
+      value: "Vous sortez du donjon, le soleil r\xE9chaufe votre visage, que faites
+        vous ?"
       objectReference: {fileID: 0}
     - target: {fileID: 3565100949973139736, guid: 8b500c27d1d5f4a4eb7017e81d0bb197,
         type: 3}
