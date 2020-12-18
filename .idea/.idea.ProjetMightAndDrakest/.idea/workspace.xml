@@ -20,10 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/GameObject 1.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/GameObject 1.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/fx_coup_tranchant3.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FX/animationFX/fx_coup_tranchant3.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D/Font/Liebing SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D/Font/Liebing SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/animationFX/FXCoupTranchant.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/animationFX/FXCoupTranchant.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/fx_coupPic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/fx_coupPic.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/fx_tranchant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/fx_tranchant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Zwifider.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/Zwifider.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ShieldPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ShieldPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/StancePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/StancePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UtilityPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UtilityPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/WeaponPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/WeaponPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" afterDir="false" />
@@ -32,6 +45,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceChanceDuDroit.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceChanceDuDroit.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceReverDuGauche.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stance/SOStance/SOStanceReverDuGauche.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,8 +146,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/InteractComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" />
       </list>
     </option>
   </component>
@@ -221,7 +235,7 @@
       <workItem from="1608154163311" duration="1264000" />
       <workItem from="1608191515150" duration="7802000" />
       <workItem from="1608228665031" duration="1989000" />
-      <workItem from="1608231700936" duration="24594000" />
+      <workItem from="1608231700936" duration="25468000" />
     </task>
     <servers />
   </component>
