@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu (fileName = "SOSpecialEffectAddWeapon", menuName = "SO/Combat/SOSpecialEffect/AddWeapon")]
 public class SOSpecialEffectAddWeapon : SOSpecialEffectGeneral
 {
-    public List<SOWeapon> PossibleWeapons;
+    public List<SOObject> PossibleWeapons;
     
     public override bool CheckForUse(FightComonent fightComonent, List<EnnemiCombatUIComponent> ennemiCombatUIComponents, int weaponIndex)
     {
@@ -12,6 +12,7 @@ public class SOSpecialEffectAddWeapon : SOSpecialEffectGeneral
     }
     public override void MakeSpecialEffect(FightComonent fightComonent,List<EnnemiCombatUIComponent> ennemiCombatUIComponents, int weaponIndex)
     {
-      // fightComonent.PlayerInfoComponent.
+        int index = Random.Range(0, PossibleWeapons.Count - 1);
+      fightComonent.PlayerInfoComponent.Inventory.Add(new ItemData(PossibleWeapons[index]));
     }
 }

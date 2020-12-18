@@ -118,6 +118,7 @@
             <e p="SOSpecialEffectAddWeapon.cs" t="Include" />
             <e p="SOSpecialEffectBurn.cs" t="Include" />
             <e p="SOSpecialEffectGeneral.cs" t="Include" />
+            <e p="SOSpecialEffectLossHP.cs" t="Include" />
             <e p="SOSpecialEffectShilding.cs" t="Include" />
             <e p="SOSpecialEffetStun.cs" t="Include" />
             <e p="SOSpecialStatBurn.cs" t="Include" />

@@ -388,7 +388,7 @@ public class FightComonent : MonoBehaviour
         {
             SelectedStance.SoStance.ExecutStance(this, 2);
         }
-        else if (ItemData2. SoObject is SOWeapon)
+        else if (ItemData2.SoObject is SOWeapon)
         {
             List<EnnemiCombatUIComponent> targets;
             SOWeapon weapon = (SOWeapon) ItemData2.SoObject;
@@ -558,11 +558,14 @@ public class FightComonent : MonoBehaviour
 
     private void SetPanelVictory()
     {
+        if(EnnemiGroupComponent.IsVictory){HudComponent.Victory();}
         Debug.Log("Victoire");
         IsFighting = false;
         EnnemiGroupComponent.Die();
         HudComponent.EndFight();
         FightSelectorComponent.ResetPannels();
+        Stances.Clear();
+        
     }
 
     private void SetPanelDefat()

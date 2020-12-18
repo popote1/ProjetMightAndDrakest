@@ -22,7 +22,30 @@
     <list default="true" id="bfa514b1-87d5-4dbf-9577-8bb4c8f76472" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjetMightAndDrakest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModel/DemiCoupole/CoupoleV2_lambert1_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModel/DemiCoupole/CoupoleV2_lambert1_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModel/DemiCoupole/DemiCoupole.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModel/DemiCoupole/DemiCoupole.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/FX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/FX.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_brulant/fx_coup_brulant1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_brulant/fx_coup_brulant1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_brulant/fx_coup_brulant2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_brulant/fx_coup_brulant2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_brulant/fx_coup_brulant3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/Sprites/fx_coup_brulant/fx_coup_brulant3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/épée.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemObject/WeaponInfo/épée.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube (3) Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube (3) Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/BoutonEnigme/BoutonEnigme_lambert1_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/BoutonEnigme/BoutonEnigme_lambert1_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Os/Os1_lambert1_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Os/Os1_lambert1_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Tabouret/Tabouret_lambert1_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/PropsDispo/Tabouret/Tabouret_lambert1_Normal.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocking3DTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/MainMenuComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/MainMenuComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectAddWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectAddWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Canvas.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +71,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffetStun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectLossHP.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/CombatSliderAnimationComponant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/StanceInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/FichierTest/testFPSControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialStatStun.cs" />
@@ -98,13 +121,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/SecretDorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/DoorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/DialogueStartComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/MainMenuComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/SoundManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/FPControlerComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/EnnemiCombatUIComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiMaterialAnimationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceRevertDuGauche.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/Stances/SOStanceChaceDuDroite.cs" />
@@ -112,15 +130,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripte/PlaneC#/PuzzelEllement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/ShakeComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/FichierTest/flikeringLight.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/ButtonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/SallCoupoleComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/ItemComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/SpaceTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/Component/InventoryComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectAddWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/ScriptableObject/SOSpecialEffectLossHP.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightSelectorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PuzzelComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/PlayerInfoComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/SoundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/MainMenuComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/EnnemiGroupComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/FightComonent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripte/Component/UIComponent/HUDComponent.cs" />
       </list>
     </option>
   </component>
@@ -208,6 +232,7 @@
       <workItem from="1608154163311" duration="1264000" />
       <workItem from="1608191515150" duration="7802000" />
       <workItem from="1608228665031" duration="1989000" />
+      <workItem from="1608231700936" duration="14209000" />
     </task>
     <servers />
   </component>

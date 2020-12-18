@@ -57,7 +57,7 @@ public class PuzzelComponent : MonoBehaviour
         }
 
         PuzzelElements[elementIndex].GameObjectElement.transform.localEulerAngles =
-            new Vector3(0, 0,360 / MaxPos * PuzzelElements[elementIndex].CurrentPos);
+            new Vector3(0, 0,(360 / MaxPos * PuzzelElements[elementIndex].CurrentPos));
     }
 
     private void CheckIsDone()

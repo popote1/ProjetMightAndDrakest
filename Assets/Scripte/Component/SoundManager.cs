@@ -7,7 +7,6 @@ public class SoundManager : MonoBehaviour
    public static GameObject Holder;
 
    public static float MusicVolume = 0.5f;
-   
    private static AudioSource ExplorationMisic;
    private static AudioSource TemporalExploratinMisic;
    private static AudioSource CombatMusic;
@@ -82,5 +81,12 @@ public class SoundManager : MonoBehaviour
    {
        CombatMusic.volume = 0;
        ExplorationMisic.volume = MusicVolume;
+   }
+
+   public static void ChangeMusicVolume(float newVolume)
+   {
+       ExplorationMisic.volume = ExplorationMisic.volume * newVolume/MusicVolume;
+       CombatMusic.volume = CombatMusic.volume * newVolume / MusicVolume;
+       MusicVolume = newVolume;
    }
 }
