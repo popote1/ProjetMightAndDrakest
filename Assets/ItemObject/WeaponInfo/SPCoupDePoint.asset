@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd07c80099381404f8074fa80d81bd96, type: 3}
+  m_Name: SPCoupDePoint
+  m_EditorClassIdentifier: 
+  Name: Coup De Point
+  CoolDescription: Done un coup de point mais perd un PV
+  WorldSprite: {fileID: 0}
+  UISprite: {fileID: 0}
+  FX: {fileID: 4015691442708638874, guid: 70873b46cf1b96f47b7a9b89b9f29f4c, type: 3}
+  AudioClip: {fileID: 8300000, guid: a9c2259b15095fb4d956757c136525b6, type: 3}
+  volume: 1
+  Damage: 1
+  ChanceToHit: 50
+  Target: 0
+  Durability: 1
+  isTwoHand: 0
+  SpecialEffect: {fileID: 11400000, guid: 2a428388195917243abf66debc6ad041, type: 2}

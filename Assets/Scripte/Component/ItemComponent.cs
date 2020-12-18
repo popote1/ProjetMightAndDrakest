@@ -15,8 +15,7 @@ public class ItemComponent : MonoBehaviour , IInteracteble
     public GameObject ShieldPanel;
     public GameObject UtilityPanel;
     public Canvas Canvas;
-    public UnityEvent EventOnPicking = new UnityEvent(); 
-
+    public UnityEvent EventOnPicking = new UnityEvent();
     private MeshRenderer _meshRenderer;
     private LineRenderer _lineRenderer;
     private GameObject _infoPanel;

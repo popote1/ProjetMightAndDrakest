@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd07c80099381404f8074fa80d81bd96, type: 3}
+  m_Name: Lance
+  m_EditorClassIdentifier: 
+  Name: 
+  CoolDescription: 
+  WorldSprite: {fileID: 2100000, guid: ac0bfeae7d1e6204cb0881cfe03b3821, type: 2}
+  UISprite: {fileID: 21300000, guid: 20bd8419596e6524cbef2131e343aeab, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 8fd1d808b5512354889f66cbdbe07a57, type: 3}
+  AudioClip: {fileID: 8300000, guid: f7e16f9aa579cc64fb214c7836915951, type: 3}
+  volume: 1
+  Damage: 5
+  ChanceToHit: 70
+  Target: 0
+  Durability: 2
+  isTwoHand: 0
+  SpecialEffect: {fileID: 0}

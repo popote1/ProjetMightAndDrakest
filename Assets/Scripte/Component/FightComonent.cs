@@ -318,6 +318,8 @@ public class FightComonent : MonoBehaviour
         if (IsStaneOnObject1)
         {
             SelectedStance.SoStance.ExecutStance(this, 1);
+            if(ItemData1.SoObject is SOWeapon) if (((SOWeapon) ItemData1.SoObject).isTwoHand) isTwoHanded = true;
+            if(ItemData1.SoObject is SOShield) if (((SOShield) ItemData1.SoObject).IsTwoHanded) isTwoHanded = true;
         }
         else if (ItemData1.SoObject is SOWeapon)
         {
@@ -388,7 +390,7 @@ public class FightComonent : MonoBehaviour
         {
             SelectedStance.SoStance.ExecutStance(this, 2);
         }
-        else if (ItemData2. SoObject is SOWeapon)
+        else if (ItemData2.SoObject is SOWeapon)
         {
             List<EnnemiCombatUIComponent> targets;
             SOWeapon weapon = (SOWeapon) ItemData2.SoObject;
@@ -558,11 +560,14 @@ public class FightComonent : MonoBehaviour
 
     private void SetPanelVictory()
     {
+        if(EnnemiGroupComponent.IsVictory){HudComponent.Victory();}
         Debug.Log("Victoire");
         IsFighting = false;
         EnnemiGroupComponent.Die();
         HudComponent.EndFight();
         FightSelectorComponent.ResetPannels();
+        Stances.Clear();
+        
     }
 
     private void SetPanelDefat()

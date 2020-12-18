@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd07c80099381404f8074fa80d81bd96, type: 3}
+  m_Name: Baton
+  m_EditorClassIdentifier: 
+  Name: 
+  CoolDescription: "Les Argeminum se dressaient face \xE0 la r\xE9gion Ouest, dressant
+    leur b\xE2ton haut vers le ciel et r\xE9citant les pr\xE9ceptes du synode pibouin.
+    Paradoxe, c\u2019est \xE0 ce moment que les moines du Stup perdirent les secrets
+    du Myst\xE8re au Chocolat..."
+  WorldSprite: {fileID: 2100000, guid: 3a9776058ed8d8a4c99ffded0ad0fc39, type: 2}
+  UISprite: {fileID: 21300000, guid: f3cca0d50d3dbce4bbd9d22d3b84ba1a, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 70873b46cf1b96f47b7a9b89b9f29f4c, type: 3}
+  AudioClip: {fileID: 8300000, guid: 26761e17aae40ec40a894e744ee8ad99, type: 3}
+  volume: 1
+  Damage: 4
+  ChanceToHit: 50
+  Target: 0
+  Durability: 3
+  isTwoHand: 0
+  SpecialEffect: {fileID: 0}

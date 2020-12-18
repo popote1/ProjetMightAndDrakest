@@ -22,6 +22,7 @@ public class EnnemiGroupComponent : MonoBehaviour
     public List<Transform> PatrolPoints;
     [Header("TemporalTest")]
     public List<SOEnnemi> SoEnnemis;
+    public bool IsVictory;
 
     private Vector3 _targetPos;
     private int _nextPos=-1;

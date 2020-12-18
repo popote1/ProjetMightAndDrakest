@@ -13,13 +13,20 @@ MonoBehaviour:
   m_Name: RondHache
   m_EditorClassIdentifier: 
   Name: Rondache
-  CoolDescription: 
+  CoolDescription: "Lorsqu\u2019un garde ramena une petite fille p\xE9trifi\xE9e
+    de peur au village, on ne comprit pas vraiment par quelle prouesse elle \xE9tait
+    parvenue \xE0 parcourir la for\xEAt sans la moindre \xE9gratignure. Une partie
+    de la for\xEAt remplie de gobelins, qui plus est ! Tout ce qu\u2019elle portait
+    sur elle, c\u2019\xE9tait une rondache flambant neuve. L\xE0 non plus, on ne
+    comprit pas o\xF9 elle l\u2019avait trouv\xE9. Seulement que l\u2019objet en
+    soi \xE9tait presque reluisant de propret\xE9, au m\xEAme titre que la fillette
+    ne souffrait d\u2019aucune blessure."
   WorldSprite: {fileID: 2100000, guid: 18eb161ae94638548b09dcef2ba331ba, type: 2}
   UISprite: {fileID: 21300000, guid: 1b680996d49b3bd4cba118eb75d16d85, type: 3}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
-  AudioClip: {fileID: 8300000, guid: c72f38bb2a73a324291298b6e7283d1c, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 63f025a3f26a11a498473a598c386a75, type: 3}
+  AudioClip: {fileID: 8300000, guid: 4f015af7fbe7b03448ac860f3231d309, type: 3}
   volume: 1
   ShieldValue: 4
-  Durability: 3
+  Durability: 5
   IsTwoHanded: 0
   SpecialEffect: {fileID: 0}

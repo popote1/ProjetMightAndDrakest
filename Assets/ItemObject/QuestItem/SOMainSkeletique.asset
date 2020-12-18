@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: SOMainSkeletique
   m_EditorClassIdentifier: 
   Name: Main  de Skelette
-  CoolDescription: " Je devrais pouvoir l'ouvrir pour r\xE9cup\xE9rer la clef quelle
-    contiens"
+  CoolDescription: "Cette main appartenait certainement au dernier\u2026 \u201Cpropri\xE9taire\u201D
+    de cette cellule. Esp\xE9rons que vous aurez plus de chance que lui. En tout
+    cas, il avait l\u2019air vraiment tr\xE8s pr\xE8s du but."
   WorldSprite: {fileID: 2100000, guid: 43e199ce6c238174190f22428068ebf0, type: 2}
   UISprite: {fileID: 21300000, guid: 95909cc741a6fc041b18e2c3e68f7950, type: 3}
   FX: {fileID: 0}
-  AudioClip: {fileID: 0}
-  volume: 0
-  PracticalDescription: Main qui tiens un petite clef
+  AudioClip: {fileID: 8300000, guid: 376ea8ed5531b634bb99228e474b5243, type: 3}
+  volume: 1
+  PracticalDescription: "Esp\xE9rons que cette cl\xE9 puisse ouvrir la cellule..."
   NewItem: {fileID: 11400000, guid: f6b8aecb4b77eb54fb8117295ee9a1ca, type: 2}

@@ -26,9 +26,11 @@ public class PlayerInfoComponent : MonoBehaviour
             {
                 shakeComponent.StartShake();
             }
-            currentHp = value; 
-            
-            
+            currentHp = value;
+            if (CurrentHP <= 0)
+            {
+                GetComponent<HUDComponent>().Defaite();
+            }
         }
     }
     private int currentHp;
@@ -67,8 +69,7 @@ public class PlayerInfoComponent : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         CurrentHP = StartHP;
     }
-
-    // Update is called once per frame
+   
     
   
 }

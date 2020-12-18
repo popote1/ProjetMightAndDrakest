@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class HUDComponent : MonoBehaviour
 {
@@ -32,7 +33,14 @@ public class HUDComponent : MonoBehaviour
     public TMP_Text txtDialogueSkipText;
     public float DialogueSpeed;
     public float DialogueStepSpeed;
-    
+    [Header("Defait")] 
+    public GameObject PanelDefaite;
+    public Button ButtonDefaiteMenu; 
+    private CanvasGroup _defaitCanvasGroup;
+    [Header("Victory")]
+    public GameObject PanelVictory;
+    public Button ButtonVictoryMenu; 
+    private CanvasGroup _victoryCanvasGroup;
     [Header("Sound")] 
     public AudioClip OpenInventoryClip;
     public AudioClip CombateMusic;
@@ -40,12 +48,18 @@ public class HUDComponent : MonoBehaviour
     [Range(0, 1)] public float StartCombatVolume;
     public AudioClip EndCombat;
     [Range(0, 1)] public float EndCombatVolume;
-    
+    public AudioClip DefaiteClip;
+    [Range(0, 1)] public float DefaiteVolume;
+    public AudioClip VictoryClip;
+    [Range(0, 1)] public float VictoryVolume;
+
     [Range(0, 1)] public float OpenInventotyVolume = 1;
     private float _inventorytimer;
     private bool isClicked;
     private bool _showInventoryBar;
     private bool _isInDialogue;
+    private bool _isDefaite;
+    private bool _isVictory;
     private int _skipIndex;
     private float _originalSpeed;
     private float _originalStepSpeed;
@@ -54,6 +68,8 @@ public class HUDComponent : MonoBehaviour
     void Start()
     {
         specialStat.enabled = false;
+        _defaitCanvasGroup = PanelDefaite.GetComponent<CanvasGroup>();
+        _victoryCanvasGroup = PanelVictory.GetComponent<CanvasGroup>();
     }
 
     public void ExitMainMenu()
@@ -102,6 +118,10 @@ public class HUDComponent : MonoBehaviour
         {
             canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 0, 0.1f);
         }
+
+        if (_isDefaite) _defaitCanvasGroup.alpha = Mathf.Lerp(_defaitCanvasGroup.alpha, 1, 0.1f);
+        if (_isVictory) _victoryCanvasGroup.alpha = Mathf.Lerp(_victoryCanvasGroup.alpha, 1, 0.02f);
+        
 
 
         SliderHP.value = Mathf.Lerp(SliderHP.value, (float)PlayerInfoComponent.CurrentHP / PlayerInfoComponent.MaxHP, 0.2f);
@@ -190,5 +210,42 @@ public class HUDComponent : MonoBehaviour
         PlayerInfoComponent.transform.GetComponent<FPControlerComponent>().Speed = _originalSpeed;
         PlayerInfoComponent.transform.GetComponent<FPControlerComponent>().StepTime = _originalStepSpeed;
         _isInDialogue = false;
+    }
+
+    public void Defaite()
+    {
+        PanelDefaite.SetActive(true);
+        _defaitCanvasGroup.alpha=0;
+        _isDefaite = true;
+        ButtonDefaiteMenu.Select();
+        IsExploring = false;
+        PlayerInput.actions.FindActionMap("CombatsControls").Disable();
+        PlayerInput.actions.FindActionMap("ExplorationControl").Disable();
+        SoundManager.ChangeMusicVolume(0);
+        SoundManager.PlaySound(DefaiteClip,DefaiteVolume);
+
+    }
+
+    public void Victory()
+    {
+        PanelVictory.SetActive(true);
+        _victoryCanvasGroup.alpha = 0;
+        _isVictory = true;
+        ButtonVictoryMenu.Select();
+        IsExploring = false;
+        PlayerInput.actions.FindActionMap("CombatsControls").Disable();
+        PlayerInput.actions.FindActionMap("ExplorationControl").Disable();
+        SoundManager.ChangeMusicVolume(0);
+        SoundManager.PlaySound(VictoryClip, VictoryVolume);
+    }
+
+    public void UIMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void UIQuit()
+    {
+        Application.Quit();
     }
 }

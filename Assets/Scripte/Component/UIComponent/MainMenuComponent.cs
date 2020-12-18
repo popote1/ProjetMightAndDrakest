@@ -17,6 +17,11 @@ public class MainMenuComponent : MonoBehaviour
       SoundManager.PlayMusic(ExploratingMusic,3);
    }
 
+   private void Start()
+   {
+      SoundManager.ChangeMusicVolume(0.5f);
+   }
+
    public void Update()
    {
       if (MoveCam)

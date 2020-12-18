@@ -13,15 +13,21 @@ MonoBehaviour:
   m_Name: Rapiere
   m_EditorClassIdentifier: 
   Name: "Rapi\xE8re"
-  CoolDescription: 
+  CoolDescription: "Parmi les l\xE9gendes qui peuplent le nouveau monde, le nom de
+    la Lame d\u2019opale est souvent cit\xE9. Une \xE9p\xE9iste hors-pair qui aurait
+    particip\xE9 \xE0 la chute de Ti Math la maudite. Elle aurait d\xE9fendu seule
+    la petite ville d\u2019Ottenois face aux cr\xE9atures marines pendant plusieurs
+    jours. Au terme de cette mission, elle aurait tranch\xE9 la mer pour se frayer
+    un chemin jusqu\u2019au fond de l\u2019oc\xE9an, d\xE9truisant ainsi le nid de
+    ces abominables cr\xE9atures."
   WorldSprite: {fileID: 2100000, guid: 7872896faff45fd40b91cf5bdf566a4f, type: 2}
   UISprite: {fileID: 21300000, guid: 925d907c9de8f7e438efc711004c4598, type: 3}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
-  AudioClip: {fileID: 8300000, guid: c72f38bb2a73a324291298b6e7283d1c, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 8fd1d808b5512354889f66cbdbe07a57, type: 3}
+  AudioClip: {fileID: 8300000, guid: 4549b2c96d81ec94da94372a1598861b, type: 3}
   volume: 1
   Damage: 6
   ChanceToHit: 70
   Target: 1
-  Durability: 3
+  Durability: 4
   isTwoHand: 0
   SpecialEffect: {fileID: 0}

@@ -149,40 +149,49 @@ public class InventoryComponent : MonoBehaviour
         }
     }
 
-    public void UIButtonItem() {
-        ShowButtonPanel(2);
-        _selectedItem = _preselectedPanel.GetComponent<EditPanelComponent>().ItemData;
-        _scrollPanel = false;
-        if (_selectedItem.SoObject is SOWeapon || _selectedItem.SoObject is SOShield) UsButton.gameObject.SetActive(false);
-        if (_selectedItem.SoObject is SOUtilityItem)
+    public void UIButtonItem()
+    {
+        if (playerInfoComponent.Inventory.Count > 0)
         {
-            UsButton.gameObject.SetActive(true);
-            UsButton.onClick.AddListener(delegate
-            {
-                ((SOUtilityItem)_selectedItem.SoObject).SoUtilityEffectGeneral.WorldUse(this);
-                UIButtonIteamReturn();
-                UsButton.onClick.RemoveAllListeners();
-            });
-        }
-        if (_selectedItem.SoObject is SOQuestItem){
-            SOQuestItem item = (SOQuestItem) _selectedItem.SoObject;
-            if (item.CheckWorldUse())
+            ShowButtonPanel(2);
+            _selectedItem = _preselectedPanel.GetComponent<EditPanelComponent>().ItemData;
+            _scrollPanel = false;
+            if (_selectedItem.SoObject is SOWeapon || _selectedItem.SoObject is SOShield)
+                UsButton.gameObject.SetActive(false);
+            if (_selectedItem.SoObject is SOUtilityItem)
             {
                 UsButton.gameObject.SetActive(true);
                 UsButton.onClick.AddListener(delegate
                 {
-                    ((SOQuestItem)_selectedItem.SoObject).WorldUse(this);
+                    ((SOUtilityItem) _selectedItem.SoObject).SoUtilityEffectGeneral.WorldUse(this);
                     UIButtonIteamReturn();
                     UsButton.onClick.RemoveAllListeners();
                 });
             }
-            else
+
+            if (_selectedItem.SoObject is SOQuestItem)
             {
-                UsButton.gameObject.SetActive(false);
+                SOQuestItem item = (SOQuestItem) _selectedItem.SoObject;
+                if (item.CheckWorldUse())
+                {
+                    UsButton.gameObject.SetActive(true);
+                    UsButton.onClick.AddListener(delegate
+                    {
+                        ((SOQuestItem) _selectedItem.SoObject).WorldUse(this);
+                        UIButtonIteamReturn();
+                        UsButton.onClick.RemoveAllListeners();
+                    });
+                }
+                else
+                {
+                    UsButton.gameObject.SetActive(false);
+                }
             }
+
+            if (UsButton.gameObject.activeSelf) UsButton.Select();
+            else TrowButton.Select();
+            ScrollRectItems.velocity = Vector2.zero;
         }
-        if (UsButton.gameObject.activeSelf) UsButton.Select();else TrowButton.Select();
-        ScrollRectItems.velocity =Vector2.zero;
     }
 
     public void UIButtonTrowItem()
@@ -392,6 +401,7 @@ public class InventoryComponent : MonoBehaviour
         TxtShieldDurability.text = shieldInfo.CurrantDurability + "/" + shield.Durability;
         TxtShieldShilding.text = shield.ShieldValue + "";
         ImgShieldIcone.sprite = shield.UISprite;
+        TxtShieldCoolDescription.text = shield.CoolDescription;
         if (shield.SpecialEffect != null) {
             TxtShieldSpecialEffect.text = shield.SpecialEffect.Description;
             TxtShieldSpecialEffect.enabled = true;

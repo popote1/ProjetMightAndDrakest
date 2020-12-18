@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ButtonComponent : MonoBehaviour ,IInteracteble
 {
-    public bool DestroyOnUs = true;
-    public UnityEvent Event;
-    
+    public bool StaySelected = false;
+    public SOStanceGeneral Stance;
     public Sprite Icone;
     public GameObject UIImage;
     public AudioClip Clip;
@@ -49,7 +47,10 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
 
     public void DePreselectable()
     {
-        _panel.transform.localScale = Vector3.one;
+        if (_panel != null)
+        {
+            _panel.transform.localScale = Vector3.one;
+        }
     }
 
     public void DesetSelectable()
@@ -59,9 +60,8 @@ public class ButtonComponent : MonoBehaviour ,IInteracteble
 
     public bool USe(PlayerInfoComponent playerInfoComponent)
     {
-        Event.Invoke();
-        Destroy(_panel);
-        if(DestroyOnUs)Destroy(this);
+        if (!StaySelected)Destroy(_panel);
+        playerInfoComponent.SOStance.Add(Stance);
         SoundManager.PlaySound(Clip,Volume);
         return true;
     }

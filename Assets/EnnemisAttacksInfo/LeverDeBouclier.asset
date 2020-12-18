@@ -16,6 +16,6 @@ MonoBehaviour:
   Damage: 0
   ChanceToHit: 100
   SpecialEffect: {fileID: 11400000, guid: b87f6fffe2466784ba8c0576bf926cc7, type: 2}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
-  AudioClip: {fileID: 8300000, guid: c72f38bb2a73a324291298b6e7283d1c, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 63f025a3f26a11a498473a598c386a75, type: 3}
+  AudioClip: {fileID: 8300000, guid: 4f015af7fbe7b03448ac860f3231d309, type: 3}
   volume: 1

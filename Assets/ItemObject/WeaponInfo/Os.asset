@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Os
   m_EditorClassIdentifier: 
   Name: Os
-  CoolDescription: 
+  CoolDescription: "Un jour un homme a dit : \xAB Moi aussi j\u2019\xE9tais un aventurier,
+    mais j\u2019ai pris une jambe dans le genou \xBB. Mais en ce qui me concerne,
+    j\u2019ai gliss\xE9 et me suis cass\xE9 le f\xE9mur. Mais j\u2019ai continu\xE9.
+    Puis un jour, on m\u2019a annonc\xE9 que j\u2019avais une vert\xE8bre f\xEAl\xE9e,
+    et l\xE0 la question s\u2019est paus\xE9."
   WorldSprite: {fileID: 2100000, guid: f93e1f6c6a2f3544c939cc34c65ea7a0, type: 2}
   UISprite: {fileID: 21300000, guid: 2fad450b3c597364cb1fec57cd873341, type: 3}
-  FX: {fileID: 4015691442708638874, guid: 5cf7f2ff0d77f724dbd841b1dd608f0f, type: 3}
-  AudioClip: {fileID: 8300000, guid: 73401e1468b32944ca51d1f25fe34987, type: 3}
+  FX: {fileID: 4015691442708638874, guid: 70873b46cf1b96f47b7a9b89b9f29f4c, type: 3}
+  AudioClip: {fileID: 8300000, guid: d219a8ba48c12394dbafcdbf95a5705a, type: 3}
   volume: 1
   Damage: 3
   ChanceToHit: 70
